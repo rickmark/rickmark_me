@@ -6,22 +6,24 @@ Released for free under a Creative Commons Attribution 2.5 License
 */
 
 body {
-	margin: 30px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	padding: 0;
-	background: #000000;
+	background: #453823;
 	text-align: justify;
-	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 11px;
-	color: #FFFFFF;
+    font-weight: 300;
 }
 
 h1, h2, h3 {
 	margin-top: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
 }
 
 h1 {
-	font-size: 1.6em;
-	font-weight: normal;
+	font-size: 4em;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -377,29 +379,42 @@ img.right {
 /* Footer */
 
 #footer {
-	width: 960px;
-	height: 80px;
+	height: 40px;
+    padding-top: 10px;
 	margin: 0 auto;
-	padding: 0 20px;
 	border-top: 1px solid #2C4449;
+    color: black;
 }
 
 #footer p {
 	margin: 0;
-	padding: 10px 0 0 0;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 10px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #737373;
+	color: black;
 }
 
 #footer a {
-	color: #BDBDBD;
+	color: black;
 }
 
 #footer .link {
 }
 
 #footer .copyright {
+}
+
+.header_random_boxs div
+{
+    height: 40px;
+}
+
+.header_random_boxes
+{
+
+}
+
+#main
+{
+    background-color: white;
 }
