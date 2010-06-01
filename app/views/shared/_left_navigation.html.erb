@@ -1,7 +1,7 @@
 
 <h3>Most Recent Articles</h3>
 <ul>
-  <% Article.visible.each do |article| %>
+  <% Article.visible.order('updated_at DESC').limit(20).each do |article| %>
   <li><%= link_to(article.subject, article) %></li>
   <% end %>
 </ul>
