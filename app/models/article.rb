@@ -1,10 +1,10 @@
 require 'truncate_html'
 
 class Article < ActiveRecord::Base
+  include Taggable
+
   validates_presence_of :subject
   validates_presence_of :body
-
-  has_many :tag_usages, :as => :taggable
 
   scope :visible, where(:hidden => false)
 
@@ -16,5 +16,9 @@ class Article < ActiveRecord::Base
 
   def to_param
     "#{id}-#{subject.downcase.gsub(/[^[:alnum:]]/,'-')}".gsub(/-{2,}/,'-')
+  end
+
+  def to_str
+    subject
   end
 end

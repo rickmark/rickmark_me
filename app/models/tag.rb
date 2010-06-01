@@ -1,3 +1,7 @@
 class Tag < ActiveRecord::Base
-  belongs_to :tag_usages
+  has_many :tag_usages
+
+  def to_param
+    name
+  end
 end
