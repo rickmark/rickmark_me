@@ -1,0 +1,22 @@
+<%= form_for(@article) do |form| %>
+    <fieldset class="right_labels">
+      <%= form.error_messages %>
+      <ol>
+        <li>
+          <%= form.label :subject %>
+          <%= form.text_field :subject %>
+        </li>
+        <li>
+          <%= form.label :body %>
+          <%= form.text_area :body %>
+        </li>
+        <li>
+          <%= form.label :hidden %>
+          <%= form.check_box :hidden %>
+        </li>
+      </ol>
+    </fieldset>
+    <fieldset class="submit">
+       <%= form.submit %>
+    </fieldset>
+<% end %>

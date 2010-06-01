@@ -4,14 +4,14 @@
   <title>WwwRichardpenwellMe</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'shCore', 'shBrushRuby' %>
   <%= csrf_meta_tag %>
   <%= generate_random_color_palate %>
 </head>
 <body>
-
-    <div class="container_12">
+    <div class="container_12 random_color_<%= @heading_color = rand 10 %>">
       <%= random_header_draw %>
-      <div class="alpha grid_12 omega random_color_<%= @heading_color = rand 10 %>">
+      <div class="alpha grid_12 omega">
         <div style="float: left; margin: 10px;">
             <a href="/"><h1>Richard Penwell</h1></a>
             <h2 style="position:absolute;"><%= random_subheading %></h2>
@@ -20,15 +20,24 @@
           <object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton" width="230" height="85"><param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" /><param name="wmode" value="transparent" /><param name="FlashVars" value="id=3689f86aa4ddf7bcdd7ddc8f8b0b0d5cb7fb3c28&style=0" /></object>
         </div>
       </div>
-      <div id="left" class="alpha grid_3 random_color_<%= @heading_color %>">
-        <%= render :partial => 'shared/left_navigation' %>
+      <div id="left" class="alpha grid_3">
+        <div class="main_space">
+          <%= render :partial => 'shared/left_navigation' %>
+        </div>
       </div>
       <div id="main" class="grid_9 omega">
-        <%= yield %>
+        <div class="main_space">
+          <%= yield %>
+        </div>
       </div>
-      <div id='footer' class="alpha grid_12 omega random_color_<%= @heading_color %>">
+      <div id='footer' class="alpha grid_12 omega">
         <p class="copyright">Copyright &copy; <%= Date.new.year %> Richard Penwell. All Rights Reserved.</p>
       </div>
+      <div class="clear"></div>
+      <script language="javascript">
+        dp.SyntaxHighlighter.ClipboardSwf = '/clipboard.swf';
+        dp.SyntaxHighlighter.HighlightAll('code');
+      </script>
     </div>
 </body>
 </html>

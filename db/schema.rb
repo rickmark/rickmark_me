@@ -9,18 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100531204827) do
+ActiveRecord::Schema.define(:version => 20100601021921) do
 
   create_table "articles", :force => true do |t|
     t.string   "subject"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "hidden"
+  end
+
+  create_table "tag_usages", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.integer  "taggable_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

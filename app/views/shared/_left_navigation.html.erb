@@ -1,6 +1,15 @@
+
+<h3>Most Recent Articles</h3>
+<ul>
+  <% Article.visible.each do |article| %>
+  <li><%= link_to(article.subject, article) %></li>
+  <% end %>
+</ul>
+
+
 <h3>Tags</h3>
 <ul>
-  <% @tags.each do |tag| %>
+  <% Tag.all.each do |tag| %>
   <li><%= tag %></li>
   <% end %>
 </ul>

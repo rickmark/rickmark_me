@@ -3,14 +3,13 @@ module ApplicationHelper
   RANDOM_CHUNKS_MAX = 10
   RANDOM_CHUNKS_MIN = 3
   HEADER_WIDTH = 940
-  SUBHEADINGS = [ 'Live, learn, code', 'Software IS modern art', '']
 
   def generate_random_color_palate
     color_palate = "<style>\n".html_safe
     10.times do |i|
       h = rand 100
-      s = 25
-      l = rand(65) + 35
+      s = 20
+      l = rand(35) + 55
 
       hsl = Color::HSL.new(h, s, l)
       color_palate << ".random_color_#{i} { background-color: #{hsl.html}; }\n".html_safe
@@ -20,7 +19,7 @@ module ApplicationHelper
   end
 
   def random_header_draw
-    boxes = "<div class='header_random_boxs'>".html_safe
+    boxes = "<div class='header_random_boxs alpha grid_12 omega'>".html_safe
     size_so_far = 0
 
     chunks = []
@@ -44,7 +43,7 @@ module ApplicationHelper
   def random_subheading
     @excuses ||= load_excuses
 
-    "BOFH Excuse: " + @excuses[rand @excuses.length]
+    RedCloth.new(@excuses[rand @excuses.length]).to_html.html_safe
   end
 
   private

@@ -12,6 +12,12 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="RedCloth" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="capistrano" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
@@ -64,25 +70,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] highline (v1.5.1, /Library/Ruby/Gems/1.8/gems/highline-1.5.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] capistrano (v2.5.18, /Library/Ruby/Gems/1.8/gems/capistrano-2.5.18)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] net-sftp (v2.0.2, /Library/Ruby/Gems/1.8/gems/net-sftp-2.0.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, /Library/Ruby/Gems/1.8/gems/abstract-1.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.0.beta3, /Library/Ruby/Gems/1.8/gems/activemodel-3.0.0.beta3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v0.3.3, /Library/Ruby/Gems/1.8/gems/arel-0.3.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] builder (v2.1.2, /Library/Ruby/Gems/1.8/gems/builder-2.1.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.6.5, /Library/Ruby/Gems/1.8/gems/erubis-2.6.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.4.0.beta1, /Users/penwellr/.gem/ruby/1.8/gems/i18n-0.4.0.beta1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.1, /Library/Ruby/Gems/1.8/gems/mail-2.2.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] memcache-client (v1.8.3, /Users/penwellr/.gem/ruby/1.8/gems/memcache-client-1.8.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, /Library/Ruby/Gems/1.8/gems/mime-types-1.16)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.1, /Library/Ruby/Gems/1.8/gems/polyglot-0.3.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.1.0, /Library/Ruby/Gems/1.8/gems/rack-1.1.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack-mount (v0.6.3, /Library/Ruby/Gems/1.8/gems/rack-mount-0.6.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.5.4, /Users/penwellr/.gem/ruby/1.8/gems/rack-test-0.5.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Library/Ruby/Gems/1.8/gems/rake-0.8.7)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] text-format (v1.0.0, /Library/Ruby/Gems/1.8/gems/text-format-1.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] text-hyphen (v1.0.0, /Library/Ruby/Gems/1.8/gems/text-hyphen-1.0.0)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] thor (v0.13.6, /Users/penwellr/.gem/ruby/1.8/gems/thor-0.13.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.5, /Library/Ruby/Gems/1.8/gems/treetop-1.4.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] tzinfo (v0.3.22, /Users/penwellr/.gem/ruby/1.8/gems/tzinfo-0.3.22)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] RedCloth (v4.2.3, /Users/penwellr/.gem/ruby/1.8/gems/RedCloth-4.2.3)" level="application" />
   </component>
 </module>
 

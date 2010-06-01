@@ -11,11 +11,11 @@ body {
 	background: #453823;
 	text-align: justify;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
     font-weight: 300;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	margin-top: 0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -28,10 +28,22 @@ h1 {
 
 h2 {
 	font-size: 1.6em;
+    padding:0px;
+}
+
+h2 p
+{
+    margin:0px;
+    padding:0px;
 }
 
 h3 {
 	font-size: 1em;
+}
+
+h4 {
+    font-size: 0.8em;
+    color: #808080;
 }
 
 ul {
@@ -336,7 +348,7 @@ img.right {
 	color: #CCCCCC;
 }
 /* Calendar */
-
+                                  f
 #calendar_wrap {
 	padding: 10px 15px;
 	text-align: center;
@@ -382,7 +394,6 @@ img.right {
 	height: 40px;
     padding-top: 10px;
 	margin: 0 auto;
-	border-top: 1px solid #2C4449;
     color: black;
 }
 
@@ -414,7 +425,65 @@ img.right {
 
 }
 
+p a
+{
+    font-weight: bold;
+    color: #069;
+}
+
 #main
 {
     background-color: white;
+
+}
+
+.main_space
+{
+    margin: 16px;
+}
+
+fieldset {
+margin: 1.5em 0 0 0;
+padding: 0;
+}
+legend {
+margin-left: 1em;
+color: #000000;
+font-weight: bold;
+}
+fieldset ol {
+padding: 1em 1em 0 1em;
+list-style: none;
+}
+fieldset li {
+padding-bottom: 1em;
+}
+fieldset.submit {
+border-style: none;
+}
+
+.right_labels label {    
+float: left;
+width: 10em;
+margin-right: 1em;
+text-align: right;
+}
+
+fieldset.submit {
+float: none;
+width: auto;
+border-style: none;
+padding-left: 12em;
+background-color: transparent;
+}
+
+fieldset {
+float: left;
+clear: both;
+width: 100%;
+margin: 0 0 1.5em 0;
+padding: 0;
+border: 0 solid #BFBAB0;
+border-bottom: 1px solid #BFBAB0;
+background-color: #F2EFE9;
 }
