@@ -9,7 +9,7 @@
   <%= generate_random_color_palate %>
 </head>
 <body>
-    <div class="container_12 random_color_<%= @heading_color = rand 10 %>">
+    <div class="container_12" style="background-color: <%= generate_random_background_color %>">
       <%= random_header_draw %>
       <div class="alpha grid_12 omega">
         <div style="float: left; margin: 10px;">

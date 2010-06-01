@@ -18,6 +18,15 @@ module ApplicationHelper
     color_palate << "</style>".html_safe
   end
 
+  def generate_random_background_color
+    h = rand 100
+    s = 20
+    l = rand(15) + 75
+
+    hsl = Color::HSL.new(h,s,l)
+    hsl.html.html_safe
+  end
+
   def random_header_draw
     boxes = "<div class='header_random_boxs alpha grid_12 omega'>".html_safe
     size_so_far = 0
