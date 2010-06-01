@@ -1,4 +1,12 @@
 
+<h3>Active Projects</h3>
+<ul>
+  <% Project.active.order('updated_at DESC').limit(10).each do |project| %>
+    <li><%= link_to(project.name, project) %></li>
+  <% end %>
+  <% link_to("all projects...", projects_path) %>
+</ul>
+
 <h3>Most Recent Articles</h3>
 <ul>
   <% Article.visible.order('updated_at DESC').limit(20).each do |article| %>

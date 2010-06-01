@@ -1,4 +1,6 @@
 WwwRichardpenwellMe::Application.routes.draw do |map|
+  resources :projects
+
 
   resources :articles
 

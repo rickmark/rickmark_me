@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100601043809) do
+ActiveRecord::Schema.define(:version => 20100601051327) do
 
   create_table "articles", :force => true do |t|
     t.string   "subject"
@@ -17,6 +17,18 @@ ActiveRecord::Schema.define(:version => 20100601043809) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "hidden"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.string   "project_page"
+    t.string   "source_control_type"
+    t.string   "source_control_url"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "active"
+    t.string   "demo_url"
   end
 
   create_table "tag_usages", :force => true do |t|

@@ -1,0 +1,28 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<% if @project.project_page? %>
+<p>
+  <b>Project page:</b>
+  <%= @project.project_page %>
+</p>
+<% end %>
+
+<p>
+  <strong>Source control:</strong>
+  <%= source_control(@project) %>
+</p>
+
+<% if @project.demo_url? %>
+   Demonstration: <%= link_to(@project.demo_url, @project.demo_url) %>
+<% end %>
+
+<p>
+  <b>Description:</b><br/>
+  <%= @project.description %>
+</p>
+
