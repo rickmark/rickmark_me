@@ -31,6 +31,10 @@
           <%= f.label :description %>
           <%= f.text_area :description %>
         </li>
+        <li>
+          <%= f.label :tag_names, "Tags" %>
+          <%= f.text_field :tag_names %>
+        </li>
       </ol>
     </fieldset>
     <%= render :partial => 'shared/submit_area', :locals => { :form => f, :object => @project, :collection_path => projects_path } %>

@@ -26,3 +26,5 @@
   <%= @project.description %>
 </p>
 
+<h4>Tags</h4>
+<%= @project.tag_usages.collect { |tag_usage| link_to(tag_usage.tag.name, tag_usage.tag) }.join(', ').html_safe %>
