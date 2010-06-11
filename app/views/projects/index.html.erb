@@ -3,7 +3,7 @@
 
 <% @projects.each do |project| %>
   <div>
-    <h3><%= link_to project.name, project %><%= "<em>(inactive)</em>".html_safe unless project.active %></h3>
+    <h3><%= "<em>".html_safe unless project.active %><%= link_to project.name, project %><%= " (inactive)</em>".html_safe unless project.active %></h3>
 
     <%= project.description %>
     <h4>Tags: <%= project.tag_names %></h4>

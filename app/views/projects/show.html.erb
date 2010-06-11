@@ -8,7 +8,7 @@
 <% if @project.project_page? %>
 <p>
   <b>Project page:</b>
-  <%= @project.project_page %>
+  <%= link_to @project.project_page, @project.project_page %>
 </p>
 <% end %>
 
