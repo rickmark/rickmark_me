@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.visible
+    @title = "Article List"
 
     respond_to do |format|
       format.html
@@ -10,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @title = @article.subject
 
     respond_to do |format|
       format.html

@@ -12,6 +12,7 @@
   <% Article.visible.order('updated_at DESC').limit(20).each do |article| %>
   <li><%= link_to(article.subject, article) %></li>
   <% end %>
+  <%= link_to('all articles...', articles_path)%>
 </ul>
 
 
