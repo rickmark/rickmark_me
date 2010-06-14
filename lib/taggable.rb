@@ -13,7 +13,7 @@ module Taggable
 
     def tag_names=(value)
       tags = value.split(', ').collect{ |tag| Tag.find_or_create_by_name(tag) }
-      tag_usages.clear
+      tag_usages.each do { |tu| tu.destroy }
       tags.each { |tag| tag_usages.build(:tag => tag) }
     end
   end
