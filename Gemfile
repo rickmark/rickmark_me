@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails'
-gem 'sass'
+gem 'rails', '~> 4.1'
+gem 'sass-rails'
 gem 'uglifier'
 gem 'therubyracer'
 gem 'haml'
-
+gem 'sprockets-rails'
+gem 'coffee-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

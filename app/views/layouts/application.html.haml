@@ -2,7 +2,7 @@
 %html
   %head
     %title= @title || "Richard Mark"
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag :application
     = javascript_include_tag :defaults
     = javascript_include_tag 'shCore', 'shBrushRuby'
     = csrf_meta_tag
@@ -12,10 +12,11 @@
     .container_12{:style => "background-color: #{generate_random_background_color}"}
       = random_header_draw
       .alpha.grid_12.omega
-        %div{:style => "float: left; margin: 10px;"}
-          %a{:href => "/"}/
-          %h1 Richard Penwell
-          %h2{:style => "position:absolute;"}= random_subheading
+        %div{:style => "margin: 10px;"}
+          %a{:href => '/' }
+            %h1 Richard Mark
+          %h2= random_subheading
+
       #left.alpha.grid_3
         .main_space
           = render :partial => 'shared/left_navigation'
