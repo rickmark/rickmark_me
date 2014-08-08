@@ -1,0 +1,4 @@
+- if @home_article
+  = @home_article.to_html
+%h2 Recent Articles
+= render :partial => 'articles/article_list'

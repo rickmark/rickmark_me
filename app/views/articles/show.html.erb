@@ -1,7 +1,0 @@
-<h2><%= @article.subject %></h2>
-<h4>Posted at <%= @article.created_at %><%= " and last corrected at #{@article.updated_at}" unless @article.created_at == @article.updated_at %></h4>
-
-<%= @article.to_html %>
-
-<h4>Tags</h4>
-<%= @article.tag_usages.collect { |tag_usage| link_to(tag_usage.tag.name, tag_usage.tag) }.join(', ').html_safe %>

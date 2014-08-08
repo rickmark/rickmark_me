@@ -6,8 +6,8 @@ class Article < ActiveRecord::Base
   validates_presence_of :subject
   validates_presence_of :body
 
-  default_scope order('updated_at DESC')
-  scope :visible, where(:hidden => false)
+  default_scope -> { order('updated_at DESC') }
+  scope :visible, -> { where(:hidden => false) }
 
   def to_html(length = nil)
     html = RedCloth.new(body).to_html

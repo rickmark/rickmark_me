@@ -1,0 +1,20 @@
+%h3 Resources
+%ul
+  %li= link_to "YouTrack Bug Reporting", "http://#{request.host}:8080/youtrack/"
+  %li= link_to "TeamCity Build Engine", "http://#{request.host}:8080/teamCity/"
+  %li= link_to "My Github Page", "http://github.com/penwellr"
+  %li= link_to "My Facebook Page", "http://facebook.com/penwellr"
+%h3 Active Projects
+%ul
+  - Project.active.order('updated_at DESC').limit(10).each do |project|
+    %li= link_to(project.name, project)
+  = link_to("all projects...", projects_path)
+%h3 Most Recent Articles
+%ul
+  - Article.visible.order('updated_at DESC').limit(20).each do |article|
+    %li= link_to(article.subject, article)
+  = link_to('all articles...', articles_path)
+%h3 Tags
+%ul
+  - Tag.all.each do |tag|
+    %li= link_to(tag.name, tag)

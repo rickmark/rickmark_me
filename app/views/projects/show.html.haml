@@ -1,0 +1,19 @@
+%p.notice= notice
+%p
+  %b Name:
+  = @project.name
+- if @project.project_page?
+  %p
+    %b Project page:
+    = link_to @project.project_page, @project.project_page
+%p
+  %strong Source control:
+  = source_control(@project)
+- if @project.demo_url?
+  Demonstration: #{link_to(@project.demo_url, @project.demo_url)}
+%p
+  %b Description:
+  %br/
+  = @project.to_html
+%h4 Tags
+= @project.tag_usages.collect { |tag_usage| link_to(tag_usage.tag.name, tag_usage.tag) }.join(', ').html_safe

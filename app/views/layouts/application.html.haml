@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %title= @title || "Richard Mark"
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = javascript_include_tag 'shCore', 'shBrushRuby'
+    = csrf_meta_tag
+    = generate_random_color_palate
+    %meta{:content => "EFTQuf9ZvjuNyolRKHKDXfoJ7HY2pYzo1tbMLHYk96Y", :name => "google-site-verification"}/
+  %body
+    .container_12{:style => "background-color: #{generate_random_background_color}"}
+      = random_header_draw
+      .alpha.grid_12.omega
+        %div{:style => "float: left; margin: 10px;"}
+          %a{:href => "/"}/
+          %h1 Richard Penwell
+          %h2{:style => "position:absolute;"}= random_subheading
+      #left.alpha.grid_3
+        .main_space
+          = render :partial => 'shared/left_navigation'
+      #main.grid_9.omega
+        .main_space
+          = yield
+      #footer.alpha.grid_12.omega
+        %p.copyright
+          Copyright &copy; #{Date.current.year} Richard Mark. All Rights Reserved.
+      .clear
+      %script{:language => "javascript"}
+        dp.SyntaxHighlighter.ClipboardSwf = '/clipboard.swf';
+        dp.SyntaxHighlighter.HighlightAll('code');
+      = render :partial => 'shared/google_analytics'

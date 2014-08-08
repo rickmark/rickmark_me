@@ -1,9 +1,0 @@
-    <fieldset class="submit">
-      <%= form.submit %>
-      <% if object.new_record? %>
-          <%= link_to 'Back', object %>
-      <% else %>
-          <%= link_to 'Show', object %> |
-          <%= link_to 'Back', collection_path %>
-      <% end %>
-    </fieldset>
