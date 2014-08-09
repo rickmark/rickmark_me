@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new(article_attrs)
 
     respond_to do |format|
       if @article.save
@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      if @article.update_attributes(params[:article])
+      if @article.update_attributes(article_attrs)
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
         format.xml { head :ok }
       else
@@ -63,5 +63,10 @@ class ArticlesController < ApplicationController
         format.xml { render :xml => @article.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  private
+  def article_attrs
+    params.require(:article).permit!
   end
 end
