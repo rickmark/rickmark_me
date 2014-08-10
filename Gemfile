@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 4.1'
+
 gem 'sass-rails'
 gem 'uglifier'
 gem 'therubyracer'
@@ -8,19 +9,8 @@ gem 'haml'
 gem 'sprockets-rails'
 gem 'coffee-rails'
 gem 'bootstrap-sass'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'color-tools', :require => 'color'
 gem 'RedCloth'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -34,6 +24,11 @@ gem 'capistrano'
 #   gem 'webrat'
 # end
 
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
 group :production do
-  gem 'unicorn'
+  gem 'puma'
+  gem 'mysql2'
 end

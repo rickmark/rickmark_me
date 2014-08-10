@@ -16,7 +16,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  database: rickmark
+  username: rickmark
+  password: o3099k27
+  host: rickmark-me.c8istzty8avh.us-east-1.rds.amazonaws.com
+  port: 3306
+
