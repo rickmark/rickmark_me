@@ -28,7 +28,7 @@ module ApplicationHelper
   end
 
   def random_header_draw
-    boxes = "<div class='header_random_boxs alpha grid_12 omega'>".html_safe
+    boxes = "<div class='header_random_boxs alpha grid_12 omega'>\n".html_safe
     size_so_far = 0
 
     chunks = []
@@ -43,7 +43,7 @@ module ApplicationHelper
 
       chunk_size = (HEADER_WIDTH - size_so_far) if chunks.last == chunk
       size_so_far += chunk_size
-      boxes << "<div class='random_color_#{chunk_color}' style='float: left; width: #{chunk_size}px;'></div>".html_safe
+      boxes << "  <div class='random_color_#{chunk_color}' style='float: left; width: #{chunk_size}px;'></div>\n".html_safe
     end
 
     boxes << "</div>\n".html_safe
