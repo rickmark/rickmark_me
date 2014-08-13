@@ -17,10 +17,10 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8
-  database: rickmark
-  username: rickmark
-  password: o3099k27
-  host: rickmark-me.c8istzty8avh.us-east-1.rds.amazonaws.com
+  host: us-cdbr-azure-west-a.cloudapp.net
   port: 3306
-
+  database: rickmark
+  username: b885cc74a2ddbe
+  password: 300efe9b
+  pool: 5
+  timeout: 5000
