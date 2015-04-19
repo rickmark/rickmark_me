@@ -12,6 +12,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'color-tools', :require => 'color'
 gem 'RedCloth'
 gem 'foreman'
+gem 'rspec-rails'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
