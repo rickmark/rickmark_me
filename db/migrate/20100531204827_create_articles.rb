@@ -4,7 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :subject
       t.text :body
 
-      t.timestamps
+      t.timestamps :null => false
     end
   end
 

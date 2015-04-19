@@ -12,11 +12,15 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    http_login
+
     get :new
     assert_response :success
   end
 
   test "should create project" do
+    http_login
+
     assert_difference('Project.count') do
       post :create, :project => @project.attributes
     end
@@ -30,16 +34,22 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    http_login
+
     get :edit, :id => @project.to_param
     assert_response :success
   end
 
   test "should update project" do
+    http_login
+
     put :update, :id => @project.to_param, :project => @project.attributes
     assert_redirected_to project_path(assigns(:project))
   end
 
   test "should destroy project" do
+    http_login
+
     assert_difference('Project.count', -1) do
       delete :destroy, :id => @project.to_param
     end

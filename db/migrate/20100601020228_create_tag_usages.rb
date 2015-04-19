@@ -4,7 +4,7 @@ class CreateTagUsages < ActiveRecord::Migration
       t.integer :tag_id
       t.integer :taggable_id
 
-      t.timestamps
+      t.timestamps :null => false
     end
 
     remove_column :tags, :taggable_id

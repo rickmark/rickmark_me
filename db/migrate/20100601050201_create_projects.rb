@@ -7,7 +7,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :source_control_url
       t.text :description
 
-      t.timestamps
+      t.timestamps :null => false
     end
   end
 
