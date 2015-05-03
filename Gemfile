@@ -13,13 +13,9 @@ gem 'color-tools', :require => 'color'
 gem 'RedCloth'
 gem 'foreman'
 gem 'rspec-rails'
-
-group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
-end
+gem 'mysql2'
 
 group :production do
   gem 'puma'
-  gem 'mysql2'
   gem 'therubyracer'
 end

@@ -1,10 +1,15 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: mysql2
+  host: localhost
+  port: 3306
+  database: rickmark_dev
+  username: root
+  password:
   pool: 5
   timeout: 5000
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,10 +22,10 @@ test:
 
 production:
   adapter: mysql2
-  host: us-cdbr-azure-west-a.cloudapp.net
+  host: localhost
   port: 3306
-  database: rickmark
-  username: b885cc74a2ddbe
-  password: 300efe9b
+  database: rickmark_prod
+  username: root
+  password:
   pool: 5
   timeout: 5000
