@@ -25,7 +25,7 @@ production:
   host: localhost
   port: 3306
   database: rickmark_prod
-  username: root
-  password:
+  username: rickmark_me_app
+  password: eMKY!z5UPyTCK_t
   pool: 5
   timeout: 5000
