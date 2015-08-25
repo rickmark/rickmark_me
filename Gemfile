@@ -28,7 +28,10 @@ gem 'RedCloth'
 gem 'foreman'
 gem 'rspec-rails'
 gem 'mysql2'
+
 gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
 
 group :production do
 #  gem 'puma'
