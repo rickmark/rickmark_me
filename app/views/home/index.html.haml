@@ -1,4 +1,584 @@
-- if @home_article
-  = @home_article.to_html
-%h2 Recent Articles
-= render :partial => 'articles/article_list'
+!!!
+%html{:lang => 'en'}
+  %head
+    / Title
+    %title Rick Mark - Software Artisan
+    / Meta
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %meta{:content => 'public', 'http-equiv' => 'Cache-control'}/
+    %meta{:content => 'width=device-width, initial-scale=1.0', :name => 'viewport'}/
+    %meta{:content => 'Personal website of Rick Mark.  Software developer, business owner, and voracious reader.', :name => 'description'}/
+    %meta{:content => '', :name => 'keywords'}/
+    %meta{:content => 'Rick Mark', :name => 'author'}/
+
+    %link{:href => 'images/favicon.png', :rel => 'shortcut icon'}/
+    %link{:href => 'images/apple-touch-icon.png', :rel => 'apple-touch-icon'}/
+    %link{:href => 'images/apple-touch-icon-72x72.png', :rel => 'apple-touch-icon', :sizes => '72x72'}/
+    %link{:href => 'images/apple-touch-icon-114x114.png', :rel => 'apple-touch-icon', :sizes => '114x114'}/
+
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    / Retina Images
+    :javascript
+      if((window.devicePixelRatio===undefined ? 1 : window.devicePixelRatio) > 1)
+          document.cookie = 'HTTP_IS_RETINA=1;path=/';
+    / End Retina Images
+    / Google Web Fonts
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500'
+    / Stylesheets
+    = stylesheet_link_tag :application
+    = stylesheet_link_tag :blue, id: 'color'
+  %body
+    / Facebook Source
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    / Loader
+    #page-loader
+    / Loader / End
+    / Header
+    %header#nav-content.vertical-nav.nav-white
+      / Logo
+      .my-logo
+        %a{:href => '#profile'}
+          = image_tag 'my-photo.png', alt: 'Rick Mark'
+      / Navigation
+      %ul.menu.nav.me-nav
+        %li.menu-item.active
+          %a{:href => '#profile'}
+            %span Profile
+            %i.fa.fa-user
+        %li.menu-item
+          %a{:href => '#resume'}
+            %span Resume
+            %i.fa.fa-pencil
+        %li.menu-item
+          %a{:href => '#portfolio'}
+            %span Portfolio
+            %i.fa.fa-desktop
+        %li.menu-item
+          %a{:href => "#blog"}
+            %span Latest Posts
+            %i.fa.fa-comment
+        %li.menu-item
+          %a{:href => "#contact"}
+            %span Contact
+            %i.fa.fa-phone
+      / Copyright
+      %span.copyright.hidden-md
+        © 2014
+        = succeed '.' do
+          %b Rick Mark
+    / Header / End
+    / Page Content
+    #page-content
+      / Profile
+      %section#profile.black
+        / Background photo
+        -# profile-bg.editable-alpha{'data-alpha' => '40'}
+          -# %img{:alt => "", :src => 'images/backgrounds/profile-bg.jpg'}/
+        .content.padded.dark
+          / Top Bar
+          .top-bar
+            / Social media
+            .pull-left
+              %span.hiddend-sm.hidden-xs Check my social media!    
+              %ul.social-icons.si-pull-up
+                %li
+                  %a{:href => '#'}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => '#'}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => '#'}
+                    %i.fa.fa-google-plus
+            / URL
+            .pull-right
+              %a.hidden-xs{:href => 'http://www.rickmark.me'} www.rickmark.me
+          / Profile Content
+          .profile-content
+            %h1.short Rick Mark
+            %h5
+              Professional Microsoft, Apple and Ruby software developer.
+            %br
+              I work to bring out the best in my team; I ask questions, and try to teach what I know to others. I lead
+              with interpersonal skills backed by substantial knowledge and experience. I’m a realist, and at the same
+              time I drive for high ideals. I estimate and re-estimate honestly and deliver.
+
+            %a.btn.btn-default{:href => '#contact'} Contact me
+          / Bottom Bar
+          .bottom-bar.profile-bottom-bar.hidden-xs
+            / Contact List
+            %ul.list-inline
+              %li
+                %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker>
+                8397 158th Ave NE #609, Redmond, WA 98052
+              %li
+                %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+                %a{:href => 'mailto:info@rickmark.me'} info@rickmark.me
+              %li
+                %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone>
+                +1 (617) 834-7876
+      / Profile / End
+      / Resume
+      %section#resume
+        .content.dimmed-effect.padded-short
+          .row
+            .col-lg-4
+              / Box - About Me
+              .resume-box.animated.slide-in-top
+                %i.title-icon.text-blue.flaticon-speech43
+                %h3 Who am I?
+                %p.lead Sed porttitor nulla eget enim gravida blandit. Integer risus nunc, molestie a nibh in, interdum fringilla urna.
+                %p Sed lacinia, nibh sit amet auctor vestibulum, enim risus condimentum erat, quis vestibulum mi ligula a nulla. Nulla vitae pharetra tellus.
+                %p Aenean ac tincidunt augue, volutpat ullamcorper elit.
+                %a.btn.btn-black{:href => '#portfolio'} See my portfolio
+                %a.btn.btn-default{:href => '#contact'} Contact me
+              / Box - Skills & Attributes
+              .resume-box.animated.slide-in-left.appear-second
+                %i.title-icon.text-green.flaticon-open79
+                %h3 Skills &amp; Attributes
+                / Sinlge skill
+                .skill
+                  %span.skill-name Adobe Photoshop
+                  .skill-bar.sb-green
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                / Sinlge skill
+                .skill
+                  %span.skill-name Adobe Dreamweaver
+                  .skill-bar.sb-green
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-off
+                    .skill-rate-off
+                / Sinlge skill
+                .skill
+                  %span.skill-name HTML/CSS
+                  .skill-bar.sb-green
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                / Sinlge skill
+                .skill
+                  %span.skill-name jQuery
+                  .skill-bar.sb-green
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-off
+            .col-md-6.col-lg-4
+              / Box - Specialities
+              .resume-box.animated.slide-in-right
+                %i.title-icon.text-red.flaticon-mouse19
+                %h3 My Specialities
+                / Speciality
+                .speciality
+                  %i.speciality-icon.text-red.flaticon-bulb11
+                  .speciality-content
+                    %h5.short Web design
+                    %p.speciaity-description Great, modern website designes.
+                / Speciality
+                .speciality
+                  %i.speciality-icon.text-red.flaticon-codings1
+                  .speciality-content
+                    %h5.short Front-End Web Development
+                    %p.speciaity-description Great, modern website designes.
+                / Speciality
+                .speciality
+                  %i.speciality-icon.text-red.flaticon-tablet42
+                  .speciality-content
+                    %h5.short App Design
+                    %p.speciaity-description Great, modern website designes.
+              / Box - Education & Jobs
+              .resume-box.animated.slide-in-left
+                %i.title-icon.text-yellow.flaticon-document56
+                %h3 Education &amp; Jobs
+                .timeline
+                  / Single event
+                  .timeline-event.te-yellow
+                    .event-date Jan 2004 - Dec 2006
+                    .event-name Specialization course
+                    .event-description University of studies, Poland, Cracow
+                  / Single event
+                  .timeline-event.te-yellow
+                    .event-date Jan 2004 - Dec 2006
+                    .event-name Specialization course
+                    .event-description University of studies, Poland, Cracow
+                  / Single event
+                  .timeline-event.te-yellow
+                    .event-date Jan 2004 - Dec 2006
+                    .event-name Specialization course
+                    .event-description University of studies, Poland, Cracow
+            .col-md-6.col-lg-4
+              / Box - Languages
+              .resume-box.animated.slide-in-right.appear-second
+                %i.title-icon.text-orange.flaticon-chat25
+                %h3 Languages
+                / Single skill
+                .skill
+                  %span.skill-name English
+                  .skill-bar.sb-orange
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-on
+                / Single skill
+                .skill
+                  %span.skill-name German
+                  .skill-bar.sb-orange
+                    .skill-rate-on
+                    .skill-rate-on
+                    .skill-rate-off
+                    .skill-rate-off
+              / Box - Hobbies
+              .resume-box.animated.slide-in-bottom
+                %i.title-icon.text-violet.flaticon-joystick4
+                %h3 Hobbies &amp; Interests
+                / List group
+                %ul.list-group
+                  %li.list-group-item Beer
+                  %li.list-group-item Sport
+                  %li.list-group-item Music
+                  %li.list-group-item Videogames
+      / Resume / End
+      / Portfolio
+      %section#portfolio
+        / Projects Holder
+        .projects-holder.black.dark.clearfix
+          / Single Project
+          .single-project.animated.fade-in
+            .project-image
+              %img{:alt => "", :src => 'images/portfolio/project_01.jpg'}/
+            .project-mask
+              .project-info
+                .project-title Swimming Pool
+                .project-caption.text-blue Webdesgin
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-blue.btn-sm{:href => 'projects/ajax-project-details.html'} View it
+                  %a.btn.btn-default.btn-sm{:href => '#', :target => '_blank'} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-third
+            .project-image
+              %img{:alt => "", :src => 'images/portfolio/project_02.jpg'}/
+            .project-mask
+              .project-info
+                .project-title Shopping Mall
+                .project-caption.text-yellow Webdesgin / Webdevelopment
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-yellow.btn-sm{:href => 'projects/ajax-project-details.html'} View it
+                  %a.btn.btn-default.btn-sm{:href => '#', :target => '_blank'} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-second
+            .project-image
+              %img{:alt => "", :src => 'images/portfolio/project_03.jpg'}/
+            .project-mask
+              .project-info
+                .project-title Animal Charity
+                .project-caption.text-green Corporate Identity
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-green.btn-sm{:href => 'projects/ajax-project-details.html'} View it
+                  %a.btn.btn-default.btn-sm{:href => '#', :target => '_blank'} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-fourth
+            .project-image
+              %img{:alt => "", :src => 'images/portfolio/project_04.jpg'}/
+            .project-mask
+              .project-info
+                .project-title Be Pregnant
+                .project-caption.text-red Webdesgin / Corporate Identity
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-red.btn-sm{:href => "projects/ajax-project-details.html"} View it
+                  %a.btn.btn-default.btn-sm{:href => "#", :target => "_blank"} Online version
+          / Single Project
+          .single-project.animated.fade-in
+            .project-image
+              %img{:alt => "", :src => "images/portfolio/project_05.jpg"}/
+            .project-mask
+              .project-info
+                .project-title Booking Store
+                .project-caption.text-green Webdesgin / Webdevelopment
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-green.btn-sm{:href => "projects/ajax-project-details.html"} View it
+                  %a.btn.btn-default.btn-sm{:href => "#", :target => "_blank"} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-second
+            .project-image
+              %img{:alt => "", :src => "images/portfolio/project_06.jpg"}/
+            .project-mask
+              .project-info
+                .project-title Social Media App
+                .project-caption.text-orange App Design
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-orange.btn-sm{:href => "projects/ajax-project-details.html"} View it
+                  %a.btn.btn-default.btn-sm{:href => "#", :target => "_blank"} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-fourth
+            .project-image
+              %img{:alt => "", :src => "images/portfolio/project_07.jpg"}/
+            .project-mask
+              .project-info
+                .project-title Medical Business
+                .project-caption.text-blue Webdesgin / Corporate Identity
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-blue.btn-sm{:href => "projects/ajax-project-details.html"} View it
+                  %a.btn.btn-default.btn-sm{:href => "#", :target => "_blank"} Online version
+          / Single Project
+          .single-project.animated.fade-in.appear-third
+            .project-image
+              %img{:alt => "", :src => "images/portfolio/project_08.jpg"}/
+            .project-mask
+              .project-info
+                .project-title Pice of cake!
+                .project-caption.text-orange Webdesgin / Webdevelopment
+                .project-buttons
+                  %a.ajax-portfolio-link.btn.btn-orange.btn-sm{:href => "projects/ajax-project-details.html"} View it
+                  %a.btn.btn-default.btn-sm{:href => "#", :target => "_blank"} Online version
+        / Ajax Project Details
+        .project-content
+      / Portfjolo / End
+      / Blog
+      %section#blog
+        .content.padded
+          .row
+            .col-lg-12
+              / Post Carousel
+              .post-carousel.animated.slide-in-top
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_01.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} Awesome Seattle Cycle Trip
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_02.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} Brand New PC
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_03.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} To be or not to be?
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => 'images/blog/post_04.jpg'}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} New Software for my company
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_05.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} Awesome Seattle Cycle Trip
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_06.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} Brand new PC
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+                / Single Post
+                %article.post.post-carousel-item
+                  .post-image
+                    %img{:alt => "", :src => "images/blog/post_07.jpg"}/
+                  .post-content-holder
+                    .post-content
+                      .post-info.clearfix
+                        %span.post-date 22 May, 2014
+                        .post-meta
+                          %span
+                            %i.fa.fa-comment
+                            %a{:href => "#"} 4 comments
+                          %span
+                            %i.fa.fa-tag
+                            %a{:href => "#"} Webdesign
+                      .post-text
+                        %h3
+                          %a{:href => "single-post.html"} To be or not to be?
+                        %p.lead Per sint eirmod expetenda te. Pro ne essent.
+                        %p Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                        %a.btn.btn-primary.btn-sm{:href => "single-post.html"} Read more
+              / End Of Section
+              .end-of-section
+                / Left Caption
+                .pull-left
+                  %span.hiddend-sm.hidden-xs Would you like to check all of my posts?    
+                  %a.btn.btn-black.btn-sm{:href => "blog-page.html"} Check my Blog Page!
+                / Post Carousel Navigation
+                .post-carousel-control
+                  %a.post-carousel-prev{:href => "#"} Previous
+                  %a.post-carousel-next{:href => "#"} Next
+      / Blog / End
+      / Contact
+      %section#contact.black
+        / Google Map
+        #google-map.animated.zoom-out
+        / Contact Content
+        .content.contact-content.padded.dark.animated.slide-in-left
+          %i.title-icon.text-primary.flaticon-speech43
+          %h2 Do you want to hire me?
+          / Contact List
+          %ul.list-unstyled.list-unstyled-icons
+            %li
+              %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker>
+              8397 158th Ave NE
+              %br>/
+              Apt 609
+              %br>/
+              Redmond, WA 98052
+            %li
+              %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+              %a{:href => 'mailto:info@rickmark.me'} info@rickmark.me
+            %li
+              %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone>
+              +0(31)6 89764536
+          %br/
+          %br/
+          %p
+            %a.btn.btn-primary{:href => 'https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2'} Download my CV
+          / Bottom Bar
+          .bottom-bar.contact-bottom-bar
+            .row
+              .col-md-12.col-lg-6
+                %h5 Check my social media!
+                / Social Icons
+                %ul.social-icons.medium
+                  %li
+                    %a{:href => 'https://www.facebook.com/penwellr'}
+                      %i.fa.fa-facebook
+                  %li
+                    %a{:href => 'https://twitter.com/almightylinuxgo'}
+                      %i.fa.fa-twitter
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-google-plus
+              .col-md-12.col-lg-6
+                %h5 Like Me on Facebook!
+                / Like Button
+                .fb-like{'data-action' => 'like', "data-href" => 'https://www.facebook.com/penwellr', 'data-layout' => 'button_count', 'data-share' => "false", "data-show-faces" => "false"}
+        / Contact Form
+        #contact-form-holder.dark
+          .contact-form-trigger.animated.slide-in-right.appear-second
+            %i.flaticon-mail21
+          %form#contact-form{:method => "post", :role => "form"}
+            .form-group
+              %label Name:
+              %input#name.form-control{:name => "name", :placeholder => "Enter your name", :required => "", :type => "text"}/
+            .form-group
+              %label Email:
+              %input#email.form-control{:name => "email", :placeholder => "Enter your email", :required => "", :type => "email"}/
+            .form-group
+              %label Message:
+              %textarea#message.form-control{:name => "message", :rows => "3"}
+            %button.btn.btn-default{:type => "submit"}
+              Submit
+              %i.icon-after.fa.fa-chevron-right
+    / Contact / End
+    / Page Content / End
+    / Scripts
+    = javascript_include_tag :application
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'
+    = javascript_include_tag :custom

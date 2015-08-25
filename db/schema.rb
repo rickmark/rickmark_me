@@ -14,37 +14,37 @@
 ActiveRecord::Schema.define(version: 20100601051327) do
 
   create_table "articles", force: :cascade do |t|
-    t.string   "subject"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "subject",    limit: 255
+    t.text     "body",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.boolean  "hidden"
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.string   "project_page"
-    t.string   "source_control_type"
-    t.string   "source_control_url"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name",                limit: 255
+    t.string   "project_page",        limit: 255
+    t.string   "source_control_type", limit: 255
+    t.string   "source_control_url",  limit: 255
+    t.text     "description",         limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.boolean  "active"
-    t.string   "demo_url"
+    t.string   "demo_url",            limit: 255
   end
 
   create_table "tag_usages", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "taggable_type"
+    t.integer  "tag_id",        limit: 4
+    t.integer  "taggable_id",   limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "taggable_type", limit: 255
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end

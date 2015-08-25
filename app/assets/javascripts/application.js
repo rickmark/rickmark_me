@@ -1,5 +1,16 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-//= require prototype
-//= require rails
+
+//= require jquery
+//= require page-loader
+//= require bootstrap
+// require jquery.easing
+//= require jquery.validate
+//= require jquery.localScroll
+//= require jquery.scrollTo
+//= require jquery.fitvids
+//= require jquery.appear
+//= require jquery.waypoints
+//= require owl.carousel
+
