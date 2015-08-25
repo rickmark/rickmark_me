@@ -121,17 +121,19 @@ $(document).ready(function (){
 				  }
 			  ]
 				  
-	  var yourLatitude = 40.758895;
-	  var yourLongitude = -73.985131;
+	  var yourLatitude = 47.678624118163235;
+	  var yourLongitude = -122.13015716509689;
 	  
 	  var myOptions = {
-		zoom: 14,
-		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.01),
+		zoom: 11,
+		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.15),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControl: false,
 		panControl: false,
 		zoomControl: false,
 		scaleControl: false,
+        draggable: false,
+        scrollwheel: false,
 		streetViewControl: false,
 		styles: mapDark
 	  };

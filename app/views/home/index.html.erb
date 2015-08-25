@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Title -->
+<title>Rick Mark - Software Artisan</title>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Moje. - Responsive One-Page Bootstrap vCard Template.">
+<meta name="keywords" content="moje, responsive, one page, resume, bootstrap, vCard, personal page, html5, css3, retina">
+<meta name="author" content="Suelo">
+
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Retina Images -->
+<script>if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
+    document.cookie='HTTP_IS_RETINA=1;path=/';</script>
+<!-- End Retina Images -->
+
+<!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/animations.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+<link rel="stylesheet" type="text/css" href="css/colors/blue.css" id="colors" />
+
+</head>
+
+<body>
+
+<!-- Facebook Source -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Loader -->
+<div id="page-loader">	</div>
+<!-- Loader / End -->
+
+<!-- Header  -->
+<header id="nav-content" class="vertical-nav nav-white">
+
+	<!-- Logo -->
+	<div class="my-logo">
+    	<a href="#profile"><img src="images/my-photo.png" alt="Rick Mark" /></a>
+    </div>
+    
+    <!-- Navigation -->
+    <ul class="menu nav me-nav">
+    	<li class="menu-item active"><a href="#profile"><span>Profile</span><i class="fa fa-user"></i></a></li>
+        <li class="menu-item"><a href="#resume"><span>Resume</span><i class="fa fa-pencil"></i></a></li>
+        <li class="menu-item"><a href="#portfolio"><span>Portfolio</span><i class="fa fa-desktop"></i></a></li>
+        <li class="menu-item"><a href="#blog"><span>Latest Posts</span><i class="fa fa-comment"></i></a></li>
+        <li class="menu-item"><a href="#contact"><span>Contact</span><i class="fa fa-phone"></i></a></li>
+    </ul>
+    
+    <!-- Copyright -->
+    <span class="copyright hidden-md">© <%= Time.now.year %> <b>Rick Mark</b>.</span>
+
+</header>
+<!-- Header / End -->
+
+<!-- Page Content -->
+<div id="page-content">
+
+	<!-- Profile -->
+	<section id="profile" class="black">
+    
+    	<!-- Background photo -->
+    	<div id="profile-bg" class="editable-alpha" data-alpha="40"></div>
+    
+    	<div class="content padded dark">
+        
+        	<!-- Top Bar -->
+        	<div class="top-bar">
+            
+            	<!-- Social media -->
+            	<div class="pull-left">
+                	<span class="hiddend-sm hidden-xs"></span>
+                    <ul class="social-icons si-pull-up">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- URL -->
+                <div class="pull-right">
+                	<a href="#" class="hidden-xs">www.rickmark.me</a>
+                </div>
+                
+            </div>
+        
+			<!-- Profile Content -->
+            <div class="profile-content">
+            	<h1 class="short">Rick Mark</h1>
+                <h5>I am <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>, <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software developer and security expert.</h5>
+                <a href="https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2" class="btn btn-primary" target="_blank">Download my CV</a> <a href="#contact" class="btn btn-default">Contact me</a>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="bottom-bar profile-bottom-bar hidden-xs">
+            
+            	<!-- Contact List -->
+                <ul class="list-inline">
+                  <li><i class="inline-icon icon-before-and-after text-primary fa fa-map-marker"></i>8397 158th Ave NE, Redmond, WA 98052</li>
+                  <li><i class="inline-icon icon-before-and-after text-primary fa fa-comment"></i><a href="mailto:info@rickmark.me">info@rickmark.me</a></li>
+                  <li><i class="inline-icon icon-before-and-after text-primary fa fa-phone"></i>+1 (206) 913-3215</li>
+                </ul>
+             
+            </div>
+                    
+        </div>    	
+        
+    </section>
+    <!-- Profile / End -->
+    
+    <!-- Resume -->
+	<section id="resume">
+    
+    	<div class="content dimmed-effect padded-short">
+        	
+            <div class="row">
+            
+              <div class="col-lg-4">
+              
+              	<!-- Box - About Me -->
+                <div class="resume-box animated slide-in-top">
+                  <i class="title-icon text-blue flaticon-speech43"></i>
+                  <h3>Who am I?</h3>
+                  <p class="lead">Software makes everything new again.  </p>
+                  <p>I'm inspired by technology. From the latest features on a phone to the leading edge of science in the cloud, no where else is there a world so full of possibilities. </p>
+                  <p>I work to bring out the best in my team; I ask questions, and try to teach what I know to others.  I lead with interpersonal skills backed by substantial knowledge and experience.  I’m a realist, and at the same time I drive for high ideals.  I estimate and reestimate honestly and deliver.</p>
+                  <a href="#portfolio" class="btn btn-black">See my portfolio</a> <a href="#contact" class="btn btn-default">Contact me</a>
+                </div>
+
+                <!-- Box - Languages -->
+                <div class="resume-box animated slide-in-left appear-second">
+                  <i class="title-icon text-orange flaticon-chat25"></i>
+                  <h3>Communication</h3>
+                  <!-- Single skill -->
+                    <p class="lead">The key to a successful software project</p>
+                  <p>
+                    I personally believe close communication allows me to deliver exactly the solution needed.  It is a
+                    fine balance between getting input from a stakeholder and acting without autonomy.  I leverage my
+                    10 years of software solution experience to make the judgement of when the technical decision is best
+                    made by developers, or when the business decision should be made by stakeholders.
+                  </p>
+                </div>
+
+              </div>
+          	  
+              <div class="col-md-6 col-lg-4">
+              
+              	<!-- Box - Specialities -->
+                <div class="resume-box animated slide-in-right">
+                  <i class="title-icon text-red flaticon-mouse19"></i>
+                  <h3>My Specialities</h3>
+                  <!-- Speciality -->
+                  <div class="speciality">
+                  	<i class="speciality-icon text-red flaticon-bulb11"></i>
+                    <div class="speciality-content">
+                    	<h5 class="short">Intellectual Property</h5>
+                        <p class="speciaity-description">Building strong patent portfolios as I design real word solutions.</p>
+                    </div>
+                  </div>
+                  <!-- Speciality -->
+                  <div class="speciality">
+                  	<i class="speciality-icon text-red flaticon-codings1"></i>
+                    <div class="speciality-content">
+                    	<h5 class="short">End-to-End Development</h5>
+                        <p class="speciaity-description">Database schema, API, HTML and Mobile app development.</p>
+                    </div>
+                  </div>
+                  <!-- Speciality -->
+                  <div class="speciality">
+                  	<i class="speciality-icon text-red flaticon-tablet42"></i>
+                    <div class="speciality-content">
+                    	<h5 class="short">Mobile First</h5>
+                        <p class="speciaity-description">iOS, Android and Windows Phone experience.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Box - Education & Jobs -->
+                <div class="resume-box animated slide-in-left">
+                  <i class="title-icon text-yellow flaticon-document56"></i>
+                  <h3>Work History</h3>
+                  <div class="timeline">
+                  	<!-- Single event -->
+                  	<div class="timeline-event te-yellow">
+                      <div class="event-date">Oct 2010 - Apr 2015</div>
+                      <div class="event-name">Microsoft Corporation</div>
+                      <div class="event-description">Redmond, WA</div>
+                    </div>
+                    <!-- Single event -->
+                  	<div class="timeline-event te-yellow">
+                      <div class="event-date">Feb 2009 - June 2010</div>
+                      <div class="event-name">Phoenix Media Communications Group</div>
+                      <div class="event-description">Boston, MA</div>
+                    </div>
+                    <!-- Single event -->
+                  	<div class="timeline-event te-yellow">
+                      <div class="event-date">Dec 2006 - Feb 2009</div>
+                      <div class="event-name">The NASDAQ OMX Group</div>
+                      <div class="event-description">Maynard, MA</div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="col-md-6 col-lg-4">
+
+                <!-- Box - Skills & Attributes -->
+                <div class="resume-box animated slide-in-right appear-second">
+                  <i class="title-icon text-green flaticon-open79"></i>
+                  <h3>Technologies &amp; Languanges</h3>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Microsoft Azure / C#</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Ruby on Rails</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Security and Cryptography</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Objective-C / Swift / AppKit / UIKit</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-off"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">HTML / CSS / JS</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-off"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Database (SQL / NoSQL)</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-off"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">Java</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-off"></div>
+                      <div class="skill-rate-off"></div>
+                    </div>
+                  </div>
+                  <!-- Sinlge skill -->
+                  <div class="skill">
+                    <span class="skill-name">C / C++ / C++ CLI</span>
+                    <div class="skill-bar sb-green">
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-on"></div>
+                      <div class="skill-rate-off"></div>
+                      <div class="skill-rate-off"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Box - Hobbies -->
+                <div class="resume-box animated slide-in-bottom">
+                  <!--<i class="title-icon text-violet flaticon-joystick4"></i>-->
+                  <h3>Other</h3>
+                  <!-- List group -->
+                  <ul class="list-group">
+                    <li class="list-group-item">Publishing Articles</li>
+                    <li class="list-group-item">Starting Companies</li>
+                    <li class="list-group-item">Working with GLBT youth</li>
+                    <li class="list-group-item">Supporting ending methamphetamine addiction.</li>
+                  </ul>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+        </div>
+    
+    </section>
+    <!-- Resume / End -->
+    
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="projects-holder black dark clearfix" style="height: 600px; padding-top: 200px; padding-left: 50px">
+        <div class="single-project animated">
+            <div class="project-title">Coming Soon</div>
+            <div class="project-caption text-blue">Working to redact any confidential information.</div>
+
+        </div>
+      </div>
+    <!--
+    	&lt;!&ndash; Projects Holder &ndash;&gt;
+    	<div class="projects-holder black dark clearfix">
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in">
+            <div class="project-image">
+                <img src="images/portfolio/project_01.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Swimming Pool</div>
+                <div class="project-caption text-blue">Webdesgin</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-blue btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-third">
+            <div class="project-image">
+                <img src="images/portfolio/project_02.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Shopping Mall</div>
+                <div class="project-caption text-yellow">Webdesgin / Webdevelopment</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-yellow btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-second">
+            <div class="project-image">
+                <img src="images/portfolio/project_03.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Animal Charity</div>
+                <div class="project-caption text-green">Corporate Identity</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-green btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-fourth">
+            <div class="project-image">
+                <img src="images/portfolio/project_04.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Be Pregnant</div>
+                <div class="project-caption text-red">Webdesgin / Corporate Identity</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-red btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in">
+            <div class="project-image">
+                <img src="images/portfolio/project_05.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Booking Store</div>
+                <div class="project-caption text-green">Webdesgin / Webdevelopment</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-green btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-second">
+            <div class="project-image">
+                <img src="images/portfolio/project_06.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Social Media App</div>
+                <div class="project-caption text-orange">App Design</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-orange btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-fourth">
+            <div class="project-image">
+                <img src="images/portfolio/project_07.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Medical Business</div>
+                <div class="project-caption text-blue">Webdesgin / Corporate Identity</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-blue btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+          &lt;!&ndash; Single Project &ndash;&gt;
+          <div class="single-project animated fade-in appear-third">
+            <div class="project-image">
+                <img src="images/portfolio/project_08.jpg" alt="" />
+            </div>
+            <div class="project-mask">
+              <div class="project-info">
+                <div class="project-title">Pice of cake!</div>
+                <div class="project-caption text-orange">Webdesgin / Webdevelopment</div>
+                <div class="project-buttons"><a href="projects/ajax-project-details.html" class="ajax-portfolio-link btn btn-orange btn-sm">View it</a> <a href="#" target="_blank" class="btn btn-default btn-sm">Online version</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        <!-- Ajax Project Details -->
+        <div class="project-content"></div>
+        
+    </section>
+    <!-- Portfjolo / End -->
+    
+    <!-- Blog -->
+    <section id="blog">
+    
+    	<div class="content padded">
+        
+          <div  class="row">
+          
+            <div class="col-lg-12">
+                
+              <!-- Post Carousel --> 
+              <div class="post-carousel animated slide-in-top">
+                <!-- Single Post -->
+                <article class="post post-carousel-item">
+                    <div class="post-image"><img src="images/blog/post_01.png" alt="" /></div>
+                    <div class="post-content-holder">
+                        <div class="post-content">
+                            <div class="post-info clearfix">
+                                <span class="post-date">22 Aug, 2015</span>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-comment"></i><a href="#">0 comments</a></span>
+                                    <span><i class="fa fa-tag"></i><a href="#">Webdesign</a></span>
+                                </div>
+                            </div>
+                            <div class="post-text">
+                                <h3><a href="#">A Whole New Web...</a></h3>
+                                <p class="lead">I'm in the process of porting my previous blog.</p>
+                                <p>Please be patient as I convert from my previous blog database in MySQL to MongoDB.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+              </div> 
+               
+              <!-- End Of Section -->
+              <div class="end-of-section">
+          
+<!--                &lt;!&ndash; Left Caption &ndash;&gt;
+                <div class="pull-left">
+                  <span class="hiddend-sm hidden-xs">Would you like to check all of my posts? &nbsp; &nbsp;</span><a href="blog-page.html" class="btn btn-black btn-sm">Check my Blog Page!</a>
+                </div>
+                 
+                &lt;!&ndash; Post Carousel Navigation &ndash;&gt;
+                <div class="post-carousel-control">
+                  <a class="post-carousel-prev" href="#">Previous</a>
+                  <a class="post-carousel-next" href="#">Next</a>
+                </div>-->
+              
+              </div>
+                
+            </div>
+          
+          </div>
+            
+        </div>
+        
+    </section>
+    <!-- Blog / End -->
+    
+    <!-- Contact -->
+    <section id="contact" class="black">
+    
+    	<!-- Google Map -->
+    	<div id="google-map" class="animated zoom-out"></div>
+        
+        <!-- Contact Content -->
+        <div class="content contact-content padded dark animated slide-in-left">
+        	<i class="title-icon text-primary flaticon-speech43"></i>
+        	<h2>Do you want to hire me?</h2>
+            <!-- Contact List -->
+            <ul class="list-unstyled list-unstyled-icons">
+              <li><i class="inline-icon icon-before-and-after text-primary fa fa-map-marker"></i>8397 158th Ave NE<br />Redmond,<br />WA 98052, USA</li>
+              <li><i class="inline-icon icon-before-and-after text-primary fa fa-comment"></i><a href="mailto:info@rickmark.me">info@rickmark.me</a></li>
+              <li><i class="inline-icon icon-before-and-after text-primary fa fa-phone"></i>+1 (206) 913-3215</li>
+            </ul>
+            <br/><br/>
+            <p><a href="https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2" class="btn btn-primary">Download my CV</a></p>
+            <!-- Bottom Bar -->
+            <div class="bottom-bar contact-bottom-bar">
+            	<div class="row">
+                	<div class="col-md-12 col-lg-6">
+                    	<h5></h5>
+                        <!-- Social Icons -->
+                        <ul class="social-icons medium">
+                        	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                    	<h5>Like Me on Facebook!</h5>
+                        <!-- Like Button -->
+                        <div class="fb-like" data-href="https://www.facebook.com/penwellr" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Form -->
+       	<div id="contact-form-holder" class="dark">
+          <div class="contact-form-trigger animated slide-in-right appear-second"><i class="flaticon-mail21"></i></div>
+          <form role="form" id="contact-form" method="post">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name"  name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" id="email"  name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label>Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit <i class="icon-after fa fa-chevron-right"></i></button>
+          </form>
+        </div>
+        
+    </section>
+    <!-- Contact / End -->
+	
+</div>
+<!-- Page Content / End -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/page-loader.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="js/jquery.appear.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/GoogleMap-dark.js"></script>
+
+
+</body>
+
+</html>

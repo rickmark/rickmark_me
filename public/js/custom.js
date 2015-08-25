@@ -1,6 +1,3 @@
-//= require_self
-//= require google_maps.dark
-
 $(document).ready(function (){
   
 	"use strict";
@@ -63,7 +60,7 @@ $(document).ready(function (){
 		  
 	  }
 	},{ offset: function() {
-		  return -$(this.element).height()+1;
+		  return -$(this).height()+1;
 		}
 	  });
 	
@@ -308,7 +305,7 @@ $(document).ready(function (){
         if ($contactForm.valid()){
             $.ajax({
                 type: "POST",
-                url: "php/contact-form.php",
+                url: "contact",
                 data: $(this).serialize(),
                 success: function(msg) {
                     if (msg === 'SEND') {
