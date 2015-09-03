@@ -4,5 +4,8 @@ RickMark::Application.routes.draw do
   resources :articles
   resources :tags
 
-  root :to => "home#index"
+  post '/contact', to: 'home#contact'
+
+  root :to => 'home#index'
+
 end

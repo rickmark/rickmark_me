@@ -126,7 +126,7 @@ $(document).ready(function (){
 	  
 	  var myOptions = {
 		zoom: 11,
-		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.15),
+		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.25),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControl: false,
 		panControl: false,

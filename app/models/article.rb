@@ -1,7 +1,7 @@
 require 'truncate_html'
 
-class Article < ActiveRecord::Base
-  include Taggable
+class Article
+  include Mongoid::Document
 
   validates_presence_of :subject
   validates_presence_of :body

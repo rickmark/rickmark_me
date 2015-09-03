@@ -8,14 +8,17 @@ $(document).ready(function (){
 	function setSizes() {
 		
 		/* General */
-		$('.logo-content').css({'margin-top': '-'+($('.logo-content').height()/2)+'px'});
+		var logoContent = $('.logo-content');
+		logoContent.css({'margin-top': '-'+(logoContent.height()/2)+'px'});
 		
 		/* Profile */
 		$('#profile').css({'height': ($(window).height()) + 'px'});
-		$('.profile-content').css({'margin-top': '-'+($('.profile-content').height()/2)+'px'});
+		var profileContent = $('.profile-content');
+		profileContent.css({'margin-top': '-'+(profileContent.height()/2)+'px'});
 		
 		/* Portfolio */
-		$('.project-info').css({'margin-top': '-'+($('.project-info').height()/2)+'px'});
+		var projectInfo = $('.project-info');
+		projectInfo.css({'margin-top': '-'+(projectInfo.height()/2)+'px'});
 		
 		/* Contact */
 		$('#contact, .contact-content').css({'min-height': ($(window).height()) + 'px'});
@@ -30,9 +33,10 @@ $(document).ready(function (){
 	
 	/* Navigation
 	-----------------------------------------------------*/
-	
-	$('#page-content section').waypoint(function(direction) {
-	  if(direction=='down') {
+	var pageContentSection = $('#page-content section');
+
+    pageContentSection.waypoint(function (direction) {
+	  if (direction == 'down') {
 		  
 		  var sectionName = '#'+$(this).attr('id');
 		  var menuLink = $('.me-nav li').children('a').attr('href');
@@ -45,9 +49,9 @@ $(document).ready(function (){
 		  
 	  }
 	},{ offset: 1 });
-	
-	$('#page-content section').waypoint(function(direction) {
-	  if(direction=='up') {
+
+    pageContentSection.waypoint( function(direction) {
+	  if (direction == 'up') {
 		  
 		  var sectionName = '#'+$(this).attr('id');
 		  var menuLink = $('.me-nav li').children('a').attr('href');
@@ -66,15 +70,16 @@ $(document).ready(function (){
 	
 	/* Resume
 	-----------------------------------------------------*/
-	
-	$('.dimmed-effect .resume-box').mouseenter(function(){
-		$('.dimmed-effect .resume-box').not(this).each(function() {
+
+    var resumeBox = $('.dimmed-effect .resume-box');
+    resumeBox.mouseenter(function(){
+        resumeBox.not(this).each(function() {
             $(this).addClass('disable');
         });
 	});
-	
-	$('.dimmed-effect .resume-box').mouseleave(function(){
-		$('.dimmed-effect .resume-box').each(function() {
+
+    resumeBox.mouseleave(function(){
+        resumeBox.each(function() {
             $(this).removeClass('disable');
         });
 	});
@@ -175,14 +180,15 @@ $(document).ready(function (){
 	
 	$('#contact-form-holder').addClass('form-hidden');
 	$('.contact-form-trigger').click(function() {
-		if($('#contact-form-holder').hasClass('form-hidden')) {
-			$('#contact-form-holder').removeClass('form-hidden').addClass('form-visible');
+        var contactFormHolder = $('#contact-form-holder');
+		if(contactFormHolder.hasClass('form-hidden')) {
+            contactFormHolder.removeClass('form-hidden').addClass('form-visible');
 			$('.contact-form-trigger').addClass('active');
 		} else
-		if($('#contact-form-holder').hasClass('form-visible')) {
-			$('#contact-form-holder').removeClass('form-visible').addClass('form-hidden');
+		if(contactFormHolder.hasClass('form-visible')) {
+            contactFormHolder.removeClass('form-visible').addClass('form-hidden');
 			$('.contact-form-trigger').removeClass('active');
-		};
+		}
 	});
 	
 	/* Animations
@@ -236,9 +242,10 @@ $(document).ready(function (){
 	
 	/* Alpha Setting
 	-----------------------------------------------------*/
-	
-	$('.editable-alpha').css({
-		'opacity': ($('.editable-alpha').attr('data-alpha')/100)
+
+    var editableAlpha = $('.editable-alpha');
+    editableAlpha.css({
+		'opacity': (editableAlpha.attr('data-alpha')/100)
 	});
 	
 	/* Check photos 
