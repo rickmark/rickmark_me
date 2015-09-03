@@ -1,0 +1,58 @@
+/ Profile
+%section#profile.black
+
+  / Background photo
+  #profile-bg.editable-alpha( data-alpha="40" )
+
+  .content.padded.dark
+
+    / Top Bar
+    .top-bar
+
+      / Social media
+      .pull-left
+        %ul.social-icons.si-pull-up
+          %li
+            %a( href="#" )
+              %i.fa.fa-facebook
+          %li
+            %a( href="#" )
+              %i.fa.fa-twitter
+          %li
+            %a( href="#")
+              %i.fa.fa-google-plus
+
+
+      / URL
+      .pull-right
+        %a.hidden-xs( href="#" ) www.rickmark.me
+
+
+    / Profile Content
+    .profile-content
+      %h1.short Rick Mark
+      %h5
+        :plain
+          I am a <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>,
+          <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software
+          developer and security expert.
+      %a.btn.btn-primary( target="_blank" href="https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2" )
+        Download my CV
+      %a.btn.btn-default( href="#contact" ) Contact me
+
+
+    / Bottom Bar
+    .bottom-bar.profile-bottom-bar.hidden-xs
+
+      / Contact List
+      %ul.list-inline
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
+          8397 158th Ave NE, Redmond, WA 98052
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+          %a( href="mailto:info@rickmark.me" ) info@rickmark.me
+
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone"
+          %a( href="tel:12069133215" ) +1 (206) 913-3215
