@@ -121,12 +121,12 @@ $(document).ready(function (){
 				  }
 			  ]
 				  
-	  var yourLatitude = 47.678624118163235;
-	  var yourLongitude = -122.13015716509689;
+	  var yourLatitude = 47.6786;
+	  var yourLongitude = -122.1301;
 	  
 	  var myOptions = {
 		zoom: 11,
-		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.25),
+		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.30),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControl: false,
 		panControl: false,
@@ -140,7 +140,7 @@ $(document).ready(function (){
 	  
 	  var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 	  
-	  var image = 'images/my-location.png';
+	  var image = '/images/my-location.png';
 	  var myLatLng = new google.maps.LatLng(yourLatitude,yourLongitude);
 	  var myLocation = new google.maps.Marker({
 		  position: myLatLng,

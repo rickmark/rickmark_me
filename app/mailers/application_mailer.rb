@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'webstei@rickmark.me'
+  default from: 'website@noncesoft.com'
 
   layout 'mailer'
 end
