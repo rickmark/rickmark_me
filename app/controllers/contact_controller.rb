@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+class ContactController < ApplicationController
   def create
     @message = Message.new(params.permit(:name, :email, :message))
     @message.origin_ip = request.remote_ip
