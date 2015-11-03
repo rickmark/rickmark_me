@@ -13,18 +13,8 @@ gem 'sprockets-rails'
 gem 'coffee-rails'
 gem 'bootstrap-sass'
 
-# Other
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'color-tools', :require => 'color'
-gem 'RedCloth'
-
 # Process Management
 gem 'foreman'
-
-# Deployment
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
 
 # Testing
 group :development, :test do

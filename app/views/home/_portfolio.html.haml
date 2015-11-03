@@ -9,7 +9,7 @@
       / Projects Holder
       .projects-holder.black.dark.clearfix
         / Single Project
-        - projects.each do |project|
+        - @view_model.projects.each do |project|
           .single-project.animated.fade-in
             .project-image
               = image_tag project.image

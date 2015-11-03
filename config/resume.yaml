@@ -1,53 +1,42 @@
 ---
 resume:
   work_history:
-    -
-      event_date: 'Oct 2015 - Current'
+    - event_date: 'Oct 2015 - Current'
       event_name: 'Bloomberg LP'
-      event_title: 'Senior Web Application Engineer',
+      event_title: 'Senior Web Application Engineer'
       event_location: 'New York, NY'
-    -
-      event_date: 'Oct 2010 - Apr 2015',
-      event_name: 'Microsoft Corporation',
-      event_title: 'Security Software Engineer II',
+    - event_date: 'Oct 2010 - Apr 2015'
+      event_name: 'Microsoft Corporation'
+      event_title: 'Security Software Engineer II'
       event_location: 'Redmond, WA'
-    -
-      event_date: 'Feb 2009 - June 2010',
-      event_name: 'Phoenix Media Communications Group',
-      event_title: 'Senior Developer',
+    - event_date: 'Feb 2009 - June 2010'
+      event_name: 'Phoenix Media Communications Group'
+      event_title: 'Senior Developer'
       event_location: 'Boston, MA'
-    -
-      event_date: 'Dec 2006 - Feb 2009',
-      event_name: 'The NASDAQ OMX Group',
-      event_title: 'Analyst IV',
+    - event_date: 'Dec 2006 - Feb 2009'
+      event_name: 'The NASDAQ OMX Group'
+      event_title: 'Analyst IV'
       event_location: 'Maynard, MA'
   skills:
-    -
-      name: 'Microsoft Azure / C#'
+    - name: 'Microsoft Azure / C#'
       score: 4
-    -
-      name: 'Ruby on Rails / RSpec'
+    - name: 'Ruby on Rails / RSpec'
       score: 4
-    -
-      name: 'Security and Cryptography'
+    - name: 'Security and Cryptography'
       score: 4
-    -
-      name: 'Objective-C / Swift / AppKit / UIKit'
+    - name: 'Objective-C / Swift / AppKit / UIKit'
       score: 3
-    -
-      name: 'HTML / CSS / JS'
+    - name: 'HTML / CSS / JS'
       score: 3
-    -
-      name: 'Azure Table / MS-SQL / MySQL / MongoDB'
+    - name: 'Azure Table / MS-SQL / MySQL / MongoDB'
       score: 3
-    -
-      name: 'Java / Java Enterprise'
+    - name: 'Java / Java Enterprise'
       score: 2
-    -
-      name: 'C / C++ / C++ CLI / Intel & ARM Assembly'
+    - name: 'C / C++ / C++ CLI / Intel & ARM Assembly'
       score: 2
   hobbies:
-    - 'Publishing Articles',
-    - 'Starting Companies',
-    - 'Working with GLBT youth',
+    - 'Publishing Articles'
+    - 'Starting Companies'
+    - 'Working with GLBT youth'
     - 'Supporting ending methamphetamine addiction'
+  projects: []
