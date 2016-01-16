@@ -4,8 +4,4 @@ log/*.log
 tmp/**/*
 .DS_Store
 .idea
-<<<<<<< HEAD
 vendor/
-=======
-vendor
->>>>>>> next
