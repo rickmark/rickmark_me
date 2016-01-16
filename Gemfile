@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '2.3.0'
+
 gem 'rails'
 
 # Data Storage Layer
@@ -15,16 +17,9 @@ gem 'bootstrap-sass'
 
 # Other
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'color-tools', :require => 'color'
-gem 'RedCloth'
 
 # Process Management
 gem 'foreman'
-
-# Deployment
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
 
 # Testing
 group :development, :test do
