@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
-  before_filter :authorize_crud
+#  before_filter :authorize_crud
 
   SECURED_ACTIONS = [ :new, :edit, :create, :update ]
 

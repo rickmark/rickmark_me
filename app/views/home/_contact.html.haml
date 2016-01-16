@@ -1,0 +1,55 @@
+/ Contact
+%section#contact.black
+
+  / Google Map
+  #google-map.animated.zoom-out
+
+  / Contact Content
+  .content.contact-content.padded.dark.animated.slide-in-left
+    %i.title-icon.text-primary.flaticon-speech43
+
+    %h2 Do you want to contact me?
+    / Contact List
+    %ul.list-unstyled.list-unstyled-icons
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
+        New York City, NY 10001
+
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+        = link_to 'info@rickmark.me', 'mailto:info@rickmark.me'
+
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone
+        +1 (206) 913-3215
+    %br/
+    %br/
+
+    %p
+      %a.btn.btn-primary( href="https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2" ) Download my CV
+    / Bottom Bar
+    .bottom-bar.contact-bottom-bar
+      .row
+        .col-md-12.col-lg-6
+          %h5
+          / Social Icons
+          %ul.social-icons.medium
+            %li
+              %a( href="#" )
+                %i.fa.fa-facebook
+            %li
+              %a( href="#" )
+                %i.fa.fa-twitter
+            %li
+              %a( href="#" )
+                %i.fa.fa-google-plus
+
+        .col-md-12.col-lg-6
+          %h5 Like Me on Facebook!
+          / Like Button
+          .fb-like{ data: { href: 'https://www.facebook.com/penwellr', layout: 'button_count', action: 'like', 'show-faces': 'false', share: 'false' } }
+
+  / Contact Form
+  = render partial: 'contact_form'
+
+/ Contact / End

@@ -15,9 +15,12 @@ gem 'sprockets-rails'
 gem 'coffee-rails'
 gem 'bootstrap-sass'
 
+<<<<<<< HEAD
 # Other
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+=======
+>>>>>>> next
 # Process Management
 gem 'foreman'
 

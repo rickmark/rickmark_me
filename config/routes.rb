@@ -1,10 +1,10 @@
 RickMark::Application.routes.draw do
 
-  resources :projects
-  resources :articles
-  resources :tags
+  #resources :projects
+  #resources :articles
+  #resources :tags
 
-  post '/contact', to: 'home#contact'
+  resource :contact, only: [ :create ]
 
   root :to => 'home#index'
 
