@@ -23,4 +23,8 @@ class Resume
   def projects
     @data[:projects].map { |project| Project.new project }
   end
+
+  def info
+    PersonalInfo.new @data[:info]
+  end
 end

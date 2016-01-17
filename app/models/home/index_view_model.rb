@@ -6,6 +6,6 @@ module Home
       @resume = Resume.new
     end
 
-    def_delegators :@resume, :work_history, :hobbies, :skills, :projects
+    def_delegators :@resume, :work_history, :hobbies, :skills, :projects, :info
   end
 end

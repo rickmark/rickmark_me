@@ -1,22 +1,32 @@
 ---
 resume:
+  info:
+    first_name: Rick
+    last_name: Mark
+    email_address: rickmark@outlook.com
+    location: New York, NY 10019
+    telephone_number: +1 (206) 913-3215
+    resume_url:
+    latitude: 40.7686973
+    longitude: -73.9918181
+    website: www.rickmark.me
   work_history:
-    - event_date: 'Oct 2015 - Current'
-      event_name: 'Bloomberg LP'
-      event_title: 'Senior Web Application Engineer'
-      event_location: 'New York, NY'
-    - event_date: 'Oct 2010 - Apr 2015'
-      event_name: 'Microsoft Corporation'
-      event_title: 'Security Software Engineer II'
-      event_location: 'Redmond, WA'
-    - event_date: 'Feb 2009 - June 2010'
-      event_name: 'Phoenix Media Communications Group'
-      event_title: 'Senior Developer'
-      event_location: 'Boston, MA'
-    - event_date: 'Dec 2006 - Feb 2009'
-      event_name: 'The NASDAQ OMX Group'
-      event_title: 'Analyst IV'
-      event_location: 'Maynard, MA'
+    - date: 'Oct 2015 - Current'
+      name: 'Bloomberg LP'
+      title: 'Senior Web Application Engineer'
+      location: 'New York, NY'
+    - date: 'Oct 2010 - Apr 2015'
+      name: 'Microsoft Corporation'
+      title: 'Security Software Engineer II'
+      location: 'Redmond, WA'
+    - date: 'Feb 2009 - June 2010'
+      name: 'Phoenix Media Communications Group'
+      title: 'Senior Developer'
+      location: 'Boston, MA'
+    - date: 'Dec 2006 - Feb 2009'
+      name: 'The NASDAQ OMX Group'
+      title: 'Analyst IV'
+      location: 'Maynard, MA'
   skills:
     - name: 'Microsoft Azure / C#'
       score: 4

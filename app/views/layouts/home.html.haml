@@ -30,9 +30,8 @@
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500'
 
     / Stylesheets
-    = stylesheet_link_tag '/css/bootstrap.min.css'
+    = stylesheet_link_tag 'application'
     = stylesheet_link_tag '/css/animations.css'
-    = stylesheet_link_tag '/css/font-awesome.min.css'
     = stylesheet_link_tag '/css/flaticon.css'
     = stylesheet_link_tag '/css/owl.carousel.css'
     = stylesheet_link_tag '/css/owl.theme.css'
@@ -55,19 +54,6 @@
     = yield
 
     / Scripts
-    = javascript_include_tag '/js/jquery-1.10.2.min.js'
-    = javascript_include_tag '/js/page-loader.min.js'
-    = javascript_include_tag '/js/bootstrap.min.js'
-    = javascript_include_tag '/js/jquery.easing.js'
-    = javascript_include_tag '/js/jquery.validate.min.js'
-    = javascript_include_tag '/js/jquery.localscroll-1.2.7-min.js'
-    = javascript_include_tag '/js/jquery.scrollTo-1.4.3.1-min.js'
-    = javascript_include_tag '/js/jquery.fitvids.js'
-    = javascript_include_tag '/js/jquery.appear.js'
-    = javascript_include_tag '/js/waypoints.min.js'
-    = javascript_include_tag '/js/owl.carousel.min.js'
-    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp'
 
-    / Custom Script
-    = javascript_include_tag '/js/custom.js'
-    = javascript_include_tag '/js/GoogleMap-dark.js'

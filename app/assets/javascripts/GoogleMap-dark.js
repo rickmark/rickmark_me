@@ -120,13 +120,15 @@ $(document).ready(function (){
 					  ]
 				  }
 			  ]
+
+	var element = document.getElementById('google-map');
 				  
-	  var yourLatitude = 47.6786;
-	  var yourLongitude = -122.1301;
+    var yourLatitude = element.getAttribute('data-latitude');
+    var yourLongitude = element.getAttribute('data-longitude');
 	  
 	  var myOptions = {
 		zoom: 11,
-		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.30),
+		center: new google.maps.LatLng(yourLatitude, yourLongitude - 0.30),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapTypeControl: false,
 		panControl: false,
@@ -138,10 +140,10 @@ $(document).ready(function (){
 		styles: mapDark
 	  };
 	  
-	  var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
+	  var map = new google.maps.Map(element, myOptions);
 	  
 	  var image = '/images/my-location.png';
-	  var myLatLng = new google.maps.LatLng(yourLatitude,yourLongitude);
+	  var myLatLng = new google.maps.LatLng(yourLatitude, yourLongitude);
 	  var myLocation = new google.maps.Marker({
 		  position: myLatLng,
 		  map: map,
