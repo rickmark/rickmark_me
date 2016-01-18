@@ -5,7 +5,7 @@ ruby '2.3.0'
 gem 'rails'
 
 # Data Storage Layer
-gem 'mongoid-rails'
+gem 'pg'
 
 # Asset Pipeline
 gem 'uglifier'
@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'sprockets-rails'
 gem 'coffee-rails'
 gem 'bootstrap-sass'
+gem 'redcarpet'
 
 # Process Management
 gem 'foreman'
