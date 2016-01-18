@@ -28,7 +28,7 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  # Do not fallback to assets pipeline if a precompiled assets is missed.
   config.assets.compile = false
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
@@ -57,7 +57,7 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  # Enable serving of images, stylesheets, and JavaScripts from an assets server.
   # config.action_controller.asset_host = 'http://assets.example.com'
 
   # Ignore bad email addresses and do not raise email delivery errors.

@@ -1,11 +1,11 @@
 RickMark::Application.routes.draw do
-
-  #resources :projects
-  #resources :articles
-  #resources :tags
+  resources :articles, only: [ :show, :index ] do
+    resources :assets, only: [ :show ]
+    resources :comments, only: [ :create ]
+  end
 
   resource :contact, only: [ :create ]
 
-  root :to => 'home#index'
+  root to: 'home#index'
 
 end

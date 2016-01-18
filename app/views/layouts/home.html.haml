@@ -17,6 +17,8 @@
     %link{ rel: 'apple-touch-icon', sizes: '72x72', href: image_path('/images/apple-touch-icon-72x72.png') }
     %link{ rel: 'apple-touch-icon', sizes: '114x114', href: image_path('/images/apple-touch-icon-114x114.png') }
 
+    = javascript_include_tag 'pace/pace', data: { pace_options: '{"target": "#page-loader"}' }
+
     /[if lt IE 9]
       %script( src="http://html5shim.googlecode.com/svn/trunk/html5.js" )
 
@@ -39,6 +41,7 @@
     = stylesheet_link_tag '/css/colors/blue.css', id: 'colors'
 
   %body
+    #page-loader
     / Facebook Source
     #fb-root
     :javascript

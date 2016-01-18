@@ -19,6 +19,7 @@
     "OwlCarousel2": "~2.0.0",
     "waypoints": "~4.0.0",
     "components-font-awesome": "4.5.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "pace": "1.0.2"
   }
 }
