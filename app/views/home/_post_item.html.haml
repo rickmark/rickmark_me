@@ -5,7 +5,7 @@
   .post-content-holder
     .post-content
       .post-info.clearfix
-        %span.post-date= object.created_at
+        %span.post-date= object.created_at.strftime '%-d %b %Y'
 
         .post-meta
           %span
