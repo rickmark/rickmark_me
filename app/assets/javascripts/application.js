@@ -12,6 +12,4 @@
 //= require jquery.fitvids
 //= require 'jquery.appear/jquery.appear'
 //= require 'waypoints/lib/jquery.waypoints'
-//= require 'owl.carousel/dist/owl.carousel'
-//= require 'custom'
-//= require 'GoogleMap-dark'
+//= require 'OwlCarousel2/dist/owl.carousel'

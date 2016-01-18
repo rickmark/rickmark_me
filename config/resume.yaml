@@ -7,8 +7,8 @@ resume:
     location: New York, NY 10019
     telephone_number: +1 (206) 913-3215
     resume_url:
-    latitude: 40.7686973
-    longitude: -73.9918181
+    latitude: 40.760
+    longitude: -73.98
     website: www.rickmark.me
   work_history:
     - date: 'Oct 2015 - Current'
