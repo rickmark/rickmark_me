@@ -29,4 +29,5 @@ end
 group :production do
   gem 'puma'
   gem 'therubyracer'
+  gem 'rails_12factor'
 end
