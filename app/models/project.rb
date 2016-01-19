@@ -1,8 +1,6 @@
 class Project
-  include Mongoid::Document
-  include Taggable
 
-  scope :active, -> { where(:active => true) }
+
 
   def to_str
     name
