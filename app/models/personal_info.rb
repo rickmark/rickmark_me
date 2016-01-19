@@ -6,6 +6,7 @@ class PersonalInfo
   attr_accessor :latitude, :longitude
   attr_accessor :phone_number
   attr_accessor :website
+  attr_accessor :print_url
 
   def initialize(data)
 
@@ -15,6 +16,7 @@ class PersonalInfo
     @phone_number = data[:telephone_number]
     @email_address = data[:email_address]
     @website = data[:website]
+    @print_url = data[:resume_print_url]
 
     @latitude = data[:latitude]
     @longitude = data[:longitude]

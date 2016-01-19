@@ -36,8 +36,7 @@
           I am a <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>,
           <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software
           developer and security expert.
-      %a.btn.btn-primary( target="_blank" href="https://onedrive.live.com/download?cid=CDF8B5CF78447AAD&resid=CDF8B5CF78447AAD%21144747&authkey=AGZ4JaCpJCFPLKc&em=2" )
-        Download my CV
+      %a.btn.btn-primary{ target: '_blank', href: @view_model.info.print_url } Download my CV
       %a.btn.btn-default{ href: '#contact' } Contact me
 
 

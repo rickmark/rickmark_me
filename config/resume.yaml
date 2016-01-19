@@ -10,6 +10,7 @@ resume:
     latitude: 40.760
     longitude: -73.98
     website: www.rickmark.me
+    resume_print_url: https://onedrive.live.com/redir?resid=CDF8B5CF78447AAD!163471&authkey=!AMfLLSxyUek1PJU&ithint=file%2cpdf
   work_history:
     - date: 'Oct 2015 - Current'
       name: 'Bloomberg LP'
