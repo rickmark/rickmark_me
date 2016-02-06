@@ -1,0 +1,113 @@
+/ Resume
+%section#resume
+  .content.dimmed-effect.padded-short
+    .row
+      .col-lg-4
+
+        / Box - About Me
+        .resume-box.animated.slide-in-top
+          %i.title-icon.text-blue.flaticon-speech43
+
+          %h3 Who am I?
+
+          %p.lead Software makes everything new again.
+
+          %p
+            I'm inspired by technology. From the latest features on a phone to the leading edge of science in the
+            cloud, no where else is there a world so full of possibilities.
+
+          %p
+            I work to bring out the best in my team; I ask questions, and try to teach what I know to others. I lead
+            with interpersonal skills backed by substantial knowledge and experience. I’m a realist, and at the same
+            time I drive for high ideals. I estimate and re-estimate honestly and deliver.
+
+          %a.btn.btn-black( href="#portfolio" ) See my portfolio
+          %a.btn.btn-default( href="#contact" ) Contact me
+
+        / Box - Communication
+        .resume-box.animated.slide-in-left.appear-second
+          %i.title-icon.text-orange.flaticon-chat25
+
+          %h3 Communication
+          %p.lead The key to a successful software project
+
+          %p
+            I personally believe close communication allows me to deliver exactly the solution needed. It is a
+            fine balance between getting input from a stakeholder and acting without autonomy. I leverage my
+            10 years of software solution experience to make the judgement of when the technical decision is best
+            made by developers, or when the business decision should be made by stakeholders.
+
+      .col-md-6.col-lg-4
+
+        / Box - Specialities
+        .resume-box.animated.slide-in-right
+          %i.title-icon.text-red.flaticon-mouse19
+
+          %h3 My Specialities
+          / Speciality
+          .speciality
+            %i.speciality-icon.text-red.flaticon-bulb11
+
+            .speciality-content
+              %h5.short Intellectual Property
+
+              %p.speciality-description Building strong patent portfolios as I design real world solutions.
+
+          / Speciality
+          .speciality
+            %i.speciality-icon.text-red.flaticon-codings1
+
+            .speciality-content
+              %h5.short End-to-End Development
+
+              %p.speciality-description Database schema, API, HTML and Mobile app development.
+
+          / Speciality
+          .speciality
+            %i.speciality-icon.text-red.flaticon-tablet42
+
+            .speciality-content
+              %h5.short Mobile First
+
+              %p.speciality-description iOS, Android and Windows Phone experience.
+
+        / Box - Education & Jobs
+        .resume-box.animated.slide-in-left
+          %i.title-icon.text-yellow.flaticon-document56
+
+          %h3 Work History
+
+          .timeline
+            - @view_model.work_history.each do |event|
+              / Single event
+              .timeline-event.te-yellow
+                .event-date= event.date
+                .event-name= event.name
+                .event-description= event.location
+
+      .col-md-6.col-lg-4
+        / Box - Skills & Attributes
+        .resume-box.animated.slide-in-right.appear-second
+          %i.title-icon.text-green.flaticon-open79
+
+          %h3 Technologies & Languages
+          - @view_model.skills.each do |skill|
+            / Single skill
+            .skill
+              %span.skill-name= skill.name
+
+              .skill-bar.sb-green
+                - skill.score.times do
+                  .skill-rate-on
+                - (4 - skill.score).times do
+                  .skill-rate-off
+
+
+        / Box - Hobbies
+        .resume-box.animated.slide-in-bottom
+          %i.title-icon.text-violet.flaticon-plugin1
+
+          %h3 Other
+          %ul.list-group
+            - @view_model.hobbies.each do |hobby|
+              %li.list-group-item= hobby

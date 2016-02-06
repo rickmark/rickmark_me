@@ -1,0 +1,26 @@
+/ Portfolio
+%section#portfolio
+  .projects-holder.black.dark.clearfix{ style: "height: 600px; padding-top: 200px; padding-left: 50px" }
+    .single-project.animated
+      .project-title Coming Soon
+      .project-caption.text-blue Working to redact any confidential information
+
+
+      / Projects Holder
+      .projects-holder.black.dark.clearfix
+        / Single Project
+        - @view_model.projects.each do |project|
+          .single-project.animated.fade-in
+            .project-image
+              = image_tag project.image
+
+            .project-mask
+              .project-info
+                .project-title= project.title
+                .project-caption.text-blue= project.caption
+                .project-buttons
+                  = link_to 'View it', project, class: %w(ajax-portfolio-link btn btn-blue btn-sm)
+
+  .project-content
+
+/ Portfjolo / End

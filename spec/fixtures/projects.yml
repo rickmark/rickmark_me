@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  project_page: MyString
+  source_control_type: MyString
+  source_control_url: MyString
+  description: MyText
+
+two:
+  name: MyString
+  project_page: MyString
+  source_control_type: MyString
+  source_control_url: MyString
+  description: MyText

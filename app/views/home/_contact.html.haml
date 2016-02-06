@@ -1,0 +1,54 @@
+/ Contact
+%section#contact.black
+
+  / Google Map
+  #google-map.animated.zoom-out{ data: { latitude: @view_model.info.latitude, longitude: @view_model.info.longitude } }
+
+  / Contact Content
+  .content.contact-content.padded.dark.animated.slide-in-left
+    %i.title-icon.text-primary.flaticon-speech43
+
+    %h2 Do you want to contact me?
+    / Contact List
+    %ul.list-unstyled.list-unstyled-icons
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
+        = @view_model.info.location_name
+
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+        = link_to @view_model.info.email_address, @view_model.info.email_link
+
+      %li
+        %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone
+        = link_to @view_model.info.phone_number, @view_model.info.phone_link
+    %br/
+    %br/
+
+    %p
+      %a.btn.btn-primary{ href: @view_model.info.print_url } Download my CV
+    / Bottom Bar
+    .bottom-bar.contact-bottom-bar
+      .row
+        .col-md-12.col-lg-6
+          %h5
+          / Social Icons
+          %ul.social-icons.medium
+            %li
+              %a{ href: '#' }
+                %i.fa.fa-facebook
+            %li
+              %a{ href: '#' }
+                %i.fa.fa-twitter
+            %li
+              %a{ href: '#' }
+                %i.fa.fa-google-plus
+
+        .col-md-12.col-lg-6
+          / Like Button
+          .fb-like{ data: { href: 'https://www.facebook.com/penwellr', layout: 'button_count', action: 'like', 'show-faces': 'false', share: 'false' } }
+
+  / Contact Form
+  = render partial: 'contact_form'
+
+/ Contact / End

@@ -1,0 +1,53 @@
+---
+resume:
+  info:
+    first_name: Rick
+    last_name: Mark
+    email_address: rickmark@outlook.com
+    location: New York, NY 10019
+    telephone_number: +1 (206) 913-3215
+    resume_url:
+    latitude: 40.760
+    longitude: -73.98
+    website: www.rickmark.me
+    resume_print_url: https://onedrive.live.com/redir?resid=CDF8B5CF78447AAD!163471&authkey=!AMfLLSxyUek1PJU&ithint=file%2cpdf
+  work_history:
+    - date: 'Oct 2015 - Current'
+      name: 'Bloomberg LP'
+      title: 'Senior Web Application Engineer'
+      location: 'New York, NY'
+    - date: 'Oct 2010 - Apr 2015'
+      name: 'Microsoft Corporation'
+      title: 'Security Software Engineer II'
+      location: 'Redmond, WA'
+    - date: 'Feb 2009 - June 2010'
+      name: 'Phoenix Media Communications Group'
+      title: 'Senior Developer'
+      location: 'Boston, MA'
+    - date: 'Dec 2006 - Feb 2009'
+      name: 'The NASDAQ OMX Group'
+      title: 'Analyst IV'
+      location: 'Maynard, MA'
+  skills:
+    - name: 'Microsoft Azure / C#'
+      score: 4
+    - name: 'Ruby on Rails / RSpec'
+      score: 4
+    - name: 'Security and Cryptography'
+      score: 4
+    - name: 'Objective-C / Swift / AppKit / UIKit'
+      score: 3
+    - name: 'HTML / CSS / JS'
+      score: 3
+    - name: 'Azure Table / MS-SQL / MySQL / MongoDB'
+      score: 3
+    - name: 'Java / Java Enterprise'
+      score: 2
+    - name: 'C / C++ / C++ CLI / Intel & ARM Assembly'
+      score: 2
+  hobbies:
+    - 'Publishing Articles'
+    - 'Starting Companies'
+    - 'Working with GLBT youth'
+    - 'Supporting ending methamphetamine addiction'
+  projects: []

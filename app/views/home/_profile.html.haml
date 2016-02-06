@@ -1,0 +1,57 @@
+/ Profile
+%section#profile.black
+
+  / Background photo
+  #profile-bg.editable-alpha( data-alpha="40" )
+
+  .content.padded.dark
+
+    / Top Bar
+    .top-bar
+
+      / Social media
+      .pull-left
+        %ul.social-icons.si-pull-up
+          %li
+            %a( href="#" )
+              %i.fa.fa-facebook
+          %li
+            %a( href="#" )
+              %i.fa.fa-twitter
+          %li
+            %a( href="#")
+              %i.fa.fa-google-plus
+
+
+      / URL
+      .pull-right
+        = link_to @view_model.info.website, "http://#{@view_model.info.website}/", class: 'hidden-xs'
+
+
+    / Profile Content
+    .profile-content
+      %h1.short Rick Mark
+      %h5
+        :plain
+          I am a <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>,
+          <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software
+          developer and security expert.
+      %a.btn.btn-primary{ target: '_blank', href: @view_model.info.print_url } Download my CV
+      %a.btn.btn-default{ href: '#contact' } Contact me
+
+
+    / Bottom Bar
+    .bottom-bar.profile-bottom-bar.hidden-xs
+
+      / Contact List
+      %ul.list-inline
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
+          = @view_model.info.location_name
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+          = link_to @view_model.info.email_address, @view_model.info.email_link
+
+        %li
+          %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone
+          = link_to @view_model.info.phone_number, @view_model.info.phone_link

@@ -1,0 +1,23 @@
+/ Single Post
+%article.post.post-carousel-item
+  .post-image
+    %img( src="images/blog/post_01.png" alt="" )
+  .post-content-holder
+    .post-content
+      .post-info.clearfix
+        %span.post-date= object.created_at.strftime '%-d %b %Y'
+
+        .post-meta
+          %span
+            %i.fa.fa-comment
+            %a( href="#" )= "#{object.comments.count} #{'comment'.pluralize(object.comments.count)}"
+          %span
+            %i.fa.fa-tag
+            %a( href="#" ) Web Design
+      .post-text
+        %h3
+          = link_to object.title, object
+
+        %p.lead= object.subtitle
+
+        %p= object.lead
