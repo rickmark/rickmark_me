@@ -6,13 +6,17 @@ resume:
     email_address: rickmark@outlook.com
     location: New York, NY 10019
     telephone_number: +1 (206) 913-3215
-    resume_url:
+    resume_url: http://rickmark.me
     latitude: 40.760
     longitude: -73.98
     website: www.rickmark.me
     resume_print_url: https://onedrive.live.com/redir?resid=CDF8B5CF78447AAD!163471&authkey=!AMfLLSxyUek1PJU&ithint=file%2cpdf
   work_history:
-    - date: 'Oct 2015 - Current'
+    - date: 'Feb 2016 - Current'
+      name: 'Jet'
+      title: 'Senior Security Engineer III'
+      location: 'Hoboken, NJ'
+    - date: 'Oct 2015 - Feb 2016'
       name: 'Bloomberg LP'
       title: 'Senior Web Application Engineer'
       location: 'New York, NY'
