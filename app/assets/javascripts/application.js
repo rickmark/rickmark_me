@@ -13,7 +13,7 @@
 //= require jquery.fitvids
 //= require 'jquery.appear/jquery.appear'
 //= require 'waypoints/lib/jquery.waypoints'
-//= require 'OwlCarousel2/dist/owl.carousel'
+//= require 'OwlCarousel2/src/js/owl.carousel'
 
 
 Pace.on('hide', function() {

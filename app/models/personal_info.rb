@@ -7,19 +7,21 @@ class PersonalInfo
   attr_accessor :phone_number
   attr_accessor :website
   attr_accessor :print_url
+  attr_accessor :social_links
 
   def initialize(data)
-
     @first_name = data[:first_name]
     @last_name = data[:last_name]
     @location_name = data[:location]
     @phone_number = data[:telephone_number]
     @email_address = data[:email_address]
-    @website = data[:website]
+    @website = data[:website_url]
     @print_url = data[:resume_print_url]
 
     @latitude = data[:latitude]
     @longitude = data[:longitude]
+
+    @social_links = (data[:social_links] || []).map { |item| SocialLink.new item }
   end
 
   def full_name

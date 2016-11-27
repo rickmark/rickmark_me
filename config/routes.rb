@@ -1,4 +1,4 @@
-RickMark::Application.routes.draw do
+Rails.application.routes.draw do
   resources :articles, only: [ :show, :index ] do
     resources :assets, only: [ :show ]
     resources :comments, only: [ :create ]

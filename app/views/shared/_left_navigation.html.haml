@@ -1,7 +1,7 @@
 %h3 Resources
 %ul
-  %li= link_to "Github", "http://github.com/rickmark"
-  %li= link_to "Facebook", "http://facebook.com/penwellr"
+  %li= link_to 'Github', 'http://github.com/rickmark'
+  %li= link_to 'Facebook', 'http://facebook.com/penwellr'
 %h3 Active Projects
 %ul
   - Project.active.order('updated_at DESC').limit(10).each do |project|

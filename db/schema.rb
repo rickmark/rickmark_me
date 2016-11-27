@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -17,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160119002024) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "articles", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+  create_table "articles", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
     t.string   "lead"
@@ -28,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160119002024) do
     t.datetime "updated_at"
   end
 
-  create_table "assets", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+  create_table "assets", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "name"
     t.string   "content_type"
     t.binary   "content"
@@ -37,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160119002024) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+  create_table "comments", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "author"
     t.text     "content"
     t.uuid     "article_id"
@@ -45,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160119002024) do
     t.datetime "updated_at"
   end
 
-  create_table "messages", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+  create_table "messages", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string "email"
     t.string "name"
     t.string "message"

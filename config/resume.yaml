@@ -8,12 +8,22 @@ resume:
     telephone_number: +1 (206) 913-3215
     resume_url: http://rickmark.me
     latitude: 40.760
-    longitude: -73.98
-    website: www.rickmark.me
+    longitude: -73.99
+    website_url: www.rickmark.me
     resume_print_url: https://onedrive.live.com/redir?resid=CDF8B5CF78447AAD!163471&authkey=!AMfLLSxyUek1PJU&ithint=file%2cpdf
+    social_links:
+      - name: linkedin
+        display: LinkedIn
+        url: https://www.linkedin.com/in/penwellr
+      - name: facebook
+        display: Facebook
+        url: https://www.facebook.com/penwellr
+      - name: twitter
+        display: Twitter
+        url: https://twitter.com/almightylinuxgo
   work_history:
     - date: 'Feb 2016 - Current'
-      name: 'Jet'
+      name: 'Jet.com'
       title: 'Senior Security Engineer III'
       location: 'Hoboken, NJ'
     - date: 'Oct 2015 - Feb 2016'
@@ -52,6 +62,7 @@ resume:
   hobbies:
     - 'Publishing Articles'
     - 'Starting Companies'
+    - 'Inventing Things'
     - 'Working with GLBT youth'
     - 'Supporting ending methamphetamine addiction'
   projects: []
