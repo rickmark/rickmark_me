@@ -32,17 +32,7 @@
       .row
         .col-md-12.col-lg-6
           %h5
-          / Social Icons
-          %ul.social-icons.medium
-            %li
-              %a{ href: '#' }
-                %i.fa.fa-facebook
-            %li
-              %a{ href: '#' }
-                %i.fa.fa-twitter
-            %li
-              %a{ href: '#' }
-                %i.fa.fa-google-plus
+          = render partial: 'shared/social_links', object: @view_model.info.social_links
 
         .col-md-12.col-lg-6
           / Like Button

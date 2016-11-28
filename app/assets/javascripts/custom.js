@@ -1,5 +1,9 @@
 //= require_self
 //= require 'GoogleMap-dark'
+//= require portfolio
+//= require contact_form
+//= require blog
+//= require animations
 
 $(document).ready(function () {
 
@@ -38,33 +42,25 @@ $(document).ready(function () {
      -----------------------------------------------------*/
     var pageContentSection = $('#page-content section');
 
+    var setWaypoint = function() {
+        var sectionName = '#' + $(this.element).attr('id');
+        var activeLink = $('.me-nav li.active');
+
+        var newLink = $('li.menu-item a[href="' + sectionName + '"]');
+
+        $(activeLink).removeClass('active');
+        $(newLink).parent('li').addClass('active');
+    };
+
     pageContentSection.waypoint(function (direction) {
         if (direction == 'down') {
-
-            var sectionName = '#' + $(this).attr('id');
-            var menuLink = $('.me-nav li').children('a').attr('href');
-            var activeLink = $('.me-nav li.active');
-
-            var newLink = $('li.menu-item a[href="' + sectionName + '"]');
-
-            $(activeLink).removeClass('active');
-            $(newLink).parent('li').addClass('active');
-
+            setWaypoint.bind(this)();
         }
     }, {offset: 1});
 
     pageContentSection.waypoint(function (direction) {
         if (direction == 'up') {
-
-            var sectionName = '#' + $(this).attr('id');
-            var menuLink = $('.me-nav li').children('a').attr('href');
-            var activeLink = $('.me-nav li.active');
-
-            var newLink = $('li.menu-item a[href="' + sectionName + '"]');
-
-            $(activeLink).removeClass('active');
-            $(newLink).parent('li').addClass('active');
-
+            setWaypoint.bind(this)();
         }
     }, {
         offset: function () {
@@ -72,109 +68,7 @@ $(document).ready(function () {
         }
     });
 
-    /* Resume
-     -----------------------------------------------------*/
 
-    var resumeBox = $('.dimmed-effect .resume-box');
-    resumeBox.mouseenter(function () {
-        resumeBox.not(this).each(function () {
-            $(this).addClass('disable');
-        });
-    });
-
-    resumeBox.mouseleave(function () {
-        resumeBox.each(function () {
-            $(this).removeClass('disable');
-        });
-    });
-
-    /* Blog
-     -----------------------------------------------------*/
-
-    // Post Carousel
-
-    $(".post-carousel").owlCarousel({
-
-        // Most important owl features
-        items: false,
-        itemsCustom: [[1600, 3], [991, 2], [0, 1]],
-        itemsDesktop: false,
-        itemsDesktopSmall: false,
-        itemsTabletSmall: false,
-        itemsMobile: false,
-        singleItem: false,
-        itemsScaleUp: false,
-        slideSpeed: 600,
-        paginationSpeed: 800,
-        rewindSpeed: 1000,
-        navigation: false,
-        scrollPerPage: true,
-        pagination: true,
-        theme: "carousel-theme"
-
-    });
-
-    var owl = $(".owl-carousel").data('owlCarousel');
-
-    $('.post-carousel-next').click(function () {
-        owl.next();
-        return false;
-    });
-
-    $('.post-carousel-prev').click(function () {
-        owl.prev();
-        return false;
-    });
-
-    // Post Carousel
-
-    $(".blog-slider").owlCarousel({
-
-        // Most important owl features
-        items: false,
-        itemsCustom: false,
-        itemsDesktop: false,
-        itemsDesktopSmall: false,
-        itemsTabletSmall: false,
-        itemsMobile: false,
-        singleItem: true,
-        itemsScaleUp: false,
-        slideSpeed: 600,
-        paginationSpeed: 800,
-        rewindSpeed: 1000,
-        navigation: false,
-        scrollPerPage: true,
-        pagination: true,
-        autoPlay: true,
-        theme: "slider-theme"
-
-    });
-
-    /* Portfolio
-     -----------------------------------------------------*/
-
-    // Ajax Project Details
-
-    var toLoad;
-
-    function showNewContent() {
-        $('.project-content').slideUp(700, function () {
-            $('.project-content').slideDown(700, function () {
-                $.waypoints('refresh')
-            });
-        });
-    }
-
-    function loadContent() {
-        $('.project-content').load(toLoad, showNewContent());
-    }
-
-    $('.ajax-portfolio-link').click(function () {
-        toLoad = $(this).attr('href');
-        loadContent();
-        $('html, body').animate({scrollTop: $('.project-content').position().top}, 700);
-        return false;
-    });
 
 
     /* Smooth Scrolling
@@ -197,76 +91,6 @@ $(document).ready(function () {
         }
     });
 
-    /* Animations
-     -----------------------------------------------------*/
-
-    jQuery('.animated').appear();
-
-    $('.fade-in').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('fade-in-animation')
-        });
-    });
-
-    $('.fade-in-left').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('fade-in-left-animation')
-        });
-    });
-
-    $('.fade-in-right').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('fade-in-right-animation')
-        });
-    });
-
-    $('.slide-in-left').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('slide-in-left-animation')
-        });
-    });
-
-    $('.slide-in-right').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('slide-in-right-animation')
-        });
-    });
-
-    $('.slide-in-top').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('slide-in-top-animation')
-        });
-    });
-
-    $('.slide-in-bottom').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('slide-in-bottom-animation')
-        });
-    });
-
-    $('.zoom-in').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('zoom-in-animation')
-        });
-    });
-
-    $('.zoom-out').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('zoom-out-animation')
-        });
-    });
-
-    $('.bounce-in').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('bounce-in-animation')
-        });
-    });
-
-    $('.flip-in').appear(function () {
-        jQuery(this).each(function () {
-            jQuery(this).addClass('flip-in-animation')
-        });
-    });
 
     /* Alpha Setting
      -----------------------------------------------------*/
@@ -299,64 +123,6 @@ $(document).ready(function () {
         $('body').fitVids();
     });
 
-    /* Contact Form
-     -----------------------------------------------------*/
-
-    var $contactForm = $('#contact-form');
-
-    $contactForm.validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 1
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            message: {
-                required: true,
-                minlength: 10
-            }
-        },
-        messages: {
-            name: {
-                required: "Please enter your name."
-            },
-            email: {
-                required: "Please enter your email address."
-            },
-            message: {
-                required: "Please enter a message."
-            }
-        }
-    });
-
-    // Send the email
-    $contactForm.submit(function () {
-        var $success = '<strong>Success!</strong> Your message was sent.';
-        var $error = '<strong>Error!</strong> Your message was not sent - try again later...';
-        var response;
-        if ($contactForm.valid()) {
-            $.ajax({
-                type: "POST",
-                url: "contact",
-                data: $(this).serialize(),
-                success: function (msg) {
-                    if (msg === 'SEND') {
-                        response = '<div class="alert alert-success">' + $success + '</div>';
-                    }
-                    else {
-                        response = '<div class="alert alert-warning">' + $error + '</div>';
-                    }
-                    $(".alert-error,.alert-success").remove();
-                    $contactForm.prepend(response);
-                }
-            });
-            return false;
-        }
-        return false;
-    });
 
 });
 

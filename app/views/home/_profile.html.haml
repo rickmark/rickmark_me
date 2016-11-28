@@ -8,13 +8,7 @@
 
     / Top Bar
     .top-bar
-
-      / Social media
-      .pull-left
-        %ul.social-icons.si-pull-up
-          - @view_model.info.social_links.each do |item|
-            %li
-              = social_link item
+      = render partial: 'shared/social_links', object: @view_model.info.social_links
 
       / URL
       .pull-right

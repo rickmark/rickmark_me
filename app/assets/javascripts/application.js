@@ -16,6 +16,7 @@
 //= require 'OwlCarousel2/src/js/owl.carousel'
 
 
+
 Pace.on('hide', function() {
     $('#page-loader').delay(100).fadeOut(700);
 });
