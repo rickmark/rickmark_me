@@ -1,3 +1,5 @@
-"globals": {
-"$": false
+{
+  "globals": {
+    "$": false
+  }
 }
