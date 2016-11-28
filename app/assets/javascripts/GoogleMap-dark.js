@@ -155,7 +155,7 @@ $(document).ready(function () {
                     }
                 ]
             }
-        ]
+        ];
 
         var element = document.getElementById('google-map');
 
