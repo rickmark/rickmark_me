@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe 'home/index.html.haml' do
   it 'renders' do
-    assign :view_model, Home::IndexViewModel.new
+    assign :resume, Resume.new
+    assign :articles, []
 
     render
 

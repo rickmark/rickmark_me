@@ -126,13 +126,3 @@ $(document).ready(function () {
 
 });
 
-// Tooltip Initialize 
-function tooltipIni() {
-    $("[rel='tooltip']").tooltip();
-}
-
-// Popover Initialize 
-function popoverIni() {
-    $("[rel='popover']").popover();
-}
-

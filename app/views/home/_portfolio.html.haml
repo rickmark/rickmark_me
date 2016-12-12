@@ -1,6 +1,6 @@
 / Portfolio
 %section#portfolio
-  .projects-holder.black.dark.clearfix{ style: "height: 600px; padding-top: 200px; padding-left: 50px" }
+  .projects-holder.black.dark.clearfix{ style: 'height: 600px; padding-top: 200px; padding-left: 50px' }
     .single-project.animated
       .project-title Coming Soon
       .project-caption.text-blue Working to redact any confidential information
@@ -9,7 +9,7 @@
       / Projects Holder
       .projects-holder.black.dark.clearfix
         / Single Project
-        - @view_model.projects.each do |project|
+        - @resume.projects.each do |project|
           .single-project.animated.fade-in
             .project-image
               = image_tag project.image
@@ -23,4 +23,4 @@
 
   .project-content
 
-/ Portfjolo / End
+/ Portfolio / End

@@ -8,11 +8,11 @@
 
     / Top Bar
     .top-bar
-      = render partial: 'shared/social_links', object: @view_model.info.social_links
+      = render partial: 'shared/social_links', object: @resume.info.social_links
 
       / URL
       .pull-right
-        = link_to @view_model.info.website, "http://#{@view_model.info.website}/", class: 'hidden-xs'
+        = link_to @resume.info.website, "http://#{@resume.info.website}/", class: 'hidden-xs'
 
 
     / Profile Content
@@ -23,7 +23,7 @@
           I am a <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>,
           <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software
           developer and security expert.
-      %a.btn.btn-primary{ target: '_blank', href: @view_model.info.print_url } Download my CV
+      %a.btn.btn-primary{ target: '_blank', href: @resume.info.print_url } Download my CV
       %a.btn.btn-default{ href: '#contact' } Contact me
 
 
@@ -34,11 +34,11 @@
       %ul.list-inline
         %li
           %i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
-          = @view_model.info.location_name
+          = @resume.info.location_name
         %li
           %i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
-          = link_to @view_model.info.email_address, @view_model.info.email_link
+          = link_to @resume.info.email_address, @resume.info.email_link
 
         %li
           %i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone
-          = link_to @view_model.info.phone_number, @view_model.info.phone_link
+          = link_to @resume.info.phone_number, @resume.info.phone_link

@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
-
   def index
-    @view_model = Home::IndexViewModel.new
+    @resume = Resume.new
     @articles = Article.take(5)
 
     render layout: 'home'

@@ -3,7 +3,6 @@
 
 //= require_self
 
-
 //= require 'jquery/dist/jquery'
 //= require 'bootstrap/dist/js/bootstrap'
 //= require 'jquery.easing/js/jquery.easing'
@@ -14,8 +13,6 @@
 //= require 'jquery.appear/jquery.appear'
 //= require 'waypoints/lib/jquery.waypoints'
 //= require 'OwlCarousel2/src/js/owl.carousel'
-
-
 
 Pace.on('hide', function() {
     $('#page-loader').delay(100).fadeOut(700);

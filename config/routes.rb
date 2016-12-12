@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :comments, only: [ :create ]
   end
 
-  resource :contact, only: [ :create ]
+  resource :contact, controller: :contact, only: [ :create ]
 
   root to: 'home#index'
 

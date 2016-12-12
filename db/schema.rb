@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20160119002024) do
     t.text     "content"
     t.binary   "image"
     t.string   "image_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "assets", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
@@ -32,16 +32,16 @@ ActiveRecord::Schema.define(version: 20160119002024) do
     t.string   "content_type"
     t.binary   "content"
     t.uuid     "article_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "comments", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "author"
     t.text     "content"
     t.uuid     "article_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "messages", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|

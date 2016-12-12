@@ -66,7 +66,7 @@
           %h3 Work History
 
           .timeline
-            - @view_model.work_history.each do |event|
+            - @resume.work_history.each do |event|
               / Single event
               .timeline-event.te-yellow
                 .event-date= event.date
@@ -94,7 +94,7 @@
           %i.title-icon.text-green.flaticon-open79
 
           %h3 Technologies & Languages
-          - @view_model.skills.each do |skill|
+          - @resume.skills.each do |skill|
             / Single skill
             .skill
               %span.skill-name= skill.name
@@ -112,5 +112,5 @@
 
           %h3 Other
           %ul.list-group
-            - @view_model.hobbies.each do |hobby|
+            - @resume.hobbies.each do |hobby|
               %li.list-group-item= hobby

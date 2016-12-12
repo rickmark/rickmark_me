@@ -3,30 +3,22 @@
   %head
 
     / Title
-    %title Rick Mark - Software Artisan
+    %title Rick Mark - Software Security Expert
 
     / Meta
     %meta( name="charset" content="utf-8" )
     %meta( name="viewport" content="width=device-width, initial-scale=1.0" )
-    %meta( name="description" content="Rick Mark - Security Software Developer." )
+    %meta( name="description" content="Rick Mark - Security Software Expert." )
     %meta( name="keywords" content="microsoft, ios, security, rails, ruby, developer, azure, cloud, mobile" )
     %meta( name="author" content="Rick Mark" )
 
+    %link{ rel: 'author', href: 'humans.txt' }
     %link{ rel: 'shortcut icon', href: image_path('/images/favicon.png') }
     %link{ rel: 'apple-touch-icon', href: image_path('/images/apple-touch-icon.png') }
     %link{ rel: 'apple-touch-icon', sizes: '72x72', href: image_path('/images/apple-touch-icon-72x72.png') }
     %link{ rel: 'apple-touch-icon', sizes: '114x114', href: image_path('/images/apple-touch-icon-114x114.png') }
 
     = javascript_include_tag 'pace/pace', data: { pace_options: '{"target": "#page-loader"}' }
-
-    /[if lt IE 9]
-      %script( src="http://html5shim.googlecode.com/svn/trunk/html5.js" )
-
-
-    / Retina Images
-    :javascript
-      if ((window.devicePixelRatio === undefined ? 1 : window.devicePixelRatio) > 1)
-      document.cookie = 'HTTP_IS_RETINA=1;path=/';
 
     / Stylesheets
     = stylesheet_link_tag 'application'
@@ -39,17 +31,6 @@
 
   %body
     #page-loader
-    / Facebook Source
-    #fb-root
-    :javascript
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
 
     = yield
 
