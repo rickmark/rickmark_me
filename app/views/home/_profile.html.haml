@@ -14,9 +14,6 @@
       / URL
       .pull-right
         = link_to @resume.info.website, "http://#{@resume.info.website}/", class: 'hidden-xs'
-      .pull-right
-        = link_to action: :key do
-          %i.inline-icon.fa.fa-key
 
 
     / Profile Content
@@ -25,8 +22,8 @@
       %h5
         :plain
           I am a <span class="text-primary">Microsoft Azure</span>, <span class="text-green">Apple iOS</span>,
-          <span class="text-red">Ruby on Rails</span> and general <span class="text-orange">polyglot</span> software
-          developer and security expert.
+          <span class="text-red">Ruby on Rails</span> and general <span class="text-violet">polyglot</span> software
+          developer and <span class="text-orange">security expert</span>.
       %a.btn.btn-primary{ target: '_blank', href: @resume.info.print_url } Download my CV
       %a.btn.btn-default{ href: '#contact' } Contact me
 
