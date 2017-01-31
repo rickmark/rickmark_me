@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resource :contact, controller: :contact, only: [ :create ]
 
-  root to: 'home#index'
+  get '/key' => 'home#key'
 
+  root to: 'home#index'
 end

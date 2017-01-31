@@ -8,6 +8,7 @@ class PersonalInfo
   attr_accessor :website
   attr_accessor :print_url
   attr_accessor :social_links
+  attr_accessor :pgp_key
 
   def initialize(data)
     @first_name = data[:first_name]
@@ -17,6 +18,7 @@ class PersonalInfo
     @email_address = data[:email_address]
     @website = data[:website_url]
     @print_url = data[:resume_print_url]
+    @pgp_key = data[:pgp_key]
 
     @latitude = data[:latitude]
     @longitude = data[:longitude]

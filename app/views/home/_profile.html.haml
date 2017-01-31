@@ -10,9 +10,13 @@
     .top-bar
       = render partial: 'shared/social_links', object: @resume.info.social_links
 
+
       / URL
       .pull-right
         = link_to @resume.info.website, "http://#{@resume.info.website}/", class: 'hidden-xs'
+      .pull-right
+        = link_to action: :key do
+          %i.inline-icon.fa.fa-key
 
 
     / Profile Content

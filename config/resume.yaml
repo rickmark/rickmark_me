@@ -6,11 +6,64 @@ resume:
     email_address: rickmark@outlook.com
     location: New York, NY 10019
     telephone_number: +1 (206) 913-3215
-    resume_url: http://rickmark.me
+    resume_url: https://rickmark.me
     latitude: 40.760
     longitude: -73.99
     website_url: www.rickmark.me
     resume_print_url: https://indd.adobe.com/view/a6f34f27-9886-4b8c-820d-ecf3ec69d8eb
+    pgp_key: |
+      -----BEGIN PGP PUBLIC KEY BLOCK-----
+      Version: GnuPG v2
+
+      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
+      x8xEe1rWvtmRLA==
+      =0/vv
+      -----END PGP PUBLIC KEY BLOCK-----
     social_links:
       - name: linkedin
         display: LinkedIn
