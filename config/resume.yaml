@@ -76,19 +76,23 @@ resume:
         url: https://twitter.com/almightylinuxgo
   work_history:
     - date: 'Jan 2017 - Current'
-      name: 'Hot Mess - http://hotmess.social'
+      name: 'Hot Mess'
+      link: https://hotmess.social
       title: 'Owner'
       location: 'New York, NY'
     - date: 'Feb 2016 - 2017'
       name: 'Jet.com'
+      link: https://jet.com
       title: 'Senior Security Engineer III'
       location: 'Hoboken, NJ'
     - date: 'Oct 2015 - Feb 2016'
       name: 'Bloomberg LP'
+      link: https://bloomberglaw.com
       title: 'Senior Web Application Engineer'
       location: 'New York, NY'
     - date: 'Oct 2010 - Apr 2015'
       name: 'Microsoft Corporation'
+      link: https://azure.com
       title: 'Security Software Engineer II'
       location: 'Redmond, WA'
     - date: 'Feb 2009 - June 2010'
@@ -97,6 +101,7 @@ resume:
       location: 'Boston, MA'
     - date: 'Dec 2006 - Feb 2009'
       name: 'The NASDAQ OMX Group'
+      link: https://directorsdesk.com
       title: 'Analyst IV'
       location: 'Maynard, MA'
   skills:

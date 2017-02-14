@@ -70,7 +70,11 @@
               / Single event
               .timeline-event.te-yellow
                 .event-date= event.date
-                .event-name= event.name
+                .event-name
+                - if event.link
+                  = link_to event.name, event.link
+                - else
+                  = event.name
                 .event-description= event.location
 
 
