@@ -75,6 +75,11 @@ resume:
         display: Twitter
         url: https://twitter.com/almightylinuxgo
   work_history:
+    - date: 'June 2017 - Current'
+      name: 'Uber Advanced Technologies Group'
+      link: https://www.uber.com/info/atg/
+      title: 'Senior Security Engineer'
+      location: 'San Francisco, CA'
     - date: 'Jan 2017 - Current'
       name: 'Hot Mess'
       link: https://hotmess.social
