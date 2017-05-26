@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.3.3'
+ruby '2.4.1'
 
 gem 'rails'
 
@@ -24,6 +24,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
+  gem 'rubocop'
 end
 
 group :production do
