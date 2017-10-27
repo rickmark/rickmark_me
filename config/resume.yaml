@@ -65,6 +65,9 @@ resume:
       - name: twitter
         display: Twitter
         url: https://twitter.com/almightylinuxgo
+      - name: key
+        display: Keybase
+        url: https://keybase.io/rickmark
   work_history:
     - date: 'June 2017 - Current'
       name: 'Uber Advanced Technologies Group'

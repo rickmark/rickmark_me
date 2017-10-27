@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @resume = Resume.new
-    @articles = Article.take(5)
+    @articles = []
 
     render layout: 'home'
   end
