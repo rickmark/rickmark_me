@@ -1,0 +1,101 @@
+# Rick's projects, organizations, sites and profiles, linked from the footer, home page and posts.
+sites:
+  - name: Blog
+    url: /blog/
+    note: Security research notes
+  - name: Garage
+    url: https://garagerag.app
+    note: Private, local RAG for the Mac
+  - name: Team t8012 blog
+    url: https://blog.t8012.dev/on-bridgeos-t2-research/
+    note: The T2 research write-up
+  - name: RSS feed
+    url: /blog/feed.xml
+    note: Every new post
+
+orgs:
+  - name: Hack Different
+    url: https://github.com/hack-different
+    note: Open-source Apple platform research
+  - name: Team t8012
+    url: https://github.com/t8012
+    note: The T2 security chip team
+  - name: AudienceKit
+    url: https://github.com/audience-kit
+    note: Community, people, places and events
+
+projects:
+  - name: apple-knowledge
+    url: https://github.com/hack-different/apple-knowledge
+    note: Machine-readable facts about Apple hardware and software
+    group: Apple research
+  - name: chainfix
+    url: https://github.com/rickmark/chainfix
+    note: Check and repair Keychain and iCloud Keychain
+    group: Tools that protect people
+  - name: isafety
+    url: https://github.com/rickmark/isafety
+    note: Examine iPhones and iPads for safety threats
+    group: Tools that protect people
+  - name: garage-rag
+    url: https://github.com/rickmark/garage-rag
+    note: The open-source code behind Garage
+    group: Products
+  - name: mootool
+    url: https://github.com/hack-different/mootool
+    note: Parse Apple security state, from LocalPolicy to APTickets
+    group: Apple research
+  - name: secure_emu
+    url: https://github.com/hack-different/secure_emu
+    note: Run SecureROM under the Unicorn emulator
+    group: Firmware and boot
+  - name: libapfs
+    url: https://github.com/rickmark/libapfs
+    note: A library for the Apple File System
+    group: Apple formats
+  - name: libidevice
+    url: https://github.com/rickmark/libidevice
+    note: libimobiledevice, reimagined in Rust
+    group: Apple formats
+  - name: apple_utdm
+    url: https://github.com/rickmark/apple_utdm
+    note: A Linux driver for USB Target Disk Mode
+    group: Ports and radios
+  - name: badusb
+    url: https://github.com/rickmark/badusb
+    note: TOCTOU gaps in USB mass storage
+    group: Ports and radios
+  - name: lightning_strike
+    url: https://github.com/rickmark/lightning_strike
+    note: Security of the Lightning connector
+    group: Ports and radios
+  - name: apple-malicious-baseband
+    url: https://github.com/rickmark/apple-malicious-baseband
+    note: A malicious baseband image with Apple's signature
+    group: Ports and radios
+  - name: mojo_thor
+    url: https://github.com/rickmark/mojo_thor
+    note: EFI and SMC firmware malware research
+    group: Firmware and boot
+  - name: hedonism_bot
+    url: https://github.com/lwm-luminx/hedonism_bot
+    note: Find the event photos you appear in, without naming anyone
+    group: Products
+  - name: meshtastic-map-manager
+    url: https://github.com/rickmark/meshtastic-map-manager
+    note: Manage Meshtastic map data
+    group: Products
+
+profiles:
+  - name: GitHub
+    url: https://github.com/rickmark
+    icon: github
+  - name: LinkedIn
+    url: https://linkedin.com/in/penwellr
+    icon: linkedin
+  - name: Patreon
+    url: https://www.patreon.com/rickmark
+    icon: heart
+  - name: RSS
+    url: /blog/feed.xml
+    icon: rss

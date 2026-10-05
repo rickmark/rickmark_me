@@ -2,11 +2,13 @@
 layout: default
 title: Blog
 description: Writing on Apple platform security, firmware and hardware research, privacy, and fabrication.
+band: true
+band_label: Writing
+band_lead: "Apple platform security, firmware and hardware research, privacy, and fabrication."
 redirect_from:
   - /author/rickmark/
 ---
-<h1 class="page-title">Blog</h1>
-<p class="lead">Writing on Apple platform security, firmware and hardware research, privacy, and fabrication. Posts marked WIP are notes in progress; see <a href="{{ '/blog/about-wip/' | relative_url }}">About 'WIP'</a>.</p>
+<p>Posts marked WIP are notes in progress; see <a href="{{ '/blog/about-wip/' | relative_url }}">About 'WIP'</a>.</p>
 {% assign by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year in by_year %}
 <h2 class="section-title">{{ year.name }}</h2>
