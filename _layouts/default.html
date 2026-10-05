@@ -23,7 +23,7 @@
     </div>
   </header>
 
-  {% if page.hero %}{% include hero.html %}{% endif %}
+  {% if page.hero %}{% include hero.html %}{% elsif page.about_hero %}{% include about-hero.html %}{% elsif page.band %}{% include page-band.html %}{% elsif page.layout == 'post' %}{% include post-band.html %}{% endif %}
   <main class="container site-main">
     {{ content }}
   </main>

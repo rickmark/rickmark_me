@@ -1,13 +1,13 @@
-{%- comment -%}The design system's cover composition: colour blocks on an 8px grid with a 32px dot grid. The ink slab runs past the viewBox so it bleeds to the page edge.{%- endcomment -%}
+{%- comment -%}The design system's cover composition on the graphite band: colour blocks on an 8px grid with a 32px dot grid. The amber slab runs past the viewBox so it bleeds to the page edge.{%- endcomment -%}
 <svg class="blocks" width="448" height="300" viewBox="0 0 448 300" aria-hidden="true" focusable="false">
-  <rect class="b-ink" x="256" y="-1000" width="3000" height="3000"/>
-  <rect class="b-tint" x="0" y="156" width="224" height="128" rx="6"/>
-  <rect class="b-accent" x="64" y="12" width="160" height="112" rx="6"/>
-  <rect class="b-signal" x="0" y="40" width="48" height="96" rx="6"/>
-  <g class="b-dot-light">
+  <rect class="g-accent" x="256" y="-1000" width="3000" height="3000"/>
+  <rect class="g-raised" x="0" y="156" width="224" height="128" rx="6"/>
+  <rect class="g-signal" x="64" y="12" width="160" height="112" rx="6"/>
+  <rect class="g-paper" x="0" y="40" width="48" height="96" rx="6"/>
+  <g class="g-dot-dark">
     {%- for y in (0..7) -%}{%- for x in (0..7) -%}<circle cx="{{ x | times: 32 | plus: 288 }}" cy="{{ y | times: 32 | plus: 32 }}" r="2.5"/>{%- endfor -%}{%- endfor -%}
   </g>
-  <g class="b-dot">
+  <g class="g-dot">
     {%- for y in (0..2) -%}{%- for x in (1..6) -%}<circle cx="{{ x | times: 32 }}" cy="{{ y | times: 32 | plus: 188 }}" r="2.5"/>{%- endfor -%}{%- endfor -%}
   </g>
 </svg>
