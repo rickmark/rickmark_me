@@ -23,9 +23,10 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
-      - id: pages
-        uses: actions/configure-pages@v5
-      - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - uses: actions/configure-pages@v5
+      # Served at the rickmark.me custom domain, so keep baseurl "" from _config.yml
+      # rather than the /rickmark_me project path configure-pages reports.
+      - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
       - uses: actions/upload-pages-artifact@v3
