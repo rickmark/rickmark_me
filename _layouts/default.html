@@ -14,7 +14,7 @@
 <body>
   <header class="site-header">
     <div class="container header-row">
-      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <a href="{{ '/' | relative_url }}" class="site-title">{% include mark.html %}{{ site.title }}</a>
       <nav class="site-nav">
         <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">Blog</a>
         <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
@@ -23,13 +23,14 @@
     </div>
   </header>
 
+  {% if page.hero %}{% include hero.html %}{% endif %}
   <main class="container site-main">
     {{ content }}
   </main>
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <span>© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
+      <span class="footer-brand">{% include mark.html %}© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
       <span class="footer-links">
         <a href="{{ '/blog/feed.xml' | relative_url }}">{% include icon.html name="rss" %}RSS</a>
         <a href="https://github.com/rickmark" rel="noopener">{% include icon.html name="github" %}GitHub</a>
