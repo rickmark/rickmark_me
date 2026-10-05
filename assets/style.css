@@ -114,7 +114,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .site-main { padding-top: var(--space-3); padding-bottom: var(--space-4); }
 
 .site-footer {
-  padding: var(--space-3) 0;
+  padding: var(--space-4) 0 var(--space-3);
   background-color: var(--band-bg);
   background-image: radial-gradient(circle, var(--band-dot) 2.5px, transparent 3px);
   background-size: var(--space-3) var(--space-3);
@@ -123,15 +123,26 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: var(--band-muted);
   font-size: 14px; line-height: 20px;
 }
+.directory {
+  display: grid; grid-template-columns: 1fr 1fr 2fr 1fr; gap: var(--space-3);
+  padding-bottom: var(--space-3); margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--band-raised);
+}
+.directory h2 { margin: 0 0 12px; color: var(--band-accent); }
+.directory ul { list-style: none; margin: 0; padding: 0; }
+.directory li { margin: 0 0 10px; }
+.directory li span { display: block; color: var(--band-muted); font-size: 13px; line-height: 18px; }
+.directory a { display: inline-flex; align-items: center; gap: 6px; color: var(--band-text); }
+.directory a:hover { color: var(--band-accent); }
+.directory code { font-family: var(--font-mono); font-size: 13px; }
+.directory-projects ul { columns: 2; column-gap: var(--space-3); }
+.directory-projects li { margin-bottom: 6px; break-inside: avoid; }
+.footer-bottom { padding-top: 0; }
+.footer-top { color: var(--band-muted); }
+.footer-top:hover { color: var(--band-accent); }
 .footer-brand { display: inline-flex; align-items: center; gap: var(--space-1); color: var(--band-text); }
 .footer-brand .mark { width: 16px; height: 16px; }
 .site-footer .b-ink { fill: var(--band-text); }
-.footer-links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-.footer-links a {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: var(--band-text);
-}
-.footer-links a:hover { color: var(--band-accent); }
 .icon { width: 16px; height: 16px; flex: none; }
 
 /* Colour blocks shared by the hero, mark and rules */
@@ -198,6 +209,40 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .feature-body { padding: var(--space-2); font-size: 15px; line-height: 24px; color: var(--ink-muted); }
 .feature-body strong { display: block; margin-bottom: 4px; font-size: 19px; line-height: 28px; font-weight: 600; color: var(--ink); }
 .feature-body code { font-family: var(--font-mono); font-size: 17px; color: var(--signal); }
+
+/* Home: projects grid on the graphite band */
+.projects-band > .wide { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.section-title-band { color: var(--band-accent); margin-top: 0; }
+.section-title-band::before { background: var(--band-accent); }
+.projects-band .band-intro { color: var(--band-text); }
+.project-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2);
+}
+.project {
+  display: flex; flex-direction: column; gap: 4px; height: 100%;
+  padding: var(--space-2); border-radius: var(--radius-md);
+  background: var(--band-raised); color: var(--band-text);
+  border-top: 4px solid var(--band-signal);
+  transition: background-color 120ms ease;
+}
+.project-grid li:nth-child(3n+2) .project { border-top-color: var(--band-accent); }
+.project-grid li:nth-child(3n) .project { border-top-color: var(--band-paper); }
+.band-graphite a.project { color: var(--band-text); }
+.project:hover { text-decoration: none; background: #3a3d42; }
+.project-group { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--band-muted); }
+.project code { font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 500; color: var(--band-signal); overflow-wrap: anywhere; }
+.project-note { font-size: 14px; line-height: 20px; color: var(--band-text); }
+
+/* Posts: cross-links after the article */
+.more-from { margin-top: var(--space-4); }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.chips a {
+  display: inline-block; padding: 6px 12px; border-radius: var(--radius-md);
+  background: var(--accent-tint); color: var(--ink); font-size: 14px; line-height: 20px;
+}
+.chips a:hover { text-decoration: none; background: var(--accent); color: var(--on-accent); }
+.chips code { font-family: var(--font-mono); font-size: 13px; }
 
 /* Page and post title bands */
 .page-band .container { padding-top: var(--space-4); padding-bottom: var(--space-3); }
@@ -374,6 +419,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 860px) {
   .features { grid-template-columns: 1fr; }
+  .project-grid { grid-template-columns: 1fr 1fr; }
+  .directory { grid-template-columns: 1fr 1fr; }
+  .directory-projects { grid-column: 1 / -1; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-hero-inner { grid-template-columns: 1fr; gap: var(--space-3); }
   .hero-inner { grid-template-columns: 1fr; gap: 0; }
@@ -383,6 +431,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 @media (max-width: 600px) {
+  .project-grid { grid-template-columns: 1fr; }
   .hero-text h1, .about-hero-text h1 { font-size: 40px; line-height: 44px; }
   .stat strong { font-size: 32px; line-height: 36px; }
   body { font-size: 16px; line-height: 26px; }

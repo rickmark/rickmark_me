@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container header-row">
       <a href="{{ '/' | relative_url }}" class="site-title">{% include mark.html %}{{ site.title }}</a>
       <nav class="site-nav">
         <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">Blog</a>
+        <a href="{{ '/#projects' | relative_url }}">Projects</a>
         <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
         <a href="https://github.com/rickmark" rel="noopener">GitHub ↗</a>
       </nav>
@@ -28,15 +29,13 @@
     {{ content }}
   </main>
 
+  {% if page.hero %}{% include projects-band.html %}{% endif %}
+
   <footer class="site-footer">
-    <div class="container footer-row">
+    {% include footer-directory.html %}
+    <div class="wide footer-row footer-bottom">
       <span class="footer-brand">{% include mark.html %}© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
-      <span class="footer-links">
-        <a href="{{ '/blog/feed.xml' | relative_url }}">{% include icon.html name="rss" %}RSS</a>
-        <a href="https://github.com/rickmark" rel="noopener">{% include icon.html name="github" %}GitHub</a>
-        <a href="https://linkedin.com/in/penwellr" rel="noopener">{% include icon.html name="linkedin" %}LinkedIn</a>
-        <a href="https://www.patreon.com/rickmark" rel="noopener">{% include icon.html name="heart" %}Patreon</a>
-      </span>
+      <a class="footer-top" href="#top">Back to top ↑</a>
     </div>
   </footer>
 </body>

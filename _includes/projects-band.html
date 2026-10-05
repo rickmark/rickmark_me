@@ -1,0 +1,12 @@
+<section class="band band-graphite projects-band" id="projects">
+  <div class="wide">
+    <h2 class="section-title section-title-band">Projects and places</h2>
+    <p class="band-intro">Most of my work is open source, spread across my own repositories, <a href="https://github.com/hack-different">Hack Different</a> and <a href="https://github.com/t8012">Team t8012</a>.</p>
+    <ul class="project-grid">
+      {% for l in site.data.links.projects %}
+      <li><a class="project" href="{{ l.url }}" rel="noopener"><span class="project-group">{{ l.group }}</span><code>{{ l.name }}</code><span class="project-note">{{ l.note }}</span></a></li>
+      {% endfor %}
+    </ul>
+    <p class="hero-actions"><a class="button" href="https://github.com/rickmark" rel="noopener">All repositories on GitHub</a><a class="button-quiet" href="{{ '/about/' | relative_url }}#research-and-open-source">The full list →</a></p>
+  </div>
+</section>

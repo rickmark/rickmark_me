@@ -1,0 +1,9 @@
+<aside class="more-from">
+  <h2 class="section-title">More from Rick</h2>
+  <ul class="chips">
+    <li><a href="{{ '/about/' | relative_url }}">About me</a></li>
+    {% for l in site.data.links.sites %}{% unless l.url == '/blog/' %}<li><a href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}">{{ l.name }}</a></li>{% endunless %}{% endfor %}
+    {% for l in site.data.links.orgs %}<li><a href="{{ l.url }}" rel="noopener">{{ l.name }}</a></li>{% endfor %}
+    {% for l in site.data.links.projects limit: 6 %}<li><a href="{{ l.url }}" rel="noopener"><code>{{ l.name }}</code></a></li>{% endfor %}
+  </ul>
+</aside>
