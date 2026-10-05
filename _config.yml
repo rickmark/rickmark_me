@@ -46,5 +46,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - tools
+  - docs
   - vendor
   - "20[0-9]*"
