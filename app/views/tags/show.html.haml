@@ -1,8 +1,0 @@
-%h2
-  Tag: #{@tag.name}
-- if @tag.tag_usages.any?
-  %ul
-    - @tag.tag_usages.each do |usage|
-      %li= link_to(usage.taggable.class.name.humanize + ": " + usage.taggable.to_str, usage.taggable)
-- else
-  %h4 Tag is not used

@@ -1,1 +1,0 @@
-Article.create(title: 'A Whole New Web...', subtitle: "I'm in the process of porting my previous blog.", lead: 'Please be patient as I convert from my previous blog database in MySQL to Postgres.')

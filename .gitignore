@@ -1,6 +1,9 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-.DS_Store
-.idea
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+.bundle/
+# Empty Wayback Machine snapshot folders left over from the Ghost export
+/20[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/
+.claude/

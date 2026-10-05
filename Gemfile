@@ -1,34 +1,10 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.4.2'
-
-gem 'rails'
-
-# Data Storage Layer
-gem 'pg'
-
-# Asset Pipeline
-gem 'uglifier'
-gem 'sass-rails'
-gem 'haml-rails'
-gem 'sprockets-rails'
-gem 'coffee-rails'
-gem 'bootstrap-sass'
-gem 'redcarpet'
-
-# Process Management
-gem 'foreman'
-
-# Testing
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem 'cucumber-rails', require: false
-  gem 'rubocop'
-end
-
-group :production do
-  gem 'puma'
-  gem 'therubyracer'
-  gem 'rails_12factor'
-end
+gem "jekyll", "~> 4.4"
+gem "jekyll-feed"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "jekyll-redirect-from"
+gem "kramdown-parser-gfm"
+gem "rouge"
+gem "webrick"

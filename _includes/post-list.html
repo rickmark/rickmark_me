@@ -1,0 +1,9 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </li>
+  {% endfor %}
+</ul>

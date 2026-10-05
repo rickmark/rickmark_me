@@ -1,0 +1,50 @@
+title: Rick Mark
+tagline: Security, privacy and AI engineer and hardware security researcher
+description: "Rick Mark-Penwell writes about Apple platform security, firmware and hardware research, privacy, and fabrication."
+url: "https://rickmark.me"
+baseurl: ""
+lang: en_US
+timezone: UTC
+
+author:
+  name: Rick Mark-Penwell
+  url: https://rickmark.me/about/
+social:
+  name: Rick Mark-Penwell
+  links:
+    - https://github.com/rickmark
+    - https://linkedin.com/in/penwellr
+
+# Posts keep their Ghost slugs, under /blog/ (blog.rickmark.me/<slug>/ redirects to rickmark.me/blog/<slug>/)
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+feed:
+  path: blog/feed.xml
+  posts_limit: 100
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tools
+  - vendor
+  - "20[0-9]*"
