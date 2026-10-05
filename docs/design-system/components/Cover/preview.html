@@ -1,0 +1,35 @@
+<!-- @dsCard height=300 -->
+<style>
+ html,body{margin:0;background:var(--surface);}
+ .wrap{position:relative;width:960px;height:300px;overflow:hidden;font-family:var(--font-sans, "IBM Plex Sans", system-ui, sans-serif);}
+ svg{position:absolute;left:0;top:0}
+ .ink{fill:var(--ink)} .acc{fill:var(--accent)} .sig{fill:var(--signal)} .tint{fill:var(--accent-tint)} .dot{fill:var(--ink-muted)} .dotl{fill:var(--surface)}
+ .b{rx:var(--radius-md)}
+ .name{position:absolute;left:48px;bottom:72px;margin:0;font-size:80px;line-height:.92;font-weight:600;letter-spacing:-0.02em;color:var(--ink);max-width:440px}
+ .tag{position:absolute;left:48px;bottom:40px;margin:0;font-size:14px;color:var(--ink-muted);max-width:440px;font-family:"IBM Plex Mono",ui-monospace,monospace}
+</style>
+<div class="wrap">
+<!-- blocks: ink 192x300 slab (bleeds top+bottom), accent 160x128, signal 96x96, accent-tint 224x128; radius-md
+     arrangement: one tall slab with satellites, bleeding off the right and top edges, all right of x=480
+     pattern: precise, technical, mono, 8px grid -> dot grid at space-3 (32px) pitch, cut out of the ink slab and over the tint
+     steps: space-3 pitch, space-2 gaps; radius-md corners -->
+<svg width="960" height="300" viewBox="0 0 960 300" aria-hidden="true">
+ <rect class="tint b" x="512" y="156" width="224" height="128"/>
+ <rect class="acc b" x="576" y="-6" width="160" height="128"/>
+ <rect class="sig b" x="512" y="40" width="48" height="96"/>
+ <rect class="ink" x="768" y="-6" width="192" height="312"/>
+ <g class="dotl">
+  <circle cx="800" cy="32" r="2.5"/><circle cx="832" cy="32" r="2.5"/><circle cx="864" cy="32" r="2.5"/><circle cx="896" cy="32" r="2.5"/><circle cx="928" cy="32" r="2.5"/>
+  <circle cx="800" cy="64" r="2.5"/><circle cx="832" cy="64" r="2.5"/><circle cx="864" cy="64" r="2.5"/><circle cx="896" cy="64" r="2.5"/><circle cx="928" cy="64" r="2.5"/>
+  <circle cx="800" cy="96" r="2.5"/><circle cx="832" cy="96" r="2.5"/><circle cx="864" cy="96" r="2.5"/><circle cx="896" cy="96" r="2.5"/><circle cx="928" cy="96" r="2.5"/>
+  <circle cx="800" cy="128" r="2.5"/><circle cx="832" cy="128" r="2.5"/><circle cx="864" cy="128" r="2.5"/><circle cx="896" cy="128" r="2.5"/><circle cx="928" cy="128" r="2.5"/>
+ </g>
+ <g class="dot">
+  <circle cx="544" cy="188" r="2.5"/><circle cx="576" cy="188" r="2.5"/><circle cx="608" cy="188" r="2.5"/><circle cx="640" cy="188" r="2.5"/><circle cx="672" cy="188" r="2.5"/><circle cx="704" cy="188" r="2.5"/>
+  <circle cx="544" cy="220" r="2.5"/><circle cx="576" cy="220" r="2.5"/><circle cx="608" cy="220" r="2.5"/><circle cx="640" cy="220" r="2.5"/><circle cx="672" cy="220" r="2.5"/><circle cx="704" cy="220" r="2.5"/>
+  <circle cx="544" cy="252" r="2.5"/><circle cx="576" cy="252" r="2.5"/><circle cx="608" cy="252" r="2.5"/><circle cx="640" cy="252" r="2.5"/><circle cx="672" cy="252" r="2.5"/><circle cx="704" cy="252" r="2.5"/>
+ </g>
+</svg>
+<h1 class="name">Rick Mark</h1>
+<p class="tag">Hardware, privacy and key security — notes from the bench.</p>
+</div>
