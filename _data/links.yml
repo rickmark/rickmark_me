@@ -18,6 +18,9 @@ sites:
   - name: Hot Mess
     url: https://hotmess.social
     note: Queer nightlife, live
+  - name: LuminX
+    url: https://luminx.media
+    note: Cinema, photography, 3D scanning and more
   - name: Team t8012 blog
     url: https://blog.t8012.dev/on-bridgeos-t2-research/
     note: The T2 research write-up
@@ -37,7 +40,7 @@ orgs:
     note: Community, people, places and events
   - name: LuminX
     url: https://github.com/lwm-luminx
-    note: Garage, Hot Mess on the web and hedonism_bot
+    note: LuminX's software, from Garage to hedonism_bot
 
 projects:
   - name: apple-knowledge

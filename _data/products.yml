@@ -111,23 +111,29 @@
 
 - slug: luminx
   name: LuminX
-  kicker: Where the products live
-  url: https://github.com/lwm-luminx
-  domain: github.com/lwm-luminx
+  kicker: Create the unseen
+  url: https://luminx.media
+  domain: luminx.media
   colour: graphite
   summary: >-
-    LuminX is the GitHub organization that holds my product work: Garage, the Hot Mess website, and hedonism_bot.
+    LuminX is the creative studio of Love Wins Media, from custom AI neural networks to cinema-class production. It
+    brings the tools and the talent to engineer the future of a brand, at the intersection of technology and creativity.
+  services: [Marketing, Photography, Cinema, 3D scanning, 3D printing, Live events, Drone imaging, Rentals]
   facts:
-    - "<a href=\"https://github.com/lwm-luminx/garage-rag\"><code>garage-rag</code></a>: Garage, the private local RAG for the Mac"
-    - "<a href=\"https://github.com/lwm-luminx/hotmess.social\"><code>hotmess.social</code></a>: the Hot Mess web app and marketing site, built on AudienceKit"
-    - "<a href=\"https://github.com/lwm-luminx/hedonism_bot\"><code>hedonism_bot</code></a>: lets photographers upload event photos, and uses pgvector embeddings to group faces without naming anyone, so people can find the photos they appear in"
+    - Cinema production, digital marketing and virtual production
+    - 3D scanning and printing, from reality capture to finished parts
+    - "Its software lives in the <a href=\"https://github.com/lwm-luminx\">lwm-luminx</a> GitHub organization, including <a href=\"https://github.com/lwm-luminx/garage-rag\"><code>garage-rag</code></a>, <a href=\"https://github.com/lwm-luminx/hotmess.social\"><code>hotmess.social</code></a> and <a href=\"https://github.com/lwm-luminx/hedonism_bot\"><code>hedonism_bot</code></a>"
   family: [garage, hot-mess, audiencekit]
   links:
+    - name: luminx.media
+      url: https://luminx.media
     - name: LuminX on GitHub
       url: https://github.com/lwm-luminx
-    - name: garage-rag
-      url: https://github.com/lwm-luminx/garage-rag
-    - name: hotmess.social
-      url: https://github.com/lwm-luminx/hotmess.social
-    - name: hedonism_bot
-      url: https://github.com/lwm-luminx/hedonism_bot
+    - name: "Blog: Revopoint reality capture"
+      url: /blog/reality-capture-revopoint-miraco-metrox-workflow/
+    - name: "Blog: Formlabs Form 4"
+      url: /blog/next-gen-fabrication-formlabs-form-4/
+    - name: "Blog: MakerBot Method X"
+      url: /blog/industrial-strength-makerbot-method-x-carbon-fiber/
+    - name: "Blog: Edelkrone motion control"
+      url: /blog/kinematics-in-focus-edelkrone-ecosystem/
