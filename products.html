@@ -26,13 +26,19 @@ description: Garage, AudienceKit, Hot Mess and LuminX, the products Rick Mark-Pe
         {% for f in p.facts %}<li>{{ f }}</li>{% endfor %}
       </ul>
       <ul class="chips">
-        {% for l in p.links %}<li><a href="{{ l.url }}" rel="noopener">{{ l.name }}</a></li>{% endfor %}
+        {% for l in p.links %}<li><a href="{% if l.url contains '://' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}" rel="noopener">{{ l.name }}</a></li>{% endfor %}
       </ul>
     </div>
     <div class="product-shots">
       {% if p.shots %}
         {% for s in p.shots %}{% include product-shot.html shot=s %}{% endfor %}
-      {% elsif p.family %}
+      {% elsif p.services %}
+        <div class="product-services">
+          <p class="product-services-head"><span class="label">{{ p.domain }}</span><strong>{{ p.kicker }}</strong></p>
+          <ul>{% for sv in p.services %}<li>{{ sv }}</li>{% endfor %}</ul>
+        </div>
+      {% endif %}
+      {% if p.family %}
         <div class="product-family">
           {% for slug in p.family %}{% assign f = site.data.products | where: "slug", slug | first %}
           <a class="family-tile" href="#{{ f.slug }}">
