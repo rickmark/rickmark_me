@@ -1,0 +1,4 @@
+<figure class="shot">
+  <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span><em>{{ include.shot.caption }}</em></div>
+  <img src="{{ include.shot.src | relative_url }}" alt="{{ include.shot.alt }}" loading="lazy" decoding="async" width="1280" height="{{ include.shot.height | default: 800 }}">
+</figure>

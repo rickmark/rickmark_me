@@ -1,0 +1,133 @@
+# The products I build, shown on /products/ and in the home page's products band.
+# Screenshots live in assets/images/products/ and were taken from each product's site.
+- slug: garage
+  name: Garage
+  kicker: Private, local RAG for the Mac
+  url: https://garagerag.app
+  domain: garagerag.app
+  colour: ink
+  summary: >-
+    Garage indexes your documents, code, notes and messages on your own computer and serves them to your AI assistant
+    over the Model Context Protocol. It uploads nothing: your assistant gets only the excerpts it searches for, never
+    the whole collection.
+  facts:
+    - Hybrid search that combines vector similarity with full-text search
+    - Tracks whether each document is your own work, a reference, or something you received
+    - Runs its models locally through llama.cpp, Ollama or LM Studio
+    - Works with Claude Desktop, Claude Code, Cursor and other MCP clients
+    - Signed macOS app for Apple Silicon (macOS 14 and later), a TestFlight beta, a Linux command line, and Windows on the way
+  shots:
+    - src: /assets/images/products/garage-site.webp
+      alt: The garagerag.app home page, headed "Your files, your computer, your AI." with a Download Garage 1.5 button
+      caption: garagerag.app
+    - src: /assets/images/products/garage-app-search.webp
+      alt: Garage's search window on the Mac, ranking documents by hybrid score with the matching excerpt shown alongside
+      caption: Hybrid search in the Mac app
+      height: 408
+  links:
+    - name: garagerag.app
+      url: https://garagerag.app
+    - name: Download
+      url: https://github.com/lwm-luminx/garage-rag/releases/latest
+    - name: User guide
+      url: https://garagerag.app/support/guide.html
+    - name: Enterprise
+      url: https://garagerag.app/enterprise/
+    - name: PyPI
+      url: https://pypi.org/project/garage-rag/
+    - name: Source on GitHub
+      url: https://github.com/lwm-luminx/garage-rag
+
+- slug: audiencekit
+  name: AudienceKit
+  kicker: The platform for community apps
+  url: https://audiencekit.com
+  domain: audiencekit.com
+  colour: signal
+  summary: >-
+    AudienceKit gives a community its own app, with its own name, domain and look, and the venues, events and people
+    that make it real. It generalizes Hot Mess: one API serves every audience, and each keeps its own identity.
+  facts:
+    - Venues grouped by city and neighbourhood, and events brought in from Facebook, Eventbrite and Ticketmaster, with RSVPs
+    - Pages for DJs, performers and hosts that members can follow
+    - Photographers share their sets straight to the audiences they shoot for
+    - An admin console for each audience, skinned in its own colours
+    - A GraphQL API with SDKs for Swift and Ruby
+  shots:
+    - src: /assets/images/products/audiencekit-site.webp
+      alt: The audiencekit.com home page, headed "Give every scene its own home." beside a Hot Mess event list
+      caption: audiencekit.com
+    - src: /assets/images/products/audiencekit-developer.webp
+      alt: The AudienceKit developer docs home page, headed "Build for the places your people go"
+      caption: developer.audiencekit.com
+  links:
+    - name: audiencekit.com
+      url: https://audiencekit.com
+    - name: Developer docs
+      url: https://developer.audiencekit.com
+    - name: Swift SDK
+      url: https://github.com/audience-kit/audience-kit-sdk-swift
+    - name: Ruby SDK
+      url: https://github.com/audience-kit/audience-kit-sdk-ruby
+    - name: Admin console
+      url: https://github.com/audience-kit/audience_kit_admin
+    - name: AudienceKit on GitHub
+      url: https://github.com/audience-kit
+
+- slug: hot-mess
+  name: Hot Mess
+  kicker: Queer nightlife, live
+  url: https://hotmess.social
+  domain: hotmess.social
+  colour: accent
+  summary: >-
+    Hot Mess shows you the venues, events and DJs of your queer nightlife scene, and which of your friends are already
+    out. I started it in 2015 to index a subculture by its people, places and events, and it now runs as an audience
+    on AudienceKit.
+  facts:
+    - "Now: the bar you're in, who is spinning, and where the night is heading"
+    - Every party, drag show and DJ set in your city on one calendar, with RSVPs your friends can see
+    - The bars and clubs of your scene, with their upcoming nights
+    - Follow the DJs, hosts and performers you love
+    - Apps for iPhone and Android, plus a web app, with share links that open straight in the app
+  shots:
+    - src: /assets/images/products/hotmess-site.webp
+      alt: The hotmess.social home page in dark mode, headed "Where your people are tonight."
+      caption: hotmess.social
+    - src: /assets/images/products/hotmess-on-audiencekit.webp
+      alt: The Hot Mess showcase on audiencekit.com, with its pink accent and pride-flag spectrum
+      caption: Hot Mess on audiencekit.com
+  links:
+    - name: hotmess.social
+      url: https://hotmess.social
+    - name: Web app
+      url: https://hotmess.social/app/
+    - name: iOS app source
+      url: https://github.com/audience-kit/hot_mess_ios
+    - name: Android app source
+      url: https://github.com/audience-kit/hot_mess_android
+    - name: Website source
+      url: https://github.com/lwm-luminx/hotmess.social
+
+- slug: luminx
+  name: LuminX
+  kicker: Where the products live
+  url: https://github.com/lwm-luminx
+  domain: github.com/lwm-luminx
+  colour: graphite
+  summary: >-
+    LuminX is the GitHub organization that holds my product work: Garage, the Hot Mess website, and hedonism_bot.
+  facts:
+    - "<a href=\"https://github.com/lwm-luminx/garage-rag\"><code>garage-rag</code></a>: Garage, the private local RAG for the Mac"
+    - "<a href=\"https://github.com/lwm-luminx/hotmess.social\"><code>hotmess.social</code></a>: the Hot Mess web app and marketing site, built on AudienceKit"
+    - "<a href=\"https://github.com/lwm-luminx/hedonism_bot\"><code>hedonism_bot</code></a>: lets photographers upload event photos, and uses pgvector embeddings to group faces without naming anyone, so people can find the photos they appear in"
+  family: [garage, hot-mess, audiencekit]
+  links:
+    - name: LuminX on GitHub
+      url: https://github.com/lwm-luminx
+    - name: garage-rag
+      url: https://github.com/lwm-luminx/garage-rag
+    - name: hotmess.social
+      url: https://github.com/lwm-luminx/hotmess.social
+    - name: hedonism_bot
+      url: https://github.com/lwm-luminx/hedonism_bot
