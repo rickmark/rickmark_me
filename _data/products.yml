@@ -116,15 +116,20 @@
   domain: lovewins.media · luminx.media
   colour: graphite
   summary: >-
-    Love Wins Media, doing business as LuminX Creative, works from custom AI neural networks to cinema-class
-    production. It brings the tools and the talent to engineer the future of a brand, at the intersection of technology
-    and creativity.
-  services: [Marketing, Photography, Cinema, 3D scanning, 3D printing, Live events, Drone imaging, Rentals]
+    Love Wins Media makes media for LGBTQ+ people, causes and the businesses that stand with them. As LuminX it takes
+    the same crew and gear to brands, from custom AI neural networks to cinema-class production.
   facts:
-    - Cinema production, digital marketing and virtual production
-    - 3D scanning and printing, from reality capture to finished parts
+    - "Love Wins: \"Tell it out loud.\" Our crew and our gear, at your story's service"
+    - "LuminX: \"Create the unseen.\" Marketing, photography, cinema, 3D scanning and printing, live events, drone imaging and rentals"
+    - Both sites share services, talent, equipment and a client portal
     - "Its software lives in the <a href=\"https://github.com/lwm-luminx\">lwm-luminx</a> GitHub organization, including <a href=\"https://github.com/lwm-luminx/garage-rag\"><code>garage-rag</code></a>, <a href=\"https://github.com/lwm-luminx/hotmess.social\"><code>hotmess.social</code></a> and <a href=\"https://github.com/lwm-luminx/hedonism_bot\"><code>hedonism_bot</code></a>"
-  family: [garage, hot-mess, audiencekit]
+  shots:
+    - src: /assets/images/products/lovewins-media.webp
+      alt: The lovewins.media home page, with the Love Wins rainbow wordmark and the headline "Tell it out loud"
+      caption: lovewins.media
+    - src: /assets/images/products/luminx-media.webp
+      alt: The luminx.media home page, with the LuminX aperture wordmark and the headline "Create the unseen"
+      caption: luminx.media
   links:
     - name: lovewins.media
       url: https://lovewins.media
