@@ -110,14 +110,15 @@
       url: https://github.com/lwm-luminx/hotmess.social
 
 - slug: luminx
-  name: LuminX
+  name: Love Wins Media / LuminX
   kicker: Create the unseen
-  url: https://luminx.media
-  domain: luminx.media
+  url: https://lovewins.media
+  domain: lovewins.media · luminx.media
   colour: graphite
   summary: >-
-    LuminX is the creative studio of Love Wins Media, from custom AI neural networks to cinema-class production. It
-    brings the tools and the talent to engineer the future of a brand, at the intersection of technology and creativity.
+    Love Wins Media, doing business as LuminX Creative, works from custom AI neural networks to cinema-class
+    production. It brings the tools and the talent to engineer the future of a brand, at the intersection of technology
+    and creativity.
   services: [Marketing, Photography, Cinema, 3D scanning, 3D printing, Live events, Drone imaging, Rentals]
   facts:
     - Cinema production, digital marketing and virtual production
@@ -125,6 +126,8 @@
     - "Its software lives in the <a href=\"https://github.com/lwm-luminx\">lwm-luminx</a> GitHub organization, including <a href=\"https://github.com/lwm-luminx/garage-rag\"><code>garage-rag</code></a>, <a href=\"https://github.com/lwm-luminx/hotmess.social\"><code>hotmess.social</code></a> and <a href=\"https://github.com/lwm-luminx/hedonism_bot\"><code>hedonism_bot</code></a>"
   family: [garage, hot-mess, audiencekit]
   links:
+    - name: lovewins.media
+      url: https://lovewins.media
     - name: luminx.media
       url: https://luminx.media
     - name: LuminX on GitHub

@@ -128,7 +128,7 @@ Screenshots and more detail for each are on the [Products]({{ '/products/' | rel
 - [Hot Mess](https://hotmess.social), my 2015 app that indexed subcultures by their people, places, and events, is now
   a guide to queer nightlife built on AudienceKit, with [iOS](https://github.com/audience-kit/hot_mess_ios),
   [Android](https://github.com/audience-kit/hot_mess_android) and [web](https://hotmess.social/app/) apps.
-- [LuminX](https://luminx.media) is Love Wins Media's creative studio, from custom AI to cinema-class production,
+- [Love Wins Media](https://lovewins.media) / [LuminX](https://luminx.media) is a creative studio, from custom AI to cinema-class production,
   photography, 3D scanning and printing, live events and drone imaging. Its software, including Garage, the Hot Mess
   website and hedonism_bot, lives in the [lwm-luminx](https://github.com/lwm-luminx) GitHub organization.
 - [hedonism_bot](https://github.com/lwm-luminx/hedonism_bot) lets photographers upload photos. It uses Postgres,
