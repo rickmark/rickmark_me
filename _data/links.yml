@@ -3,9 +3,21 @@ sites:
   - name: Blog
     url: /blog/
     note: Security research notes
+  - name: Products
+    url: /products/
+    note: Garage, AudienceKit, Hot Mess and LuminX
   - name: Garage
     url: https://garagerag.app
     note: Private, local RAG for the Mac
+  - name: AudienceKit
+    url: https://audiencekit.com
+    note: The platform for community apps
+  - name: AudienceKit developer docs
+    url: https://developer.audiencekit.com
+    note: GraphQL API and SDKs
+  - name: Hot Mess
+    url: https://hotmess.social
+    note: Queer nightlife, live
   - name: Team t8012 blog
     url: https://blog.t8012.dev/on-bridgeos-t2-research/
     note: The T2 research write-up
@@ -23,6 +35,9 @@ orgs:
   - name: AudienceKit
     url: https://github.com/audience-kit
     note: Community, people, places and events
+  - name: LuminX
+    url: https://github.com/lwm-luminx
+    note: Garage, Hot Mess on the web and hedonism_bot
 
 projects:
   - name: apple-knowledge
@@ -38,7 +53,7 @@ projects:
     note: Examine iPhones and iPads for safety threats
     group: Tools that protect people
   - name: garage-rag
-    url: https://github.com/rickmark/garage-rag
+    url: https://github.com/lwm-luminx/garage-rag
     note: The open-source code behind Garage
     group: Products
   - name: mootool

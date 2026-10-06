@@ -17,6 +17,7 @@
       <a href="{{ '/' | relative_url }}" class="site-title">{% include mark.html %}{{ site.title }}</a>
       <nav class="site-nav">
         <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">Blog</a>
+        <a href="{{ '/products/' | relative_url }}" class="{% if page.url == '/products/' %}active{% endif %}">Products</a>
         <a href="{{ '/#projects' | relative_url }}">Projects</a>
         <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
         <a href="https://github.com/rickmark" rel="noopener">GitHub ↗</a>
@@ -25,11 +26,11 @@
   </header>
 
   {% if page.hero %}{% include hero.html %}{% elsif page.about_hero %}{% include about-hero.html %}{% elsif page.band %}{% include page-band.html %}{% elsif page.layout == 'post' %}{% include post-band.html %}{% endif %}
-  <main class="container site-main">
+  <main class="{% if page.wide %}wide{% else %}container{% endif %} site-main">
     {{ content }}
   </main>
 
-  {% if page.hero %}{% include projects-band.html %}{% endif %}
+  {% if page.hero %}{% include products-band.html %}{% include projects-band.html %}{% endif %}
 
   <footer class="site-footer">
     {% include footer-directory.html %}

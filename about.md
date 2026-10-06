@@ -28,7 +28,7 @@ I've spent more than fifteen years in security engineering, most recently using 
   Azure, automated security health reporting across more than 150 teams, and worked on the Windows Data Classification
   Toolkit. I hold a patent on [detecting and preventing phishing attacks](https://patents.google.com/patent/US20160006760A1).
 
-I also founded **Hot Mess**/**AudienceKit**, products that apply social science to in-person community (more below).
+I also founded [Hot Mess](https://hotmess.social) and [AudienceKit](https://audiencekit.com), products that apply social science to in-person community, and I build [Garage](https://garagerag.app) (more on the [Products]({{ '/products/' | relative_url }}) page).
 
 ## Apple security research
 
@@ -114,11 +114,22 @@ organizations on GitHub. Besides apple-knowledge, their projects include:
 
 ### Products
 
+Screenshots and more detail for each are on the [Products]({{ '/products/' | relative_url }}) page.
+
 - [Garage](https://garagerag.app) makes your own documents, code, and messages searchable by your AI assistant over MCP.
   The database, the index and, by default, the models all run on your Mac. It's open source on
-  [GitHub](https://github.com/rickmark/garage-rag).
-- [AudienceKit](https://github.com/audience-kit) generalizes Hot Mess, my 2015 app that indexed subcultures by their
-  people, places, and events. It has its own API, admin interface, and Swift and Ruby SDKs.
+  [GitHub](https://github.com/lwm-luminx/garage-rag), and also runs from the command line on Linux and as a
+  [Python package](https://pypi.org/project/garage-rag/).
+- [AudienceKit](https://audiencekit.com) generalizes Hot Mess into a platform that gives any community its own app,
+  with its own name, domain and look. It has a GraphQL API ([developer docs](https://developer.audiencekit.com)), an
+  [admin console](https://github.com/audience-kit/audience_kit_admin), and
+  [Swift](https://github.com/audience-kit/audience-kit-sdk-swift) and
+  [Ruby](https://github.com/audience-kit/audience-kit-sdk-ruby) SDKs.
+- [Hot Mess](https://hotmess.social), my 2015 app that indexed subcultures by their people, places, and events, is now
+  a guide to queer nightlife built on AudienceKit, with [iOS](https://github.com/audience-kit/hot_mess_ios),
+  [Android](https://github.com/audience-kit/hot_mess_android) and [web](https://hotmess.social/app/) apps.
+- [LuminX](https://github.com/lwm-luminx) is the GitHub organization that holds my product work, including Garage,
+  the Hot Mess website and hedonism_bot.
 - [hedonism_bot](https://github.com/lwm-luminx/hedonism_bot) lets photographers upload photos. It uses Postgres,
   pgvector and embeddings to find and group faces without naming anyone, so people can find and download the photos
   they appear in.

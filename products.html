@@ -1,0 +1,50 @@
+---
+layout: default
+title: Products
+permalink: /products/
+wide: true
+band: true
+band_label: What I'm building
+band_lead: Alongside the research, I build products that keep people's data on their own devices and help communities find each other.
+description: Garage, AudienceKit, Hot Mess and LuminX, the products Rick Mark-Penwell builds, with screenshots and links.
+---
+<nav class="product-index" aria-label="Products">
+  {% for p in site.data.products %}<a class="product-tab product-tab-{{ p.colour }}" href="#{{ p.slug }}"><span class="label">{{ p.kicker }}</span><strong>{{ p.name }}</strong></a>{% endfor %}
+</nav>
+
+{% for p in site.data.products %}
+<section class="product product-{{ p.colour }}" id="{{ p.slug }}" aria-labelledby="{{ p.slug }}-title">
+  <header class="product-head">
+    <p class="label">{{ p.kicker }}</p>
+    <h2 id="{{ p.slug }}-title">{{ p.name }}</h2>
+    <a class="product-domain" href="{{ p.url }}" rel="noopener">{{ p.domain }} ↗</a>
+  </header>
+  <div class="product-body">
+    <div class="product-text">
+      <p class="lead">{{ p.summary }}</p>
+      <ul class="product-facts">
+        {% for f in p.facts %}<li>{{ f }}</li>{% endfor %}
+      </ul>
+      <ul class="chips">
+        {% for l in p.links %}<li><a href="{{ l.url }}" rel="noopener">{{ l.name }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    <div class="product-shots">
+      {% if p.shots %}
+        {% for s in p.shots %}{% include product-shot.html shot=s %}{% endfor %}
+      {% elsif p.family %}
+        <div class="product-family">
+          {% for slug in p.family %}{% assign f = site.data.products | where: "slug", slug | first %}
+          <a class="family-tile" href="#{{ f.slug }}">
+            <img src="{{ f.shots[0].src | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="800">
+            <span><strong>{{ f.name }}</strong>{{ f.kicker }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<p class="product-foot">More of my open-source work is in <a href="{{ '/#projects' | relative_url }}">Projects and places</a> and on <a href="{{ '/about/' | relative_url }}#products">my About page</a>.</p>
