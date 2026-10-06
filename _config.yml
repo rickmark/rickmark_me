@@ -4,6 +4,10 @@ description: "Rick Mark-Penwell writes about Apple platform security, firmware a
 url: "https://rickmark.me"
 baseurl: ""
 lang: en_US
+
+# GA4 measurement ID (G-XXXXXXXXXX). Tracking loads only in production builds (JEKYLL_ENV=production).
+google_analytics: ""
+
 timezone: UTC
 
 author:
