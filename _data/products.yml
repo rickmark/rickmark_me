@@ -130,10 +130,10 @@
     - name: LuminX on GitHub
       url: https://github.com/lwm-luminx
     - name: "Blog: Revopoint reality capture"
-      url: /blog/reality-capture-revopoint-miraco-metrox-workflow/
+      url: https://luminx.media/blogs/reality-capture-revopoint-miraco-metrox-workflow
     - name: "Blog: Formlabs Form 4"
-      url: /blog/next-gen-fabrication-formlabs-form-4/
+      url: https://luminx.media/blogs/next-gen-fabrication-formlabs-form-4
     - name: "Blog: MakerBot Method X"
-      url: /blog/industrial-strength-makerbot-method-x-carbon-fiber/
+      url: https://luminx.media/blogs/industrial-strength-makerbot-method-x-carbon-fiber
     - name: "Blog: Edelkrone motion control"
-      url: /blog/kinematics-in-focus-edelkrone-ecosystem/
+      url: https://luminx.media/blogs/kinematics-in-focus-edelkrone-ecosystem
