@@ -31,7 +31,7 @@
     {{ content }}
   </main>
 
-  {% if page.hero %}{% include products-band.html %}{% include projects-band.html %}{% endif %}
+  {% if page.hero %}{% include products-band.html %}{% include projects-band.html %}{% elsif page.about_products %}{% include products-band.html tint=true %}{% endif %}
 
   <footer class="site-footer">
     {% include footer-directory.html %}

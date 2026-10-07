@@ -1,161 +1,190 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 description: Rick Mark-Penwell is a security, privacy and AI engineer and hardware security researcher, formerly of Meta, Coinbase, Dropbox and Microsoft, known for research into Apple's T2 chip.
 about_hero: true
+about_products: true
+wide: true
 image: /assets/images/rick-mark.jpg
 redirect_from:
   - /blog/about/
 ---
+<section class="about-section" id="career">
+  <div class="about-head">
+    <h2 class="section-title">Career</h2>
+    <p class="lead">I've spent more than fifteen years in security engineering, most recently using AI where it genuinely helps.</p>
+  </div>
+  <ol class="timeline">
+    <li>
+      <h3>Meta <span>Privacy Engineer</span></h3>
+      <p>I was key to PrivacyBrain, an LLM derived from Llama that evaluated privacy incidents, reviews, and FTC commitments across hundreds of millions of records, and Project Terminus, which linked incidents to their root causes and replaced months of manual investigation with consistent automation. I also wrote an LLVM-bitcode scanner (PSAPI) for sensitive iOS and macOS APIs and contributed to the design of Llama 4.</p>
+    </li>
+    <li><h3>Coinbase <span>Security Architect</span></h3></li>
+    <li>
+      <h3>Dropbox <span>Senior Security Engineer</span></h3>
+      <p>I worked on corporate authentication, key management and Windows security in the datacenters, and open-sourced efivalidate for checking Mac firmware.</p>
+    </li>
+    <li><h3>Uber Advanced Technologies Group <span>Senior Security Engineer</span></h3></li>
+    <li>
+      <h3>Jet.com <span>Senior Software Security Engineer</span></h3>
+      <p>I was the company's first security engineer, securing what was then the largest e-commerce site on Azure.</p>
+    </li>
+    <li>
+      <h3>Bloomberg <span>Senior Web Application Developer</span></h3>
+      <p>On Bloomberg's legal research platform.</p>
+    </li>
+    <li>
+      <h3>Microsoft <span>Software Engineer, then Azure Security SDE II</span></h3>
+      <p>I did threat modeling and penetration testing for Azure, automated security health reporting across more than 150 teams, and worked on the Windows Data Classification Toolkit. I hold a patent on <a href="https://patents.google.com/patent/US20160006760A1" rel="noopener">detecting and preventing phishing attacks</a>.</p>
+    </li>
+  </ol>
+  <p class="about-note">I also founded <a href="https://hotmess.social" rel="noopener">Hot Mess</a> and <a href="https://audiencekit.com" rel="noopener">AudienceKit</a>, products that apply social science to in-person community, and I build <a href="https://garagerag.app" rel="noopener">Garage</a>. They're <a href="#products">below</a>, with more on the <a href="{{ '/products/' | relative_url }}">Products</a> page.</p>
+</section>
 
-## Career
+<section class="about-section" id="apple-research">
+  <div class="about-head">
+    <h2 class="section-title">Apple security research</h2>
+    <p class="lead">I'm best known for research into Apple's <strong>T2 security chip</strong> as part of Team t8012.</p>
+  </div>
+  <div class="feature-panel">
+    <ul class="milestones">
+      <li><span>2017</span>Built an early T2 integrity verification tool.</li>
+      <li><span>Oct 2019</span>Proposed that the checkm8 bootrom exploit reached the T2, and extended ipwndfu for it.</li>
+      <li><span>2020</span>Performed the team's first successful SecureROM dump.</li>
+      <li><span>2020</span>Helped bring the exploit into the checkra1n jailbreak.</li>
+      <li><span>2020</span>Adapted libimobiledevice to talk to the T2, and reverse engineered the USB Target Disk Mode protocol.</li>
+    </ul>
+    <div class="feature-panel-aside">
+      <p>When the research went public in October 2020, I explained to the press, including Forbes and The Register, why the flaw can't be patched in shipping Macs.</p>
+      <ul class="aside-links">
+        <li><a href="https://blog.t8012.dev/on-bridgeos-t2-research/" rel="noopener">The team's account: On bridgeOS / T2 Research ↗</a></li>
+        <li><a href="{{ '/blog/checkra1n-and-the-t2/' | relative_url }}">checkra1n and the T2 →</a></li>
+        <li><a href="{{ '/blog/using-the-t2-for-detection-and-forensics/' | relative_url }}">Using the T2 for Detection and Forensics →</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="about-note">I'm part of <a href="https://github.com/hack-different" rel="noopener">Hack Different</a>, an open-source community around Apple platforms. There I maintain <a href="https://github.com/hack-different/apple-knowledge" rel="noopener">apple-knowledge</a>, a machine-readable collection of reverse-engineered Apple hardware and software facts, and my most widely used project, with over 1,400 stars on GitHub. I also contribute to The Apple Wiki.</p>
+</section>
 
-I've spent more than fifteen years in security engineering, most recently using AI where it genuinely helps.
+<section class="about-section" id="research">
+  <div class="about-head">
+    <h2 class="section-title">Research and open source</h2>
+    <p class="lead">Most of my work is on <a href="https://github.com/rickmark" rel="noopener">GitHub</a>. Beyond the T2, it falls into a few areas.</p>
+  </div>
+  <div class="card-grid card-grid-2">
+    <div class="card card-accent">
+      <h3>Firmware and boot security</h3>
+      <ul class="project-list">
+        <li><a href="https://github.com/rickmark/mojo_thor" rel="noopener">mojo_thor</a> <small>2017</small> research into malware that infects the EFI and SMC firmware of MacBooks</li>
+        <li><a href="https://github.com/rickmark/peiutil" rel="noopener">peiutil</a> <small>2017</small> converts UEFI PEI images (TE and VZ files) to PE, so they can be disassembled</li>
+        <li><a href="https://github.com/rickmark/apple_ssv" rel="noopener">apple_ssv</a> <small>2020</small> explores macOS Signed System Volumes</li>
+        <li><a href="https://github.com/rickmark/windows-bluepill" rel="noopener">windows-bluepill</a> <small>2022</small> looks at breaking a system's security without breaking Secure Boot</li>
+      </ul>
+    </div>
+    <div class="card card-signal">
+      <h3>Ports, cables, and radios</h3>
+      <ul class="project-list">
+        <li><a href="https://github.com/rickmark/badusb" rel="noopener">badusb</a> <small>2019</small> detects and exploits time-of-check/time-of-use gaps in USB mass storage</li>
+        <li><a href="https://github.com/rickmark/lightning_strike" rel="noopener">lightning_strike</a> <small>2019</small> and <a href="https://github.com/rickmark/lightning_dfu" rel="noopener">lightning_dfu</a> <small>2021</small> study the security of the Lightning connector</li>
+        <li><a href="https://github.com/rickmark/apple_utdm" rel="noopener">apple_utdm</a> <small>2020</small> a Linux kernel driver for Apple's USB Target Disk Mode</li>
+        <li><a href="https://github.com/rickmark/apple-malicious-baseband" rel="noopener">apple-malicious-baseband</a> <small>2022</small> documents a malicious cellular baseband image that carried Apple's signature</li>
+      </ul>
+    </div>
+    <div class="card card-ink">
+      <h3>Libraries for Apple formats and services</h3>
+      <ul class="project-list">
+        <li><a href="https://github.com/rickmark/libapfs" rel="noopener">libapfs</a> for the Apple File System</li>
+        <li><a href="https://github.com/rickmark/pyxar" rel="noopener">pyxar</a> for XAR archives</li>
+        <li><a href="https://github.com/rickmark/libiupdate" rel="noopener">libiupdate</a> for Apple software updates</li>
+        <li><a href="https://github.com/rickmark/libicloud" rel="noopener">libicloud</a> for iCloud</li>
+        <li><a href="https://github.com/rickmark/apple_net_recovery" rel="noopener">apple_net_recovery</a> for Internet Recovery</li>
+        <li><a href="https://github.com/rickmark/libidevice" rel="noopener">libidevice</a> and <a href="https://github.com/rickmark/libxpc" rel="noopener">libxpc</a>, Rust reimaginings of libimobiledevice and XPC</li>
+      </ul>
+    </div>
+    <div class="card card-accent">
+      <h3>Tools that protect people</h3>
+      <ul class="project-list">
+        <li><a href="https://github.com/rickmark/isafety" rel="noopener">isafety</a> <small>2020</small> examines iPhones and iPads for security and safety threats</li>
+        <li><a href="https://github.com/rickmark/chainfix" rel="noopener">chainfix</a> <small>2024</small> checks and repairs Keychain and iCloud Keychain</li>
+        <li><a href="https://github.com/lwm-luminx/hedonism_bot" rel="noopener">hedonism_bot</a> lets photographers upload photos, and uses Postgres, pgvector and embeddings to find and group faces without naming anyone, so people can find and download the photos they appear in</li>
+        <li><a href="https://github.com/rickmark/meshtastic-map-manager" rel="noopener">meshtastic-map-manager</a> manages Meshtastic map data</li>
+      </ul>
+    </div>
+  </div>
 
-- **Meta**, Privacy Engineer. I was key to PrivacyBrain, an LLM derived from Llama that evaluated privacy incidents,
-  reviews, and FTC commitments across hundreds of millions of records, and Project Terminus, which linked incidents to
-  their root causes and replaced months of manual investigation with consistent automation. I also wrote an
-  LLVM-bitcode scanner (PSAPI) for sensitive iOS and macOS APIs and contributed to the design of Llama 4.
-- **Coinbase**, Security Architect.
-- **Dropbox**, Senior Security Engineer. I worked on corporate authentication, key management and Windows security in
-  the datacenters, and open-sourced efivalidate for checking Mac firmware.
-- **Uber Advanced Technologies Group**, Senior Security Engineer.
-- **Jet.com**, Senior Software Security Engineer. I was the company's first security engineer, securing what was then
-  the largest e-commerce site on Azure.
-- **Bloomberg**, Senior Web Application Developer, on Bloomberg's legal research platform.
-- **Microsoft**, Software Engineer, and then Azure Security SDE II. I did threat modeling and penetration testing for
-  Azure, automated security health reporting across more than 150 teams, and worked on the Windows Data Classification
-  Toolkit. I hold a patent on [detecting and preventing phishing attacks](https://patents.google.com/patent/US20160006760A1).
+  <div class="org-panel">
+    <h3>In the organizations I run</h3>
+    <p>I also own the <a href="https://github.com/hack-different" rel="noopener">Hack Different</a> and <a href="https://github.com/t8012" rel="noopener">Team t8012</a> organizations on GitHub. Besides apple-knowledge, their projects include:</p>
+    <ul class="project-columns">
+      <li><a href="https://github.com/hack-different/webmuxd" rel="noopener">webmuxd</a> and <a href="https://github.com/hack-different/go-webmuxd" rel="noopener">go-webmuxd</a>, a proof of concept of an attack where a browser may be able to access iPhone sync data</li>
+      <li><a href="https://github.com/hack-different/demuxusb" rel="noopener">demuxusb</a>, a tool to decode iDevice USB capture sessions</li>
+      <li><a href="https://github.com/hack-different/smcutil" rel="noopener">smcutil</a>, a decoder for Apple's SMC payloads (T1 and prior)</li>
+      <li><a href="https://github.com/hack-different/efivalidate" rel="noopener">efivalidate</a> for validating the firmware of Macs up to the T1</li>
+      <li><a href="https://github.com/hack-different/libapplefw" rel="noopener">libapplefw</a>, generic utilities for Apple firmware images</li>
+      <li><a href="https://github.com/hack-different/go-aapl-integrity" rel="noopener">go-aapl-integrity</a> and <a href="https://github.com/t8012/cnklverify" rel="noopener">cnklverify</a> for Apple's integrity formats (img4, chunklists, trust caches)</li>
+      <li><a href="https://github.com/hack-different/secure_emu" rel="noopener">secure_emu</a>, which runs portions of SecureROM under the Unicorn emulator</li>
+      <li><a href="https://github.com/hack-different/mootool" rel="noopener">mootool</a>, generic parsing of Apple security state information including LocalPolicy, FDR, signed APTickets, and more</li>
+      <li><a href="https://github.com/hack-different/yolo_dsc" rel="noopener">yolo_dsc</a> for extracting the dyld shared cache</li>
+      <li><a href="https://github.com/hack-different/symbol-server" rel="noopener">symbol-server</a> for annotating Apple symbols</li>
+      <li><a href="https://github.com/hack-different/xnudex" rel="noopener">xnudex</a> for indexing XNU OS images</li>
+      <li><a href="https://github.com/hack-different/kext-kmem" rel="noopener">kext-kmem</a>, a kernel extension for reading and writing kernel memory, replacing /dev/kmem</li>
+      <li><a href="https://github.com/hack-different/homebrew-jailbreak" rel="noopener">homebrew-jailbreak</a>, a Homebrew tap of research tools</li>
+      <li><a href="https://github.com/hack-different/newosxbook-tools" rel="noopener">newosxbook-tools</a>, which packages Jonathan Levin's tools for it</li>
+      <li><a href="https://github.com/hack-different/libibackup" rel="noopener">libibackup</a> for iOS backups</li>
+      <li><a href="https://github.com/hack-different/apple-diagnostics-format" rel="noopener">apple-diagnostics-format</a> for Apple's wireless diagnostics files</li>
+      <li><a href="https://github.com/hack-different/apple-baseband" rel="noopener">apple-baseband</a> for the modem baseband</li>
+      <li><a href="https://github.com/hack-different/uarp" rel="noopener">uarp</a> for Apple's accessory firmware update protocol</li>
+      <li><a href="https://github.com/t8012/pongo-flash" rel="noopener">pongo-flash</a>, from the T2 work, a flash storage driver for checkra1n's pongoOS</li>
+      <li><a href="https://github.com/t8012/RemoteServiceDiscovery" rel="noopener">RemoteServiceDiscovery</a>, from the T2 work, a reverse-engineered rewrite of Apple's framework of that name</li>
+    </ul>
+  </div>
+</section>
 
-I also founded [Hot Mess](https://hotmess.social) and [AudienceKit](https://audiencekit.com), products that apply social science to in-person community, and I build [Garage](https://garagerag.app) (more on the [Products]({{ '/products/' | relative_url }}) page).
+<section class="about-section" id="contributions">
+  <div class="about-head">
+    <h2 class="section-title">Contributions to other projects</h2>
+    <p class="lead">I've had pull requests merged in more than 25 projects outside my own. Among them:</p>
+  </div>
+  <div class="card-grid card-grid-3">
+    <div class="card card-signal">
+      <h3>Apple platform tooling</h3>
+      <p>Mach-O fileset support and new segment types in Homebrew's <a href="https://github.com/Homebrew/ruby-macho" rel="noopener">ruby-macho</a> (five merged PRs), T2 support in <a href="https://github.com/libimobiledevice/usbmuxd/pull/141" rel="noopener">usbmuxd</a>, Linux fixes to <a href="https://github.com/h0m3us3r/ipwndfu/pull/1" rel="noopener">ipwndfu</a>, build work on checkra1n's <a href="https://github.com/checkra1n/PongoOS/pull/14" rel="noopener">PongoOS</a>, pkg-config support in <a href="https://github.com/sbingner/ldid/pull/3" rel="noopener">ldid</a>, the convert verb in <a href="https://github.com/0xbf00/dmglib/pull/2" rel="noopener">dmglib</a>, and firmware sources in Acidanthera's <a href="https://github.com/acidanthera/MacInfoPkg/pull/16" rel="noopener">MacInfoPkg</a>.</p>
+    </div>
+    <div class="card card-accent">
+      <h3>Reverse engineering</h3>
+      <p>Universal macOS builds of the <a href="https://github.com/capstone-engine/capstone/pull/2221" rel="noopener">Capstone</a> disassembler, a fix to Vector 35's <a href="https://github.com/Vector35/workflow_objc/pull/57" rel="noopener">Objective-C workflow</a> for Binary Ninja, and an easier install for <a href="https://github.com/platomav/MEAnalyzer/pull/7" rel="noopener">MEAnalyzer</a>, Intel's Management Engine analyzer.</p>
+    </div>
+    <div class="card card-ink">
+      <h3>Security</h3>
+      <p><code>OpenSSL::BN#abs</code> in Ruby's <a href="https://github.com/ruby/openssl/pull/430" rel="noopener">openssl</a> library, removing unsafe OpenSSL patches from <a href="https://github.com/GemHQ/money-tree/pull/43" rel="noopener">money-tree</a>, and a stricter content security policy for Dropbox's <a href="https://github.com/dropbox/merou" rel="noopener">merou</a> permissions system.</p>
+    </div>
+    <div class="card card-signal">
+      <h3>Data and infrastructure</h3>
+      <p>The build and validation tests for <a href="https://github.com/littlebyteorg/appledb" rel="noopener">AppleDB</a> (four merged PRs), universal macOS build instructions for <a href="https://github.com/facebook/zstd/pull/3568" rel="noopener">Zstandard</a>, fixes to <a href="https://github.com/Homebrew/brew/pull/12822" rel="noopener">Homebrew</a>, <a href="https://github.com/sds/overcommit/pull/777" rel="noopener">overcommit</a> and <a href="https://github.com/q9f/keccak.rb/pull/39" rel="noopener">keccak.rb</a>, and <a href="https://github.com/meshtastic/firmware/pull/5699" rel="noopener">Meshtastic</a> firmware dev containers.</p>
+    </div>
+    <div class="card card-accent">
+      <h3>SDR and ham radio</h3>
+      <p>Ported bladeRF and <a href="https://github.com/Nuand/libbladeRF" rel="noopener">libbladeRF</a>, <code>android-sdr-kit</code>, and <a href="https://www.sdrpp.org" rel="noopener">SDR++</a> to Android (<a href="https://github.com/Nuand/bladeRF/pull/1063" rel="noopener">#1063</a>).</p>
+    </div>
+  </div>
+</section>
 
-## Apple security research
-
-I'm best known for research into Apple's **T2 security chip** as part of Team t8012:
-
-- I built an early T2 integrity verification tool in 2017.
-- In October 2019 I proposed that the checkm8 bootrom exploit reached the T2, and extended ipwndfu for it.
-- In 2020 I performed the team's first successful SecureROM dump.
-- I helped bring the exploit into the checkra1n jailbreak.
-- I adapted libimobiledevice to talk to the T2, and reverse engineered the USB Target Disk Mode protocol.
-
-When the research went public in October 2020, I explained to the press, including Forbes and The Register, why the
-flaw can't be patched in shipping Macs. The team's own account is
-[On bridgeOS / T2 Research](https://blog.t8012.dev/on-bridgeos-t2-research/), and my notes from the time are in
-[checkra1n and the T2]({{ '/blog/checkra1n-and-the-t2/' | relative_url }}) and
-[Using the T2 for Detection and Forensics]({{ '/blog/using-the-t2-for-detection-and-forensics/' | relative_url }}).
-
-I'm part of [Hack Different](https://github.com/hack-different), an open-source community around Apple platforms. There
-I maintain [apple-knowledge](https://github.com/hack-different/apple-knowledge), a machine-readable collection of
-reverse-engineered Apple hardware and software facts, and my most widely used project, with over 1,400 stars on GitHub.
-I also contribute to The Apple Wiki.
-
-## Research and open source
-
-Most of my work is on [GitHub](https://github.com/rickmark). Beyond the T2, it falls into a few areas.
-
-### Firmware and boot security
-
-- [mojo_thor](https://github.com/rickmark/mojo_thor) (2017) is research into malware that infects the EFI and SMC firmware of MacBooks.
-- [peiutil](https://github.com/rickmark/peiutil) (2017) converts UEFI PEI images (TE and VZ files) to PE, so they can be disassembled.
-- [apple_ssv](https://github.com/rickmark/apple_ssv) (2020) explores macOS Signed System Volumes.
-- [windows-bluepill](https://github.com/rickmark/windows-bluepill) (2022) looks at breaking a system's security without breaking Secure Boot.
-
-### Ports, cables, and radios
-
-- [badusb](https://github.com/rickmark/badusb) (2019) detects and exploits time-of-check/time-of-use gaps in USB mass storage.
-- [lightning_strike](https://github.com/rickmark/lightning_strike) (2019) and [lightning_dfu](https://github.com/rickmark/lightning_dfu) (2021) study the security of the Lightning connector.
-- [apple_utdm](https://github.com/rickmark/apple_utdm) (2020) is a Linux kernel driver for Apple's USB Target Disk Mode.
-- [apple-malicious-baseband](https://github.com/rickmark/apple-malicious-baseband) (2022) documents a malicious cellular baseband image that carried Apple's signature.
-
-### Libraries for Apple formats and services
-
-- [libapfs](https://github.com/rickmark/libapfs) for the Apple File System
-- [pyxar](https://github.com/rickmark/pyxar) for XAR archives
-- [libiupdate](https://github.com/rickmark/libiupdate) for Apple software updates
-- [libicloud](https://github.com/rickmark/libicloud) for iCloud
-- [apple_net_recovery](https://github.com/rickmark/apple_net_recovery) for Internet Recovery
-- [libidevice](https://github.com/rickmark/libidevice) and [libxpc](https://github.com/rickmark/libxpc), Rust reimaginings of libimobiledevice and XPC
-
-### Tools that protect people
-
-- [isafety](https://github.com/rickmark/isafety) (2020) examines iPhones and iPads for security and safety threats.
-- [chainfix](https://github.com/rickmark/chainfix) (2024) checks and repairs Keychain and iCloud Keychain.
-
-### In the organizations I run
-
-I also own the [Hack Different](https://github.com/hack-different) and [Team t8012](https://github.com/t8012)
-organizations on GitHub. Besides apple-knowledge, their projects include:
-
-- [webmuxd](https://github.com/hack-different/webmuxd) and [go-webmuxd](https://github.com/hack-different/go-webmuxd),
-  a proof of concept of an attack where a browser may be able to access iPhone sync data
-- [demuxusb](https://github.com/hack-different/demuxusb), a tool to decode iDevice USB capture sessions
-- [smcutil](https://github.com/hack-different/smcutil), a decoder for Apple's SMC payloads (T1 and prior)
-- [efivalidate](https://github.com/hack-different/efivalidate) for validating the firmware of Macs up to the T1
-- [libapplefw](https://github.com/hack-different/libapplefw), generic utilities for Apple firmware images
-- [go-aapl-integrity](https://github.com/hack-different/go-aapl-integrity) and [cnklverify](https://github.com/t8012/cnklverify) for Apple's integrity formats (img4, chunklists, trust caches)
-- [secure_emu](https://github.com/hack-different/secure_emu), which runs portions of SecureROM under the Unicorn emulator
-- [mootool](https://github.com/hack-different/mootool), generic parsing of Apple security state information including
-  LocalPolicy, FDR, signed APTickets, and more
-- [yolo_dsc](https://github.com/hack-different/yolo_dsc) for extracting the dyld shared cache
-- [symbol-server](https://github.com/hack-different/symbol-server) for annotating Apple symbols
-- [xnudex](https://github.com/hack-different/xnudex) for indexing XNU OS images
-- [kext-kmem](https://github.com/hack-different/kext-kmem), a kernel extension for reading and writing kernel memory, replacing /dev/kmem
-- [homebrew-jailbreak](https://github.com/hack-different/homebrew-jailbreak), a Homebrew tap of research tools
-- [newosxbook-tools](https://github.com/hack-different/newosxbook-tools), which packages Jonathan Levin's tools for it
-- [libibackup](https://github.com/hack-different/libibackup) for iOS backups
-- [apple-diagnostics-format](https://github.com/hack-different/apple-diagnostics-format) for Apple's wireless diagnostics files
-- [apple-baseband](https://github.com/hack-different/apple-baseband) for the modem baseband
-- [uarp](https://github.com/hack-different/uarp) for Apple's accessory firmware update protocol
-- From the T2 work:
-  - [pongo-flash](https://github.com/t8012/pongo-flash), a flash storage driver for checkra1n's pongoOS
-  - [RemoteServiceDiscovery](https://github.com/t8012/RemoteServiceDiscovery), a reverse-engineered rewrite of Apple's framework of that name
-
-### Products
-
-Screenshots and more detail for each are on the [Products]({{ '/products/' | relative_url }}) page.
-
-- [Garage](https://garagerag.app) makes your own documents, code, and messages searchable by your AI assistant over MCP.
-  The database, the index and, by default, the models all run on your Mac. It's open source on
-  [GitHub](https://github.com/lwm-luminx/garage-rag), and also runs from the command line on Linux and as a
-  [Python package](https://pypi.org/project/garage-rag/).
-- [AudienceKit](https://audiencekit.com) generalizes Hot Mess into a platform that gives any community its own app,
-  with its own name, domain and look. It has a GraphQL API ([developer docs](https://developer.audiencekit.com)), an
-  [admin console](https://github.com/audience-kit/audience_kit_admin), and
-  [Swift](https://github.com/audience-kit/audience-kit-sdk-swift) and
-  [Ruby](https://github.com/audience-kit/audience-kit-sdk-ruby) SDKs.
-- [Hot Mess](https://hotmess.social), my 2015 app that indexed subcultures by their people, places, and events, is now
-  a guide to queer nightlife built on AudienceKit, with [iOS](https://github.com/audience-kit/hot_mess_ios),
-  [Android](https://github.com/audience-kit/hot_mess_android) and [web](https://hotmess.social/app/) apps.
-- [Love Wins Media](https://lovewins.media) / [LuminX](https://luminx.media) is a creative studio, from custom AI to cinema-class production,
-  photography, 3D scanning and printing, live events and drone imaging. Its software, including Garage, the Hot Mess
-  website and hedonism_bot, lives in the [lwm-luminx](https://github.com/lwm-luminx) GitHub organization.
-- [hedonism_bot](https://github.com/lwm-luminx/hedonism_bot) lets photographers upload photos. It uses Postgres,
-  pgvector and embeddings to find and group faces without naming anyone, so people can find and download the photos
-  they appear in.
-- [meshtastic-map-manager](https://github.com/rickmark/meshtastic-map-manager) manages Meshtastic map data.
-
-## Contributions to other projects
-
-I've had pull requests merged in more than 25 projects outside my own. Among them:
-
-- **Apple platform tooling:** Mach-O fileset support and new segment types in Homebrew's [ruby-macho](https://github.com/Homebrew/ruby-macho) (five merged PRs), T2 support in [usbmuxd](https://github.com/libimobiledevice/usbmuxd/pull/141), Linux fixes to [ipwndfu](https://github.com/h0m3us3r/ipwndfu/pull/1), build work on checkra1n's [PongoOS](https://github.com/checkra1n/PongoOS/pull/14), pkg-config support in [ldid](https://github.com/sbingner/ldid/pull/3), the convert verb in [dmglib](https://github.com/0xbf00/dmglib/pull/2), and firmware sources in Acidanthera's [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/pull/16).
-- **Reverse engineering:** universal macOS builds of the [Capstone](https://github.com/capstone-engine/capstone/pull/2221) disassembler, a fix to Vector 35's [Objective-C workflow](https://github.com/Vector35/workflow_objc/pull/57) for Binary Ninja, and an easier install for [MEAnalyzer](https://github.com/platomav/MEAnalyzer/pull/7), Intel's Management Engine analyzer.
-- **Security:** `OpenSSL::BN#abs` in Ruby's [openssl](https://github.com/ruby/openssl/pull/430) library, removing unsafe OpenSSL patches from [money-tree](https://github.com/GemHQ/money-tree/pull/43), and a stricter content security policy for Dropbox's [merou](https://github.com/dropbox/merou) permissions system.
-- **Data and infrastructure:** the build and validation tests for [AppleDB](https://github.com/littlebyteorg/appledb) (four merged PRs), universal macOS build instructions for [Zstandard](https://github.com/facebook/zstd/pull/3568), fixes to [Homebrew](https://github.com/Homebrew/brew/pull/12822), [overcommit](https://github.com/sds/overcommit/pull/777) and [keccak.rb](https://github.com/q9f/keccak.rb/pull/39), and [Meshtastic](https://github.com/meshtastic/firmware/pull/5699) firmware dev containers.
-- **SDR and ham radio:** ported bladeRF and [libbladeRF](https://github.com/Nuand/libbladeRF), `android-sdr-kit`, and [SDR++](https://www.sdrpp.org) to Android ([#1063](https://github.com/Nuand/bladeRF/pull/1063)).
-
-## Outside of work
-
-Away from the keyboard, I make documentary film and photography centered on the LGBT community.
-
-## Work with me
-
-I'm available for AI security, privacy engineering, and security research roles, remote or hybrid. Get in touch on
-[LinkedIn](https://linkedin.com/in/penwellr). If my open-source work is useful to you, you can support it on
-[Patreon](https://www.patreon.com/rickmark).
-
-## Elsewhere
-
-[GitHub](https://github.com/rickmark) · [LinkedIn](https://linkedin.com/in/penwellr) · [Patreon](https://www.patreon.com/rickmark)
+<section class="about-section" id="contact">
+  <div class="card-grid card-grid-3 closing-grid">
+    <div class="card card-callout">
+      <h3>Work with me</h3>
+      <p>I'm available for AI security, privacy engineering, and security research roles, remote or hybrid.</p>
+      <a class="button" href="https://linkedin.com/in/penwellr" rel="noopener">Get in touch on LinkedIn</a>
+    </div>
+    <div class="card card-signal">
+      <h3>Support the work</h3>
+      <p>If my open-source work is useful to you, you can support it on Patreon, or follow along on GitHub.</p>
+      <p class="card-links"><a href="https://www.patreon.com/rickmark" rel="noopener">Patreon ↗</a> <a href="https://github.com/rickmark" rel="noopener">GitHub ↗</a></p>
+    </div>
+    <div class="card card-ink">
+      <h3>Outside of work</h3>
+      <p>Away from the keyboard, I make documentary film and photography centered on the LGBT community.</p>
+    </div>
+  </div>
+</section>
