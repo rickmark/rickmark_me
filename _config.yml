@@ -6,7 +6,7 @@ baseurl: ""
 lang: en_US
 
 # GA4 measurement ID (G-XXXXXXXXXX). Tracking loads only in production builds (JEKYLL_ENV=production).
-google_analytics: ""
+google_analytics: "G-7K3BL55GD5"
 
 timezone: UTC
 
