@@ -145,3 +145,37 @@
       url: https://luminx.media/blogs/industrial-strength-makerbot-method-x-carbon-fiber
     - name: "Blog: Edelkrone motion control"
       url: https://luminx.media/blogs/kinematics-in-focus-edelkrone-ecosystem
+
+- slug: hedonism-bot
+  name: Hedonism Bot
+  kicker: Find yourself in the event photos
+  url: https://gallery.luminx.media
+  domain: gallery.luminx.media
+  colour: signal
+  summary: >-
+    Hedonism Bot is a photo gallery for event photographers. It groups the faces in every set without naming anyone,
+    so the people in the photos can find the shots they appear in. It runs LuminX's own gallery.
+  facts:
+    - Faces are found with ArcFace, stored as embeddings in Postgres with pgvector, and clustered with HDBSCAN
+    - A Python worker captions each photo with LLaVA, so every shot carries a description of what's in it
+    - Browse a gallery by event or by face, then open any photo full size
+    - Each photographer gets their own gallery on their own domain, and the archive moves RAW originals to cheaper storage
+    - "A macOS menu bar app uploads straight from the camera card, pairing each RAW file with its HEIF"
+  services:
+    - Upload from the card
+    - Find every face
+    - Group without names
+    - Caption every shot
+    - Browse by face
+    - Browse by event
+    - Your own domain
+    - Archive the RAWs
+  links:
+    - name: gallery.luminx.media
+      url: https://gallery.luminx.media
+    - name: Source on GitHub
+      url: https://github.com/lwm-luminx/hedonism_bot
+    - name: Mac uploader
+      url: https://github.com/lwm-luminx/hedonism_bot/tree/main/mac/HedonismUploader
+    - name: ML worker
+      url: https://github.com/lwm-luminx/hedonism_bot/tree/main/who_dis

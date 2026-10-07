@@ -130,10 +130,10 @@ Screenshots and more detail for each are on the [Products]({{ '/products/' | rel
   [Android](https://github.com/audience-kit/hot_mess_android) and [web](https://hotmess.social/app/) apps.
 - [Love Wins Media](https://lovewins.media) / [LuminX](https://luminx.media) is a creative studio, from custom AI to cinema-class production,
   photography, 3D scanning and printing, live events and drone imaging. Its software, including Garage, the Hot Mess
-  website and hedonism_bot, lives in the [lwm-luminx](https://github.com/lwm-luminx) GitHub organization.
-- [hedonism_bot](https://github.com/lwm-luminx/hedonism_bot) lets photographers upload photos. It uses Postgres,
-  pgvector and embeddings to find and group faces without naming anyone, so people can find and download the photos
-  they appear in.
+  website and Hedonism Bot, lives in the [lwm-luminx](https://github.com/lwm-luminx) GitHub organization.
+- [Hedonism Bot](https://gallery.luminx.media) is a gallery for event photographers. It uses Postgres, pgvector and
+  face embeddings to group faces without naming anyone, so people can find the photos they appear in. It's open source
+  on [GitHub](https://github.com/lwm-luminx/hedonism_bot), with a Mac app that uploads straight from the camera card.
 - [meshtastic-map-manager](https://github.com/rickmark/meshtastic-map-manager) manages Meshtastic map data.
 
 ## Contributions to other projects
