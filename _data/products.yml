@@ -111,21 +111,26 @@
 
 - slug: lumiere
   name: Lumière Archive
-  kicker: A living portfolio, grouped by face
-  url: https://gallery.luminx.media
-  domain: gallery.luminx.media
+  kicker: Every photographer. Their own light.
+  url: https://lumiere.host
+  domain: lumiere.host
   colour: gold
   summary: >-
-    Lumière Archive is a photographer's living portfolio: a curated selection of their best work from each event, not
-    every frame they shoot. The people in the photos find themselves through face grouping, without anyone being
-    named, and can order high-quality prints.
+    Lumière gives every photographer a home of their own: a gallery at their own address, with the tools to bring work
+    in from the camera and organize it into albums. Each gallery is a living portfolio of a photographer's best work,
+    where the people in the photos find themselves through face grouping, without anyone being named, and can order
+    high-quality prints.
   facts:
-    - Photographers choose which shots go up, so the gallery stays a portfolio rather than a dump of every frame
+    - One platform for many independent photographers, each with their own gallery and workspace
+    - Every gallery lives at yourname.lumiere.host, or on the photographer's own domain
+    - Photographers choose which shots go up and group them into albums with the details of each shoot
     - Faces are grouped with embeddings in Postgres and pgvector, so nobody has to tag or name anyone
-    - Browse by event or by person, then order a high-quality print
-    - The Lumière Uploader Mac app brings selected shots straight off the camera's SD card, RAW and HEIF included
-    - Each photographer gets their own gallery on their own domain
+    - Browse by album, event or person, then order a high-quality print
+    - Upload on the web, from the macOS companion app straight off the camera card (RAW and HEIF included), or from selected folders on iPhone and iPad
   shots:
+    - src: /assets/images/products/lumiere-host.webp
+      alt: The lumiere.host home page, headed "Every photographer. Their own light." beside an arched landscape photo and a yourname.lumiere.host card
+      caption: lumiere.host
     - src: /assets/images/products/lumiere-gallery.webp
       alt: The Lumière Archive gallery, with events and people in the sidebar beside a grid of photos marked Owned or priced at $1
       caption: gallery.luminx.media
@@ -133,7 +138,11 @@
       alt: The Lumière Archive admin sign-in, with the gold Iris aperture mark and a Continue with Facebook button
       caption: Photographer sign-in
   links:
-    - name: gallery.luminx.media
+    - name: lumiere.host
+      url: https://lumiere.host
+    - name: Find a gallery
+      url: https://lumiere.host/#find-gallery
+    - name: "LuminX's gallery"
       url: https://gallery.luminx.media
     - name: Source on GitHub
       url: https://github.com/lwm-luminx/hedonism_bot
