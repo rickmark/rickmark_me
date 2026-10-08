@@ -5,7 +5,7 @@ sites:
     note: Security research notes
   - name: Products
     url: /products/
-    note: Garage, AudienceKit, Hot Mess and Love Wins Media / LuminX
+    note: Garage, AudienceKit, Hot Mess, Lumière Archive and Love Wins Media / LuminX
   - name: Garage
     url: https://garagerag.app
     note: Private, local RAG for the Mac
@@ -18,6 +18,9 @@ sites:
   - name: Hot Mess
     url: https://hotmess.social
     note: Queer nightlife, live
+  - name: Lumière Archive
+    url: https://gallery.luminx.media
+    note: A living portfolio, grouped by face
   - name: Love Wins Media / LuminX
     url: https://lovewins.media
     note: Cinema, photography, 3D scanning and more
@@ -40,7 +43,7 @@ orgs:
     note: Community, people, places and events
   - name: Love Wins Media / LuminX
     url: https://github.com/lwm-luminx
-    note: LuminX's software, from Garage to hedonism_bot
+    note: LuminX's software, from Garage to Lumière Archive
 
 projects:
   - name: apple-knowledge
@@ -97,7 +100,7 @@ projects:
     group: Firmware and boot
   - name: hedonism_bot
     url: https://github.com/lwm-luminx/hedonism_bot
-    note: Find the event photos you appear in, without naming anyone
+    note: Lumière Archive, a living portfolio where people find their photos by face
     group: Products
   - name: meshtastic-map-manager
     url: https://github.com/rickmark/meshtastic-map-manager

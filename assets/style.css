@@ -618,6 +618,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) {
   .features { grid-template-columns: 1fr; }
   .product-index, .product-cards { grid-template-columns: 1fr 1fr; }
+  .product-index > :last-child:nth-child(odd) { grid-column: 1 / -1; }
   .product-body { grid-template-columns: 1fr; }
   .product-services ul { grid-template-columns: 1fr 1fr; }
   .project-grid { grid-template-columns: 1fr 1fr; }
