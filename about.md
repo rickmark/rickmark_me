@@ -107,7 +107,7 @@ redirect_from:
       <ul class="project-list">
         <li><a href="https://github.com/rickmark/isafety" rel="noopener">isafety</a> <small>2020</small> examines iPhones and iPads for security and safety threats</li>
         <li><a href="https://github.com/rickmark/chainfix" rel="noopener">chainfix</a> <small>2024</small> checks and repairs Keychain and iCloud Keychain</li>
-        <li><a href="{{ '/products/' | relative_url }}#lumiere">Lumière Archive</a> (<a href="https://github.com/lwm-luminx/hedonism_bot" rel="noopener">hedonism_bot</a>) lets photographers upload photos, and uses Postgres, pgvector and embeddings to find and group faces without naming anyone, so people can find and download the photos they appear in</li>
+        <li><a href="{{ '/products/' | relative_url }}#lumiere">Lumière Archive</a> (<a href="https://github.com/lwm-luminx/hedonism_bot" rel="noopener">hedonism_bot</a>) is a living portfolio for photographers, using Postgres, pgvector and embeddings to group faces without naming anyone, so people can find the photos they appear in and order prints</li>
         <li><a href="https://github.com/rickmark/meshtastic-map-manager" rel="noopener">meshtastic-map-manager</a> manages Meshtastic map data</li>
       </ul>
     </div>
