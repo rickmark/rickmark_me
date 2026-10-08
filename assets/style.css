@@ -419,7 +419,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .post-nav a:last-child { text-align: right; }
 
 /* Products: the /products/ page and the home page's products band */
-.product-index { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); margin: 0 0 var(--space-4); }
+.product-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-2); margin: 0 0 var(--space-4); }
 .product-tab {
   display: flex; flex-direction: column; gap: 4px;
   padding: var(--space-2); border-radius: var(--radius-md);
@@ -434,6 +434,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .product-tab-signal { --tab-colour: var(--signal); }
 .product-tab-accent { --tab-colour: var(--accent); }
 .product-tab-graphite { --tab-colour: var(--ink-muted); }
+.product-tab-gold { --tab-colour: #c9a96e; }
 
 .product {
   margin: 0 0 var(--space-4);
@@ -455,6 +456,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .product-accent .product-head { background: #a8500a; }
 .product-accent .product-head .label, .product-accent .product-domain { color: #ffffff; }
 .product-signal .product-domain:hover, .product-accent .product-domain:hover { color: var(--band-bg); }
+/* Lumière Archive keeps its own ink and gold */
+.product-gold .product-head { background: #0f0f0f; }
+.product-gold .product-head .label, .product-gold .product-domain { color: #c9a96e; }
+.product-gold .product-domain:hover { color: #ffffff; }
 .product-body {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3);
   padding: var(--space-3);
@@ -502,7 +507,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .product-foot { color: var(--ink-muted); }
 
 .products-band > .wide { padding-top: var(--space-4); padding-bottom: var(--space-4); }
-.product-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); }
+.product-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-2); }
 .product-card {
   display: flex; flex-direction: column; height: 100%;
   border: 1px solid var(--hairline); border-radius: var(--radius-md); overflow: hidden;
@@ -521,6 +526,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .product-card-signal { --card-colour: var(--signal); }
 .product-card-accent { --card-colour: var(--accent); }
 .product-card-graphite { --card-colour: var(--ink-muted); }
+.product-card-gold { --card-colour: #c9a96e; }
 
 /* About: sectioned layout below the hero */
 .about-section { padding: var(--space-3) 0; border-top: 1px solid var(--hairline); scroll-margin-top: var(--space-2); }
