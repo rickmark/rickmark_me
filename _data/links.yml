@@ -5,7 +5,7 @@ sites:
     note: Security research notes
   - name: Products
     url: /products/
-    note: Garage, AudienceKit, Hot Mess, Love Wins Media / LuminX and Hedonism Bot
+    note: Garage, AudienceKit, Hot Mess, Lumière Archive and Love Wins Media / LuminX
   - name: Garage
     url: https://garagerag.app
     note: Private, local RAG for the Mac
@@ -18,12 +18,12 @@ sites:
   - name: Hot Mess
     url: https://hotmess.social
     note: Queer nightlife, live
+  - name: Lumière Archive
+    url: https://gallery.luminx.media
+    note: A living portfolio, grouped by face
   - name: Love Wins Media / LuminX
     url: https://lovewins.media
     note: Cinema, photography, 3D scanning and more
-  - name: Hedonism Bot
-    url: https://gallery.luminx.media
-    note: Find yourself in the event photos
   - name: Team t8012 blog
     url: https://blog.t8012.dev/on-bridgeos-t2-research/
     note: The T2 research write-up
@@ -43,7 +43,7 @@ orgs:
     note: Community, people, places and events
   - name: Love Wins Media / LuminX
     url: https://github.com/lwm-luminx
-    note: LuminX's software, from Garage to Hedonism Bot
+    note: LuminX's software, from Garage to Lumière Archive
 
 projects:
   - name: apple-knowledge

@@ -1,11 +1,11 @@
-<section class="band products-band" id="products">
+<section class="band products-band{% if include.tint %} band-tint{% endif %}" id="products">
   <div class="wide">
     <h2 class="section-title">What I'm building</h2>
     <ul class="product-cards">
       {% for p in site.data.products %}
       <li>
         <a class="product-card product-card-{{ p.colour }}" href="{{ '/products/' | relative_url }}#{{ p.slug }}">
-          {% if p.shots %}<img src="{{ p.shots[0].src | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="800">{% elsif p.services %}<span class="product-card-art product-card-services" aria-hidden="true">{% for sv in p.services limit: 4 %}<span>{{ sv }}</span>{% endfor %}</span>{% else %}<span class="product-card-art" aria-hidden="true">{% for slug in p.family %}{% assign f = site.data.products | where: "slug", slug | first %}<img src="{{ f.shots[0].src | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="800">{% endfor %}</span>{% endif %}
+          {% if p.shots %}<img src="{{ p.shots[0].src | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="800">{% else %}<span class="product-card-art" aria-hidden="true">{% for slug in p.family %}{% assign f = site.data.products | where: "slug", slug | first %}<img src="{{ f.shots[0].src | relative_url }}" alt="" loading="lazy" decoding="async" width="1280" height="800">{% endfor %}</span>{% endif %}
           <span class="product-card-body"><span class="label">{{ p.kicker }}</span><strong>{{ p.name }}</strong><span class="product-card-domain">{{ p.domain }}</span></span>
         </a>
       </li>
