@@ -111,19 +111,20 @@
 
 - slug: lumiere
   name: Lumière Archive
-  kicker: Event photos, found by face
+  kicker: A living portfolio, grouped by face
   url: https://gallery.luminx.media
   domain: gallery.luminx.media
   colour: gold
   summary: >-
-    Lumière Archive is a gallery for event photography. A photographer uploads the night's set, and the people who
-    were there find the photos they appear in, grouped by face without anyone being named, then buy and download them.
+    Lumière Archive is a photographer's living portfolio: a curated selection of their best work from each event, not
+    every frame they shoot. The people in the photos find themselves through face grouping, without anyone being
+    named, and can order high-quality prints.
   facts:
+    - Photographers choose which shots go up, so the gallery stays a portfolio rather than a dump of every frame
     - Faces are grouped with embeddings in Postgres and pgvector, so nobody has to tag or name anyone
-    - Browse by event or by person, then buy a photo and download the full-resolution original
-    - The Lumière Uploader Mac app sends a set straight off the camera's SD card, RAW and HEIF included
+    - Browse by event or by person, then order a high-quality print
+    - The Lumière Uploader Mac app brings selected shots straight off the camera's SD card, RAW and HEIF included
     - Each photographer gets their own gallery on their own domain
-    - Originals can move to cheaper archive storage while previews keep loading fast
   shots:
     - src: /assets/images/products/lumiere-gallery.webp
       alt: The Lumière Archive gallery, with events and people in the sidebar beside a grid of photos marked Owned or priced at $1
