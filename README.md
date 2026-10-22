@@ -71,6 +71,46 @@ a valid certificate for `blog.rickmark.me`, serving permanent redirects from `/`
 Preserve query strings. Do not blindly change the DNS to GitHub Pages: the destination
 must first be configured to accept the subdomain and serve its certificate.
 
+### Wrangler static site and legacy redirects
+
+`workers/site` serves the generated `_site` directory using Cloudflare Workers Static Assets.
+Wrangler runs the production Jekyll build and SEO checks before dev or deployment.
+Requests on `blog.rickmark.me` receive
+301 responses to the canonical `/blog/` paths, preserves query strings, and avoids
+adding `/blog` twice. Jekyll's aliases then resolve renamed posts and external articles.
+The Worker source and dependencies are excluded from Jekyll output. The existing GitHub
+Pages workflow remains available; deploying this Worker with its custom domains moves
+serving of the main site to Cloudflare once DNS is activated.
+
+```bash
+cd workers/site
+npm ci
+npm test
+npm run check
+npm run dev
+```
+
+To connect the account and deploy, run from that directory:
+
+```bash
+npx wrangler login
+npx wrangler whoami
+npm run deploy
+```
+
+Deployment requires an active `rickmark.me` zone in the selected Cloudflare account.
+The configured Worker Custom Domains are `rickmark.me` and `blog.rickmark.me`; Cloudflare
+manages their DNS records and certificates. Namecheap's existing forwarding service cannot serve this
+Worker. If moving DNS to Cloudflare, first import and verify all existing records,
+including mail, verification and GitHub Pages records, before changing nameservers.
+Do not point a Namecheap CNAME at a workers.dev address as a substitute for configuring
+the Custom Domain. If the account has multiple accounts, set the intended `account_id`
+in `wrangler.jsonc` after inspecting `wrangler whoami`.
+
+After DNS activation and certificate issuance, verify the HTTPS screenshot URLs return
+301 responses with the correct Location headers. Run the Jekyll SEO checks to verify
+their final local destinations. See [Cloudflare Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/).
+
 ## Deployment
 
 `.github/workflows/pages.yml` builds and deploys on every push to `master`. In the repository's

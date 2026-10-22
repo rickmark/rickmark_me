@@ -55,4 +55,5 @@ exclude:
   - tools
   - docs
   - vendor
+  - workers
   - "20[0-9]*"

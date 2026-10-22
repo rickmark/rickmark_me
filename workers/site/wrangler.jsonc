@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rickmark-site",
+  "account_id": "63125877cfc4c4ba1d804b54adca5461",
+  "main": "src.js",
+  "compatibility_date": "2026-10-22",
+  "workers_dev": false,
+  "preview_urls": false,
+  "build": {
+    "cwd": "../..",
+    "command": "JEKYLL_ENV=production bundle exec jekyll build && python3 tools/check_seo.py"
+  },
+  "assets": {
+    "directory": "../../_site",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "rickmark.me", "custom_domain": true },
+    { "pattern": "blog.rickmark.me", "custom_domain": true }
+  ]
+}
