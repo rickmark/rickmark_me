@@ -6,7 +6,8 @@ baseurl: ""
 lang: en_US
 
 # GA4 measurement ID (G-XXXXXXXXXX). Tracking loads only in production builds (JEKYLL_ENV=production).
-google_analytics: "G-7K3BL55GD5"
+# Stream: rickmark.me | https://rickmark.me | ID: 16184468081
+google_analytics: "G-DFGK7V9LQS"
 
 timezone: UTC
 
@@ -28,6 +29,8 @@ defaults:
       type: posts
     values:
       layout: post
+      seo:
+        type: BlogPosting
 
 feed:
   path: blog/feed.xml

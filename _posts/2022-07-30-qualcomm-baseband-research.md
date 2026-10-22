@@ -3,6 +3,8 @@ title: "Qualcomm Baseband Research"
 date: "2022-07-30 01:14:11 +0000"
 description: "bbfw Zip package containing: * sbl1.mbn - Secondary Bootloader (after ROM PBL) * Info.plist - Apple update information * Options.plist - Zero? Seems in error? (Even empty plists have length) * qdsp6sw.mbn - Qualcomm Hexagon Digital Signal Processor (non-ARM core) * tz.mbn - Qualcomm TrustZone Implementation - QSEE * hyp.mbn…"
 redirect_from:
+  - /qualcomm-baseband-research/
+  - /untitled/
   - /blog/untitled/
 render_with_liquid: false
 ---

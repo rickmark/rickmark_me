@@ -3,6 +3,8 @@ title: "Plug'nPwn - Connect to Jailbreak"
 date: "2022-07-30 01:13:49 +0000"
 description: "Authors * Rick Mark * mrarm * Aun-Ali Zaidi * h0m3us3r published: Oct 12, 2020 Plug'nPwn - Connect to Jailbreak State of the World: checkm8, checkra1n and the T2 For those just joining us, news broke last week about the jailbreaking of Apple’s T2 security processor in recent Macs. If you haven't read…"
 render_with_liquid: false
+redirect_from:
+  - /plugnpwn-connect-to-jailbreak/
 ---
 ---
 

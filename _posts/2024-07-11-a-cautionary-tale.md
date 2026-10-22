@@ -3,6 +3,8 @@ title: "A Cautionary Tale..."
 date: "2024-07-11 10:10:04 +0000"
 description: "Now this will be the most disturbing and truthful of all my public postings. It's based on 14 years of knowledge and observation of which I rarely speak, given that the intent of majority of these events is to make me seem unreliable and to get me dismissed by law…"
 render_with_liquid: false
+redirect_from:
+  - /a-cautionary-tale/
 ---
 Now this will be the most disturbing and truthful of all my public postings. It's based on 14 years of knowledge and observation of which I rarely speak, given that the intent of majority of these events is to make me seem unreliable and to get me dismissed by law enforcement. But as I experienced a few weeks ago the waking from a dead sleep with the inability to breathe, and what I can only assume was carbon monoxide poisoning based on symptoms (despite having multiple sensors, which did not sound but did in fact blink red indicating some form of fault... details about why Kiddle would build such devices with firmware, a vulernability - I'll address another day). I without names will give my understanding and profile of the assailant:
 

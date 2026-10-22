@@ -3,6 +3,8 @@ title: "Intel Goa’uld"
 date: "2022-07-30 00:56:19 +0000"
 description: "About the name… Look… Lots of Stargate SG1 was playing while I slept, waking up to realize why the Intel ME layout was like it was (twocopies of the Boot partition sharing pages making it impossible for it to be for reasons of resiliency). Because it includes an Intel AMT/…"
 render_with_liquid: false
+redirect_from:
+  - /intel-goauld-dark-symbiote/
 ---
 # About the name…
 

@@ -3,6 +3,8 @@ title: "The Execution of the Warrant"
 date: "2020-04-16 06:01:33 +0000"
 description: "In 2002 the country looked on as the offices of Arthur Anderson LLP had box after box of records carted out of the Houston office. It is through both photographs and court documents that the accounting firm's practices were displayed and all very publicly. That was almost 20 years ago…"
 render_with_liquid: false
+redirect_from:
+  - /the-execution-of-the-warrant/
 ---
 In 2002 the country looked on as the offices of Arthur Anderson LLP had box after box of records carted out of the Houston office. It is through both photographs and court documents that the accounting firm's practices were displayed and all very publicly. That was almost 20 years ago, and the majority of documents material to a criminal investigation are now created and stored in digital form. Unlike collecting reams of paperwork from an office building, warrants for this form of information lack the grandeur and spectacle of federal agents cataloging and transporting physical files.
 

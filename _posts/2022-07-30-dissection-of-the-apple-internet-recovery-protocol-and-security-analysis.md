@@ -3,6 +3,8 @@ title: "Dissection of the Apple Internet Recovery protocol and Security Analysis
 date: "2022-07-30 01:15:00 +0000"
 description: "NOTE: The authors' machine always downgrades from 10.15.3 to 10.13.0 via internet recovery, therefore some experiments may not be working the same due to a network issue with an attacker at a position of privilege on the network. Verification of BaseSystem.dmg and OSDInstall.dmg See…"
 render_with_liquid: false
+redirect_from:
+  - /dissection-of-the-apple-internet-recovery-protocol-and-security-analysis/
 ---
 #
 

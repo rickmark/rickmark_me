@@ -3,6 +3,8 @@ title: "On Warren’s Plan to Break Up Facebook"
 date: "2021-12-13 00:00:22 +0000"
 description: "The Difficulty with Ubiquious Services The reason that the utility of Facebook is what it is, is primarily its de-facto status as the ubiquitous system of record. Before Facebook conversations in real life were a binary search tree of what system’s you shared in common (IRC, AIM, ICQ, LinkedIn…"
 render_with_liquid: false
+redirect_from:
+  - /on-warrens-plan-to-break-up-facebook/
 ---
 # The Difficulty with Ubiquious Services
 

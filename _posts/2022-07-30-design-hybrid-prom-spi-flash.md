@@ -3,6 +3,8 @@ title: "Design: Hybrid PROM / SPI Flash"
 date: "2022-07-30 01:03:02 +0000"
 description: "Todays Problem: Nearly every device makes use of SPI flash for early load boot-loader as well as recovery environments. These devices are Non-Volatile storage areas that provide the foundation of security in modern computing. Due to a rash of boot-kits, many manufacturers now make use of PKI based verification of…"
 render_with_liquid: false
+redirect_from:
+  - /design-hybrid-prom-spi-flash/
 ---
 # Todays Problem:
 

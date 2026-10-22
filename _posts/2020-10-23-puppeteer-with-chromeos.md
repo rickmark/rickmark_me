@@ -3,6 +3,8 @@ title: "Puppeteer with ChromeOS"
 date: "2020-10-23 04:11:59 +0000"
 description: "“Headed” Chrome Testing Recently I’ve been working on using Chrome and WebUSB to communicate with Apple iPhone/iPads which implement the usbmuxd protocol. As I was working with this, developer ergonomics and testing became very important, and unlike a regular website “headless” testing was infeasible because of the reliance…"
 render_with_liquid: false
+redirect_from:
+  - /puppeteer-with-chromeos/
 ---
 # “Headed” Chrome Testing
 

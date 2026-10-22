@@ -3,6 +3,8 @@ title: "USB Security in the Linux Kernel"
 date: "2022-07-30 01:19:03 +0000"
 description: "Dropbox not only works to ensure that our product is worthy of trust, but we look up and down the entire stack of components for risk and areas of improvement. Like many companies, we employ Linux servers to power the Dropbox product. We perform regular patching, secure configuration and performance…"
 render_with_liquid: false
+redirect_from:
+  - /usb-security-in-the-linux-kernel/
 ---
 #
 

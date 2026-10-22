@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
   {% feed_meta %}
+  <meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:large' }}">
+  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | absolute_url }}">
+  <link rel="describedby" type="text/plain" href="{{ '/llms.txt' | absolute_url }}">
+  {% include structured-data.html %}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +17,11 @@
   {% include analytics.html %}
 </head>
 <body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="container header-row">
       <a href="{{ '/' | relative_url }}" class="site-title">{% include mark.html %}{{ site.title }}</a>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">Blog</a>
         <a href="{{ '/products/' | relative_url }}" class="{% if page.url == '/products/' %}active{% endif %}">Products</a>
         <a href="{{ '/#projects' | relative_url }}">Projects</a>
@@ -27,7 +32,7 @@
   </header>
 
   {% if page.hero %}{% include hero.html %}{% elsif page.about_hero %}{% include about-hero.html %}{% elsif page.band %}{% include page-band.html %}{% elsif page.layout == 'post' %}{% include post-band.html %}{% endif %}
-  <main class="{% if page.wide %}wide{% else %}container{% endif %} site-main">
+  <main id="main-content" tabindex="-1" class="{% if page.wide %}wide{% else %}container{% endif %} site-main">
     {{ content }}
   </main>
 

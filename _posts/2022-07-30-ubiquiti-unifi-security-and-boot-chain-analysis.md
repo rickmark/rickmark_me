@@ -3,6 +3,8 @@ title: "Ubiquity UniFi Security and Boot-chain Analysis"
 date: "2022-07-30 01:21:30 +0000"
 description: "This Paper Under Revision Due to further analysis, it seems that swapping the secure boot chain for alpine v2 devices early in the boot process via a device tree overlay is possible. Therefore, this analysis may be based on a malware stack running on a device rather than UniFi’s…"
 redirect_from:
+  - /ubiquiti-unifi-security-and-boot-chain-analysis/
+  - /untitled-3/
   - /blog/untitled-3/
 render_with_liquid: false
 ---

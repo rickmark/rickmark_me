@@ -3,6 +3,8 @@ title: "Apple USB Target Disk Mode"
 date: "2022-07-30 00:56:08 +0000"
 description: "Introduction In earlier generations of Apple MacBook computers, TDM or Target Disk Mode was a boot mode that made all internal drives appear to an external FireWire capable system to be LUNs which could be consumed by another endpoint (Thisusually included the internal Hard Drive and CD/DVD-ROMs). Because of…"
 render_with_liquid: false
+redirect_from:
+  - /apple-usb-target-disk-mode/
 ---
 # Introduction
 

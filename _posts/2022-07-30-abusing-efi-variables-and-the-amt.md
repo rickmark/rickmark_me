@@ -3,6 +3,8 @@ title: "Abusing EFI Variables and the AMT"
 date: "2022-07-30 00:55:47 +0000"
 description: "Speculation on How EFI was Modified: By simply having Ring 0 (kernel mode) one can place EFI variables into NVRAM via EFI runtime services. If one of these variables is scanned as a valid FFV, that gives execute at level of Ring -1, from there modifying the SPI contents of…"
 render_with_liquid: false
+redirect_from:
+  - /abusing-efi-variables-and-the-amt/
 ---
 ## Speculation on How EFI was Modified:
 

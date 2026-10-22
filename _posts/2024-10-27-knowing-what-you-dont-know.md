@@ -3,6 +3,8 @@ title: "Knowing what you don’t know…"
 date: "2024-10-27 04:30:21 +0000"
 description: "Log Rotate, NTP, and how to cover your tracks as an attacker… It’s not really common knowledge but basically anyone on your network can wipe your logs (security and forensic in many cases). Almost every modern computer does two things… it uses NTP to get the current date and…"
 render_with_liquid: false
+redirect_from:
+  - /knowing-what-you-dont-know/
 ---
 Log Rotate, NTP, and how to cover your tracks as an attacker…
 

@@ -3,6 +3,8 @@ title: "ACE Controller Secrets"
 date: "2022-07-30 01:12:36 +0000"
 description: "NOTE: This was originally published on blog.t8012.dev in conjunction with h0meus3r, mrarm, and aunali1 Introduction After our team successfully ported the checkm8 exploit to the AppleSilicon T2 chip, we began exploring methods for closed-case hardware debugging, or CCD, as found on other iDevices. On such devices, the Serial…"
 render_with_liquid: false
+redirect_from:
+  - /ace-controller-secrets/
 ---
 NOTE: This was originally published on `blog.t8012.dev` in conjunction with h0meus3r, mrarm, and aunali1
 

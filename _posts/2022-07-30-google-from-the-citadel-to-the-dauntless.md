@@ -3,6 +3,8 @@ title: "Google: From the Citadel to the Dauntless"
 date: "2022-07-30 01:20:53 +0000"
 description: "DANGER: Incomplete analysis and conjecture based on real world observation. tl;dr Google’s Titan-M (codename citadel) is based on the prior generation of designs for the Chromebook EC (embeddedcontroller - Haven) which mediates the secure boot process. While Google referrers to regions of the flash known as RO_Aand…"
 redirect_from:
+  - /google-from-the-citadel-to-the-dauntless/
+  - /untitled-2/
   - /blog/untitled-2/
 render_with_liquid: false
 ---

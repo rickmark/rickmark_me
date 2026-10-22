@@ -3,6 +3,8 @@ title: "checkra1n and the T2"
 date: "2020-10-06 04:56:43 +0000"
 description: "Given the interest in the industry I've decided to make some quick notes from earlier this year available, I plan to expland on this later: What can I do with SSH to the T2 anyway? Initially, look around and perform additional research. Once executing on the T2 core, the security…"
 render_with_liquid: false
+redirect_from:
+  - /checkra1n-and-the-t2/
 ---
 Given the interest in the industry I've decided to make some quick notes from earlier this year available, I plan to expland on this later:
 

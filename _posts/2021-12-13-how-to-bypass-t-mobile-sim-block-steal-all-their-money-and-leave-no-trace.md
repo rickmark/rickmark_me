@@ -3,6 +3,8 @@ title: "How To: Bypass T-Mobile SIM block, steal all their money, and leave no t
 date: "2021-12-13 00:01:51 +0000"
 description: "Disclaimer This is a tutorial to do something illegal to demonstrate how bad the vendor is, despite multiple complaints from me. If you do this, you will likely be caught and go to prison. I do not condone these actions and the experiments that prove their validity took place against…"
 redirect_from:
+  - /how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/
+  - /how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace-2/
   - /blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace-2/
 render_with_liquid: false
 ---

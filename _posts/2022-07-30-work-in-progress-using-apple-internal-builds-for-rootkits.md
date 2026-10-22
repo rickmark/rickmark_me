@@ -3,6 +3,8 @@ title: "Work-in-Progress: Using Apple internal builds for RootKits"
 date: "2022-07-30 01:16:22 +0000"
 description: "Backstory Found this years ago while being stalked in SF mojo_thor. Recently I've found more kernel extensions beyond just MojoKDP that are involved. MojoKDP was originally found by running a VM, then capturing the memory state providing a core dump. (see other repo) Overall Theory Two Possibilities: * Apple signs…"
 render_with_liquid: false
+redirect_from:
+  - /work-in-progress-using-apple-internal-builds-for-rootkits/
 ---
 # Backstory
 

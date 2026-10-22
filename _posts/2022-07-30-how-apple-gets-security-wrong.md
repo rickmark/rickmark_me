@@ -3,6 +3,8 @@ title: "How Apple Gets Security Wrong"
 date: "2022-07-30 01:02:10 +0000"
 description: "NOTE: Much of this is older analysis and some is addressed by Developer Mode and Lockdown mode in iOS 16 * Undocumented protocols (USB-PD, lightning, UTDM, usbmux, IPSW, etc) * Use of MFi to prevent research and disclosure * Lack of Physical Attestation for privileged operations * Hold a key to enable auto-DFU * DFU…"
 render_with_liquid: false
+redirect_from:
+  - /how-apple-gets-security-wrong/
 ---
 NOTE: Much of this is older analysis and some is addressed by Developer Mode and Lockdown mode in iOS 16
 

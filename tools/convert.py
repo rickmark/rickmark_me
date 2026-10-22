@@ -114,6 +114,7 @@ for f in sorted(glob.glob('raw/*.html')):
     redirects = []
     if slug != newslug: redirects.append(f'/blog/{slug}/')
     if newslug.startswith('how-to-bypass-t-mobile'): redirects = [f'/blog/{slug}/']
+    redirects = list(dict.fromkeys([f'/{newslug}/', f'/{slug}/'] + redirects))
     fm = {'title': title, 'date': date.replace('T', ' ').replace('.000Z', ' +0000'),
           'description': clean_desc(desc)}
     lines = ['---'] + [f'{k}: {json.dumps(v, ensure_ascii=False)}' for k, v in fm.items()]

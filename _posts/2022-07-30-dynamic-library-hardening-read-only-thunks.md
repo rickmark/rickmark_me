@@ -3,6 +3,8 @@ title: "Dynamic Library Hardening - Read Only Thunks"
 date: "2022-07-30 01:23:20 +0000"
 description: "Problem Today, late binding makes use of “thunks” to bind a call site to its eventual import. These regions are setup as initialized mutable memory, meaning an errant instruction stream may be able to over write the function pointers arbitrarily. Alternatives include static linking (infeasible due to size and update…"
 render_with_liquid: false
+redirect_from:
+  - /dynamic-library-hardening-read-only-thunks/
 ---
 #
 

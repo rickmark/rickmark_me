@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Rick Mark-Penwell
+
+> Personal site of Rick Mark-Penwell (also known as Rick Mark), a security, privacy and AI engineer and hardware security researcher.
+
+The site publishes research on Apple platform security, the T2 security chip, firmware, hardware and privacy, alongside products and open-source projects. Pages are static HTML and can be read without JavaScript or authentication.
+
+Research is dated and may describe historical platform behavior. Posts marked WIP are unfinished notes; preserve their caveats and distinguish proposals or speculation from demonstrated results. Cite each article's canonical URL and publication date. The About page is the source for the author's biography; linked external projects have their own documentation.
+
+## Start here
+
+- [About Rick Mark-Penwell]({{ '/about/' | absolute_url }}): Biography, career and Apple security research.
+- [Research and writing]({{ '/blog/' | absolute_url }}): Complete chronological article archive.
+- [Products]({{ '/products/' | absolute_url }}): Products and services with links to their own sites.
+- [Open-source projects]({{ '/#projects' | absolute_url }}): Project and organization directory.
+
+## Articles
+{% for post in site.posts %}
+- [{{ post.title | strip_html | replace: '[', '\[' | replace: ']', '\]' }}]({{ post.url | absolute_url }}): Published {{ post.date | date: '%Y-%m-%d' }}.
+{% endfor %}
+## Discovery
+
+- [XML sitemap]({{ '/sitemap.xml' | absolute_url }}): Canonical indexable pages, updated at build time.
+- [Atom feed]({{ '/blog/feed.xml' | absolute_url }}): Article feed.

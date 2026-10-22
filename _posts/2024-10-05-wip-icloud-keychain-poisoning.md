@@ -3,6 +3,8 @@ title: "WIP: iCloud Keychain Poisoning"
 date: "2024-10-05 01:01:31 +0000"
 description: "tl;dr If a malicious device is able to join your iCloud keychain (such as a jailbroken iDevice or insecure macOS device) it can pre-populate keychain items with overly permissive or insecure properties. This can be leveraged with reset tokens, auto and continuity unlock, and other apps to allow lateral…"
 render_with_liquid: false
+redirect_from:
+  - /wip-icloud-keychain-poisoning/
 ---
 # tl;dr
 

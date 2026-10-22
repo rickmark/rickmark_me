@@ -5,4 +5,6 @@ sitemap: false
 User-agent: *
 Disallow:
 
+# Search engines and AI crawlers may read all public content.
+# AI reading guide: {{ '/llms.txt' | absolute_url }}
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
