@@ -79,7 +79,7 @@ Requests on `blog.rickmark.me` receive
 301 responses to the canonical `/blog/` paths, preserving query strings and avoiding
 a duplicate `/blog` prefix. Jekyll's aliases then resolve renamed posts and external articles.
 The Worker source and dependencies are excluded from Jekyll output. The existing GitHub
-Pages workflow remains available; deploying this Worker with its custom domains moves
+Pages workflow remains available; deploying this Worker with its routes moves
 serving of the main site to Cloudflare once DNS is activated.
 
 ```bash
@@ -102,17 +102,17 @@ npm run deploy
 ```
 
 Deployment requires an active `rickmark.me` zone in the selected Cloudflare account.
-The configured Worker Custom Domains are `rickmark.me` and `blog.rickmark.me`; Cloudflare
-manages their DNS records and certificates. Namecheap's existing forwarding service cannot serve this
-Worker. If moving DNS to Cloudflare, first import and verify all existing records,
-including mail, verification and GitHub Pages records, before changing nameservers.
-Do not point a Namecheap CNAME at a workers.dev address as a substitute for configuring
-the Custom Domain. If the account has multiple accounts, set the intended `account_id`
+The Worker routes `rickmark.me/*` and `blog.rickmark.me/*` run on the existing proxied
+DNS records. Keep those records proxied (orange cloud) and Cloudflare's edge certificates
+active. Routes preserve existing DNS records and avoid the Custom Domain conflict
+(error 100117) caused by trying to create records for an already configured hostname.
+The Worker serves `ASSETS` directly for the main site; it does not fetch the DNS origin.
+If the account has multiple accounts, set the intended `account_id`
 in `wrangler.jsonc` after inspecting `wrangler whoami`.
 
 After DNS activation and certificate issuance, verify the HTTPS screenshot URLs return
 301 responses with the correct Location headers. Run the Jekyll SEO checks to verify
-their final local destinations. See [Cloudflare Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/).
+their final local destinations. See [Cloudflare Worker routes](https://developers.cloudflare.com/workers/configuration/routing/routes/).
 
 ## Deployment
 

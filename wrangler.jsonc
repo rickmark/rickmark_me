@@ -18,12 +18,12 @@
   },
   "routes": [
     {
-      "pattern": "rickmark.me",
-      "custom_domain": true
+      "pattern": "rickmark.me/*",
+      "zone_name": "rickmark.me"
     },
     {
-      "pattern": "blog.rickmark.me",
-      "custom_domain": true
+      "pattern": "blog.rickmark.me/*",
+      "zone_name": "rickmark.me"
     }
   ]
 }
