@@ -1,120 +1,92 @@
 # rickmark.me
 
-Personal site and blog of Rick Mark-Penwell, built with Jekyll and deployed to GitHub Pages at
-[rickmark.me](https://rickmark.me). The previous Rails resume site is preserved at the `v1` tag.
+Rick Mark-Penwell's personal site and blog. A Node-based static generator renders
+Markdown with markdown-it and Liquid templates with LiquidJS into `_site`.
+Ruby, Jekyll and Python are not required to build, validate or deploy the site.
 
-## Run locally
+## Local development
 
-```bash
-bundle install
-bundle exec jekyll serve
-```
+Use Node 24 (see `.node-version`):
 
-## Writing a post
-
-Add `_posts/YYYY-MM-DD-slug.md` with front matter (`title`, `date`, `description`, optional `tags` and `image`).
-Posts are served at `/blog/<slug>/`.
-
-## Search and AI discovery
-
-`jekyll-sitemap` generates `/sitemap.xml` on every build. It lists canonical HTTPS pages;
-redirects, the 404 page, and the AI guide are excluded. `/robots.txt` advertises it and
-permits all crawlers, including search and AI crawlers. This also permits training
-crawlers; search access and training access are separate policies.
-
-The SEO plugin generates canonical links, descriptions, social metadata and BlogPosting
-structured data. The templates add author profiles and article breadcrumbs. Keep post
-descriptions accurate and concise. Set `last_modified_at` only when the article actually
-changes substantively; do not use the build date as its modification date.
-
-`/llms.txt` is a supplemental AI reading guide, generated from the published post list.
-It links to the same static HTML available to readers, preserves research caveats, and
-does not guarantee indexing or AI citations. No JavaScript is needed to read the site.
-
-Validate before deploying (also enforced by the deployment workflow):
-
-```bash
-JEKYLL_ENV=production bundle exec jekyll build
-python3 tools/check_seo.py
-```
-
-After deployment, verify ownership of `rickmark.me` in Google Search Console (a Domain
-property uses Google's supplied DNS TXT record). In **Sitemaps**, submit
-`https://rickmark.me/sitemap.xml`. Use URL Inspection for the homepage and a sample post,
-and monitor Page indexing. Submission requires the verified property's owner access;
-the repository changes do not submit it automatically. Check that any CDN or firewall
-also allows legitimate crawlers.
-
-References: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap),
-[Google AI search guidance](https://developers.google.com/search/docs/appearance/ai-features),
-and the [llms.txt proposal](https://llmstxt.org/).
-
-## Imported posts
-
-The posts from 2020–2025 came from the old Ghost blog at blog.rickmark.me, recovered from the Wayback Machine.
-`tools/fetch.py` downloads the newest archived copy of each post and `tools/convert.py` turns them into Markdown,
-saving images under `assets/images/<slug>/`. Old Ghost URLs keep working: `blog.rickmark.me/<slug>/` should
-redirect to `rickmark.me/blog/<slug>/`, and renamed posts carry `redirect_from` entries.
-Root-level aliases also preserve `rickmark.me/<slug>/` if a host redirect preserves the original path.
-These Jekyll redirects use HTML refresh and canonical links; HTTP status redirects must be configured at the host.
-Imported posts set
-`render_with_liquid: false` so code samples are never read as Liquid.
-
-### Legacy subdomain hosting
-
-On October 22, 2026, public checks found that Namecheap URL forwarding sends
-`http://blog.rickmark.me/checkra1n-and-the-t2/` to the correct canonical article (302),
-but the HTTPS connection to `blog.rickmark.me` times out. Repository aliases cannot
-fix this TLS/hosting failure. The subdomain needs an HTTPS-capable redirect host with
-a valid certificate for `blog.rickmark.me`, serving permanent redirects from `/` to
-`https://rickmark.me/blog/` and from `/<path>` to `https://rickmark.me/blog/<path>`.
-Preserve query strings. Do not blindly change the DNS to GitHub Pages: the destination
-must first be configured to accept the subdomain and serve its certificate.
-
-### Wrangler static site and legacy redirects
-
-The root `wrangler.jsonc` configures `workers/site/src.js` to serve the generated `_site` directory using Cloudflare Workers Static Assets.
-Wrangler runs the production Jekyll build and SEO checks before dev or deployment.
-Requests on `blog.rickmark.me` receive
-301 responses to the canonical `/blog/` paths, preserving query strings and avoiding
-a duplicate `/blog` prefix. Jekyll's aliases then resolve renamed posts and external articles.
-The Worker source and dependencies are excluded from Jekyll output. The existing GitHub
-Pages workflow remains available; deploying this Worker with its routes moves
-serving of the main site to Cloudflare once DNS is activated.
-
-```bash
+```sh
 npm ci
 npm test
-npm run check
 npm run dev
 ```
 
-Run these commands from the repository root. Cloudflare Workers Builds should use
-the repository root directory and `npx wrangler deploy` as its deploy command; the
-checked-in config supplies the build command (no `npx` before Ruby’s `bundle`).
+`npm run build` produces the production site and validates it. `npm run dev` runs
+Wrangler locally, building the same production output before serving it. For output
+without Google Analytics, run `npm run build:dev` and serve `_site` with a static server.
+`npm run check` performs a Wrangler deployment dry run without publishing anything.
 
-To connect the account and deploy:
+## Content and templates
 
-```bash
+- `site.yml`: site URL, author, profiles and GA4 measurement ID.
+- `_posts/YYYY-MM-DD-slug.md`: articles with YAML front matter (`title`, `date`,
+  `description`, optional `tags`, `image`, `last_modified_at`, `redirect_from`).
+- `_includes` and `_layouts`: Liquid components and page layouts.
+- `_data`: YAML product and link directories.
+- `scripts/build.mjs`: build inputs, Markdown rendering, metadata and generated indexes.
+
+Posts retain `/blog/<slug>/` URLs. Imported articles set `render_with_liquid: false`
+so code samples remain literal. Templates use the familiar Liquid include syntax;
+Liquid is rendered by JavaScript, not Jekyll. To add a standalone page, register its
+source and URL in the build script's page list. Assets are copied only from `assets/`;
+source files, dependencies, scratch files and design documents are not published.
+
+## SEO, AI discovery and legacy URLs
+
+Every build generates canonical links, social metadata, BlogPosting structured data,
+a sitemap at `/sitemap.xml`, an Atom feed at `/blog/feed.xml`, and `/llms.txt` from the
+published article list. `robots.txt` permits search and AI crawlers and advertises
+the sitemap. Allowing all crawlers also allows training crawlers. `llms.txt` is a
+supplemental reading guide, not a guarantee of indexing or AI citations.
+
+Set `last_modified_at` only when an article changes substantively. Submit
+`https://rickmark.me/sitemap.xml` in the verified Google Search Console property.
+The build does not submit to Search Console automatically.
+
+`redirect_from` creates HTML refresh pages with canonical links and an entry in
+`redirects.json`. `redirect_to` supports externally moved articles. Both the old root
+paths and `/blog/` aliases are preserved, including `untitled`, `untitled-2` and
+`untitled-3`. The Cloudflare Worker issues HTTP 301 redirects from the old blog
+subdomain to the main site's `/blog/` paths, preserving queries. It then serves the
+same `_site` content through its static assets binding.
+
+`npm test` builds and validates canonical URLs, redirects, sitemap exclusions,
+structured data, feed XML, analytics, images, original article code samples and
+legacy heading anchors, then tests Worker behavior. The migration fixture under
+`scripts/fixtures` captures the pre-migration URL, redirect, code and anchor contract.
+When intentionally changing an existing code sample or removing an old anchor, review
+and update its fixture too. New posts do not require updating the fixture.
+
+## Cloudflare deployment
+
+The root `wrangler.jsonc` serves `_site` with the `ASSETS` binding and runs
+`npm run build` before deployment. Cloudflare Workers Builds settings:
+
+- Repository root: `/`
+- Deploy command: `npx wrangler deploy`
+- Build command: leave empty (Wrangler runs the checked-in build command)
+
+```sh
 npx wrangler login
 npx wrangler whoami
 npm run deploy
 ```
 
-Deployment requires an active `rickmark.me` zone in the selected Cloudflare account.
-The Worker routes `rickmark.me/*` and `blog.rickmark.me/*` run on the existing proxied
-DNS records. Keep those records proxied (orange cloud) and Cloudflare's edge certificates
-active. Routes preserve existing DNS records and avoid the Custom Domain conflict
-(error 100117) caused by trying to create records for an already configured hostname.
-The Worker serves `ASSETS` directly for the main site; it does not fetch the DNS origin.
-If the account has multiple accounts, set the intended `account_id`
-in `wrangler.jsonc` after inspecting `wrangler whoami`.
+The configured account is Love Wins Media, Inc. Routes `rickmark.me/*` and
+`blog.rickmark.me/*` use the existing Cloudflare-proxied DNS records. Keep both records
+proxied and edge certificates active. Routes avoid Custom Domain error 100117 when
+records already exist. The main site is served from uploaded static assets, without
+fetching the DNS origin. After deployment, verify the homepage, sitemap and old HTTPS
+blog URLs. See [Cloudflare Worker routes](https://developers.cloudflare.com/workers/configuration/routing/routes/).
 
-After DNS activation and certificate issuance, verify the HTTPS screenshot URLs return
-301 responses with the correct Location headers. Run the Jekyll SEO checks to verify
-their final local destinations. See [Cloudflare Worker routes](https://developers.cloudflare.com/workers/configuration/routing/routes/).
+The GitHub Pages workflow also builds with Node and publishes `_site` on pushes to
+`master`; `.nojekyll` prevents further processing. `CNAME` preserves the custom domain.
 
-## Deployment
+## Historical import tools
 
-`.github/workflows/pages.yml` builds and deploys on every push to `master`. In the repository's
-Settings → Pages, set **Source** to **GitHub Actions** and the custom domain to `rickmark.me`.
+The old Ghost articles were recovered from the Wayback Machine. `tools/fetch.py` and
+`tools/convert.py` are optional historical Python import utilities, not part of the
+build or deployment. The previous Rails resume site remains at the `v1` tag.

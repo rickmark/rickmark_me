@@ -7,7 +7,7 @@
   "workers_dev": false,
   "preview_urls": false,
   "build": {
-    "command": "JEKYLL_ENV=production bundle exec jekyll build && python3 tools/check_seo.py"
+    "command": "npm run build"
   },
   "assets": {
     "directory": "./_site",

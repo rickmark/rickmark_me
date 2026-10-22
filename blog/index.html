@@ -9,7 +9,7 @@ redirect_from:
   - /author/rickmark/
 ---
 <p>Posts marked WIP are notes in progress; see <a href="{{ '/blog/about-wip/' | relative_url }}">About 'WIP'</a>.</p>
-{% assign by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign by_year = site.post_years %}
 {% for year in by_year %}
 <h2 class="section-title">{{ year.name }}</h2>
 {% include post-list.html posts=year.items %}

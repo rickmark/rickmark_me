@@ -4,11 +4,23 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "test": "node --test workers/site/src.test.js",
+    "test": "npm run build && node --test workers/site/src.test.js",
     "check": "wrangler deploy --dry-run",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "build": "node scripts/build.mjs && node scripts/check-site.mjs",
+    "build:dev": "node scripts/build.mjs --development"
   },
   "devDependencies": {
-    "wrangler": "4.152.0"
+    "cheerio": "1.2.0",
+    "fast-xml-parser": "5.11.2",
+    "highlight.js": "11.12.0",
+    "liquidjs": "10.30.0",
+    "markdown-it": "15.0.3",
+    "markdown-it-anchor": "10.0.0",
+    "wrangler": "4.152.0",
+    "yaml": "2.9.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

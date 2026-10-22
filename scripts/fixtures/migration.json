@@ -1,0 +1,544 @@
+{
+  "urls": [
+    "https://rickmark.me/",
+    "https://rickmark.me/about/",
+    "https://rickmark.me/blog/",
+    "https://rickmark.me/blog/a-cautionary-tale/",
+    "https://rickmark.me/blog/about-wip/",
+    "https://rickmark.me/blog/abusing-efi-variables-and-the-amt/",
+    "https://rickmark.me/blog/ace-controller-secrets/",
+    "https://rickmark.me/blog/apple-usb-target-disk-mode/",
+    "https://rickmark.me/blog/checkra1n-and-the-t2/",
+    "https://rickmark.me/blog/datamigration-ios-mitigations/",
+    "https://rickmark.me/blog/design-hybrid-prom-spi-flash/",
+    "https://rickmark.me/blog/design-surface-area-reduction-of-the-cs-me-by-using-bogus-public-keys/",
+    "https://rickmark.me/blog/dissection-of-the-apple-internet-recovery-protocol-and-security-analysis/",
+    "https://rickmark.me/blog/dynamic-library-hardening-read-only-thunks/",
+    "https://rickmark.me/blog/google-from-the-citadel-to-the-dauntless/",
+    "https://rickmark.me/blog/how-apple-gets-security-wrong/",
+    "https://rickmark.me/blog/how-minimalism-hurts-security/",
+    "https://rickmark.me/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/",
+    "https://rickmark.me/blog/intel-goauld-dark-symbiote/",
+    "https://rickmark.me/blog/knowing-what-you-dont-know/",
+    "https://rickmark.me/blog/on-warrens-plan-to-break-up-facebook/",
+    "https://rickmark.me/blog/plugnpwn-connect-to-jailbreak/",
+    "https://rickmark.me/blog/puppeteer-with-chromeos/",
+    "https://rickmark.me/blog/qualcomm-baseband-research/",
+    "https://rickmark.me/blog/security-critical-kernel-object-confidentiality-and-integrity/",
+    "https://rickmark.me/blog/the-execution-of-the-warrant/",
+    "https://rickmark.me/blog/the-security-weakness-of-the-m1/",
+    "https://rickmark.me/blog/the-sim-swap-revisited/",
+    "https://rickmark.me/blog/ubiquiti-unifi-security-and-boot-chain-analysis/",
+    "https://rickmark.me/blog/usb-security-in-the-linux-kernel/",
+    "https://rickmark.me/blog/using-the-t2-for-detection-and-forensics/",
+    "https://rickmark.me/blog/wip-how-did-pki-become-a-joke/",
+    "https://rickmark.me/blog/wip-icloud-keychain-poisoning/",
+    "https://rickmark.me/blog/work-in-progress-using-apple-internal-builds-for-rootkits/",
+    "https://rickmark.me/products/"
+  ],
+  "redirects": {
+    "/the-execution-of-the-warrant/": "https://rickmark.me/blog/the-execution-of-the-warrant/",
+    "/checkra1n-and-the-t2/": "https://rickmark.me/blog/checkra1n-and-the-t2/",
+    "/puppeteer-with-chromeos/": "https://rickmark.me/blog/puppeteer-with-chromeos/",
+    "/on-warrens-plan-to-break-up-facebook/": "https://rickmark.me/blog/on-warrens-plan-to-break-up-facebook/",
+    "/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/": "https://rickmark.me/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/",
+    "/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace-2/": "https://rickmark.me/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/",
+    "/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace-2/": "https://rickmark.me/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/",
+    "/abusing-efi-variables-and-the-amt/": "https://rickmark.me/blog/abusing-efi-variables-and-the-amt/",
+    "/apple-usb-target-disk-mode/": "https://rickmark.me/blog/apple-usb-target-disk-mode/",
+    "/intel-goauld-dark-symbiote/": "https://rickmark.me/blog/intel-goauld-dark-symbiote/",
+    "/the-sim-swap-revisited/": "https://rickmark.me/blog/the-sim-swap-revisited/",
+    "/datamigration-ios-mitigations/": "https://rickmark.me/blog/datamigration-ios-mitigations/",
+    "/design-surface-area-reduction-of-the-cs-me-by-using-bogus-public-keys/": "https://rickmark.me/blog/design-surface-area-reduction-of-the-cs-me-by-using-bogus-public-keys/",
+    "/how-apple-gets-security-wrong/": "https://rickmark.me/blog/how-apple-gets-security-wrong/",
+    "/how-minimalism-hurts-security/": "https://rickmark.me/blog/how-minimalism-hurts-security/",
+    "/design-hybrid-prom-spi-flash/": "https://rickmark.me/blog/design-hybrid-prom-spi-flash/",
+    "/security-critical-kernel-object-confidentiality-and-integrity/": "https://rickmark.me/blog/security-critical-kernel-object-confidentiality-and-integrity/",
+    "/ace-controller-secrets/": "https://rickmark.me/blog/ace-controller-secrets/",
+    "/plugnpwn-connect-to-jailbreak/": "https://rickmark.me/blog/plugnpwn-connect-to-jailbreak/",
+    "/qualcomm-baseband-research/": "https://rickmark.me/blog/qualcomm-baseband-research/",
+    "/untitled/": "https://rickmark.me/blog/qualcomm-baseband-research/",
+    "/blog/untitled/": "https://rickmark.me/blog/qualcomm-baseband-research/",
+    "/dissection-of-the-apple-internet-recovery-protocol-and-security-analysis/": "https://rickmark.me/blog/dissection-of-the-apple-internet-recovery-protocol-and-security-analysis/",
+    "/the-security-weakness-of-the-m1/": "https://rickmark.me/blog/the-security-weakness-of-the-m1/",
+    "/work-in-progress-using-apple-internal-builds-for-rootkits/": "https://rickmark.me/blog/work-in-progress-using-apple-internal-builds-for-rootkits/",
+    "/usb-security-in-the-linux-kernel/": "https://rickmark.me/blog/usb-security-in-the-linux-kernel/",
+    "/using-the-t2-for-detection-and-forensics/": "https://rickmark.me/blog/using-the-t2-for-detection-and-forensics/",
+    "/google-from-the-citadel-to-the-dauntless/": "https://rickmark.me/blog/google-from-the-citadel-to-the-dauntless/",
+    "/untitled-2/": "https://rickmark.me/blog/google-from-the-citadel-to-the-dauntless/",
+    "/blog/untitled-2/": "https://rickmark.me/blog/google-from-the-citadel-to-the-dauntless/",
+    "/ubiquiti-unifi-security-and-boot-chain-analysis/": "https://rickmark.me/blog/ubiquiti-unifi-security-and-boot-chain-analysis/",
+    "/untitled-3/": "https://rickmark.me/blog/ubiquiti-unifi-security-and-boot-chain-analysis/",
+    "/blog/untitled-3/": "https://rickmark.me/blog/ubiquiti-unifi-security-and-boot-chain-analysis/",
+    "/dynamic-library-hardening-read-only-thunks/": "https://rickmark.me/blog/dynamic-library-hardening-read-only-thunks/",
+    "/a-cautionary-tale/": "https://rickmark.me/blog/a-cautionary-tale/",
+    "/wip-icloud-keychain-poisoning/": "https://rickmark.me/blog/wip-icloud-keychain-poisoning/",
+    "/knowing-what-you-dont-know/": "https://rickmark.me/blog/knowing-what-you-dont-know/",
+    "/wip-how-did-pki-become-a-joke/": "https://rickmark.me/blog/wip-how-did-pki-become-a-joke/",
+    "/about-wip/": "https://rickmark.me/blog/about-wip/",
+    "/blog/about/": "https://rickmark.me/about/",
+    "/author/rickmark/": "https://rickmark.me/blog/",
+    "/industrial-strength-makerbot-method-x-carbon-fiber/": "https://rickmark.me/blog/industrial-strength-makerbot-method-x-carbon-fiber/",
+    "/blog/industrial-strength-makerbot-method-x-carbon-fiber/": "https://luminx.media/blogs/industrial-strength-makerbot-method-x-carbon-fiber",
+    "/kinematics-in-focus-edelkrone-ecosystem/": "https://rickmark.me/blog/kinematics-in-focus-edelkrone-ecosystem/",
+    "/blog/kinematics-in-focus-edelkrone-ecosystem/": "https://luminx.media/blogs/kinematics-in-focus-edelkrone-ecosystem",
+    "/next-gen-fabrication-formlabs-form-4/": "https://rickmark.me/blog/next-gen-fabrication-formlabs-form-4/",
+    "/blog/next-gen-fabrication-formlabs-form-4/": "https://luminx.media/blogs/next-gen-fabrication-formlabs-form-4",
+    "/reality-capture-revopoint-miraco-metrox-workflow/": "https://rickmark.me/blog/reality-capture-revopoint-miraco-metrox-workflow/",
+    "/blog/reality-capture-revopoint-miraco-metrox-workflow/": "https://luminx.media/blogs/reality-capture-revopoint-miraco-metrox-workflow"
+  },
+  "articles": {
+    "/blog/a-cautionary-tale/": {
+      "code": [],
+      "headings": [
+        "deep-fragile-narcissism",
+        "controlling-the-situation-badly"
+      ]
+    },
+    "/blog/about-wip/": {
+      "code": [],
+      "headings": []
+    },
+    "/blog/abusing-efi-variables-and-the-amt/": {
+      "code": [],
+      "headings": [
+        "speculation-on-how-efi-was-modified",
+        "booting-into-a-decent-shell",
+        "open-questions",
+        "useful-non-network-control-channels",
+        "early-injection-using-firewire-serial",
+        "messing-with-the-acpi-tables",
+        "hiding-from-root-using-the-linux-bfp-lsm",
+        "xen-para-virtualization-is-still-a-thing",
+        "tampering-during-compile"
+      ]
+    },
+    "/blog/ace-controller-secrets/": {
+      "code": [
+        "aa291a6e5929118c3f67bb57ea13d5ab0e6285d61642985c1906a0244076092b",
+        "7dfb1b02e13d70a661fe6e4bb23acf17e7109c4062e81f6140264f39d08fd019",
+        "f0fd83779d4252431ebd83166e7efe6b1645bb38d3b5e81939814a21b16709b6",
+        "10b261843286d0b4f9eae5946a309737da58b1b1ec8b571711e1af800cb55cfd",
+        "b147dae345aab811e01195381e48dd50c5473ff000461f5cebbb908a8b10ce38",
+        "82a55aea4bc973e059ebf1e1d5248fb4fc8a88c86c7f857741c9604bdb3da697"
+      ],
+      "headings": [
+        "introduction",
+        "ace-overview",
+        "usb-pd",
+        "dive-into-the-code",
+        "action-types",
+        "type-1",
+        "type-2",
+        "type-3",
+        "protocol-summary",
+        "applevdm-0x10-get-action-list",
+        "applevdm-0x11-get-action-info",
+        "applevdm-0x12-perform-action",
+        "concluding-remarks"
+      ]
+    },
+    "/blog/apple-usb-target-disk-mode/": {
+      "code": [
+        "831b18fc101f17c2fd0f9ca24b3d0c90bd2fd1fd4755107a14560b19dc4a347c",
+        "9eb042d3e7dafa38cf8694099b571b01dd380e82752d0879af90e77dcb57a8e6",
+        "5222ba9cba70b959a1f8ea7622fa707d9e923d532d3c1825054536d0b163a6c8"
+      ],
+      "headings": [
+        "introduction",
+        "usb-bulk-only-transport-by-any-other-name",
+        "a-little-scsi-here-and-there",
+        "the-control-endpoint",
+        "reading-the-key-bag-from-effaceable-storage",
+        "unwrapping-the-key-with-applekeystore",
+        "setting-up-for-disk-reading",
+        "reading-blocks-from-the-disk-with-aes-xts",
+        "unwrapping-the-disk-key",
+        "mounting-the-apfs-volume",
+        "potential-linux-driver",
+        "fuzzing-analysis-on-the-stack---hackers-look-here"
+      ]
+    },
+    "/blog/checkra1n-and-the-t2/": {
+      "code": [],
+      "headings": [
+        "what-can-i-do-with-ssh-to-the-t2-anyway",
+        "what-is-pongoos-and-what-does-it-have-to-do-with-this",
+        "when-will-there-be-a-patch",
+        "i-want-to-recover-my-t2-to-its-factory-configuration",
+        "is-it-safe-to-jailbreak-the-t2-can-it-harm-my-device--wipe-my-data",
+        "how-can-i-tell-if-my-t2-has-been-tampered-with",
+        "will-i-be-able-to-repair-my-own-mac",
+        "what-about-encrypted-disks-are-they-safe",
+        "will-a-firmware-password-mitigate-this",
+        "but-i-have-secure-boot-on-in-full-mode-what-gives"
+      ]
+    },
+    "/blog/datamigration-ios-mitigations/": {
+      "code": [],
+      "headings": [
+        "introduction",
+        "datamigration-and-dynamic-plugins",
+        "the-over-entitled-process",
+        "trust-cache-and-abusing-apple-libraries",
+        "compounding-factors",
+        "inadequate-protection-for-mobiledevice-framework-and-kext",
+        "loading-a-trust-cache-for-a-different-architecture-type",
+        "execve-reload-keeping-open-descriptors",
+        "softlinkingframework-and-hid"
+      ]
+    },
+    "/blog/design-hybrid-prom-spi-flash/": {
+      "code": [],
+      "headings": [
+        "todays-problem",
+        "what-consumers-really-want",
+        "implementation-choices"
+      ]
+    },
+    "/blog/design-surface-area-reduction-of-the-cs-me-by-using-bogus-public-keys/": {
+      "code": [],
+      "headings": [
+        "the-csme-is-scary",
+        "perhaps-using-bogus-public-keys-using-verifiably-random-data-to-lock-down-features-not-shipped"
+      ]
+    },
+    "/blog/dissection-of-the-apple-internet-recovery-protocol-and-security-analysis/": {
+      "code": [
+        "04245d4b22172aa3fd108a75ad6bc6612a076d775bb90371f9fa66eb8c4b92e8",
+        "487c086630987fc3ae08e1d13c71994dd9e06adc54e550ade0bde1fe96bcfa45"
+      ],
+      "headings": [
+        "verification-of-basesystemdmg-and-osdinstalldmg",
+        "request--response-of-internet-recovery-image-location",
+        "request-format",
+        "response-format",
+        "credit"
+      ]
+    },
+    "/blog/dynamic-library-hardening-read-only-thunks/": {
+      "code": [],
+      "headings": [
+        "problem",
+        "proposed-solution"
+      ]
+    },
+    "/blog/google-from-the-citadel-to-the-dauntless/": {
+      "code": [],
+      "headings": [
+        "tldr",
+        "credit-google-fixed-this-problem",
+        "the-titan-m-doesnt-always-update",
+        "the-pixel-boot-process-and-qualcomm",
+        "how-to-do-some-debug-nonsense",
+        "the-origins-and-the-haven",
+        "the-pixel-and-the-citadel",
+        "the-citadel--dauntless-bug",
+        "now-the-bug"
+      ]
+    },
+    "/blog/how-apple-gets-security-wrong/": {
+      "code": [],
+      "headings": []
+    },
+    "/blog/how-minimalism-hurts-security/": {
+      "code": [],
+      "headings": [
+        "apple-device-boot-process",
+        "online-accounts"
+      ]
+    },
+    "/blog/how-to-bypass-t-mobile-sim-block-steal-all-their-money-and-leave-no-trace/": {
+      "code": [],
+      "headings": [
+        "disclaimer",
+        "the-t-mobile-sim-lock",
+        "trivial-bypass",
+        "whats-wrong-here",
+        "that-the-sim-lock-doesnt-do-its-job",
+        "there-was-no-audit-record-of-the-change",
+        "bonus-awful-sim-lock-emails-your-the-imsi",
+        "bonus-awful-2-totp-uses-a-fixed-secret"
+      ]
+    },
+    "/blog/intel-goauld-dark-symbiote/": {
+      "code": [],
+      "headings": [
+        "about-the-name",
+        "play-at-home-with-the-capture",
+        "apriori",
+        "current-working-hypothesis",
+        "the-core-ish_bup-the-amt-and-a-csme-kit",
+        "the-uefi-hosting-environment",
+        "the-uefi-guest-environment",
+        "restore--update-persistence",
+        "efi-variable-offset--0x0",
+        "tricking-the-runtime-with-nv-vars-shadowing-bs--rt-vars",
+        "storage--hiding-of-data-in-raw-areas-and-invalid-vars",
+        "analysis-nothing-novel--new-cve---but-a-real-world-kit-ware-and-ttps",
+        "delta-in-the-me-file-system-mfs-is-stored-generationally",
+        "the-two-personalities-of-the-csme",
+        "living-through-s5-without-a-battery",
+        "the-converged-security--manageability-engine-csme-brought-to-you-mostly-by-intel",
+        "how-to-weaponize-the-intel-sensor-hub",
+        "living-off-the-land-java-vm-amt-hdcpdrm",
+        "the-amt-has-always-been-able-to-control-boot-flow",
+        "usb-heci---usb-host-controller-interface",
+        "did-we-really-need-nested-virtualization",
+        "inter-process-communication-on-the-csme",
+        "the-policy-module-and-the-mfs",
+        "the-intel-power-manager",
+        "abusing-intel-bootguard-to-inject-early-efi-code",
+        "once-in-efi",
+        "handing-uefi-updates",
+        "downstream-effects",
+        "terms---made-up-mostly",
+        "whats-the-point"
+      ]
+    },
+    "/blog/knowing-what-you-dont-know/": {
+      "code": [],
+      "headings": []
+    },
+    "/blog/on-warrens-plan-to-break-up-facebook/": {
+      "code": [],
+      "headings": [
+        "the-difficulty-with-ubiquious-services",
+        "proposed-solutions",
+        "user-data-sovereignty",
+        "classifying-facebook-graph--messenger--portal-video-chat-as-a-utility",
+        "forced-discoverability-of-other-platforms-meta-contacts",
+        "examination-of-incentive-models",
+        "identity-verification--kyc-requirements",
+        "transparency-reports-should-be-prepared-with-outside-experts"
+      ]
+    },
+    "/blog/plugnpwn-connect-to-jailbreak/": {
+      "code": [],
+      "headings": [
+        "plugnpwn---connect-to-jailbreak",
+        "state-of-the-world-checkm8-checkra1n-and-the-t2",
+        "a-monkey-by-any-other-name",
+        "the-bonobo-in-the-myst",
+        "the-usb-port-on-the-mac",
+        "the-usb-c-plug-and-usb-pd",
+        "apples-usb-pd-extensions",
+        "putting-it-together",
+        "video-demo",
+        "plugnpwn-automatic-jailbreak",
+        "replacing-the-t2-macefi-with-secureboot-enabled",
+        "usb-c-debug-probe"
+      ]
+    },
+    "/blog/puppeteer-with-chromeos/": {
+      "code": [
+        "8a6b0e42d0a72e66d17a1d9dc66cbf58d2d5df6ce6511f748a084bca0b82824d",
+        "3e2f6fef62baf647758d4ab2975beaa7ac254749011b84ae39786c2353315031",
+        "91c72a3b93d3f93fd47b2f1ffb6efdce5a0ff077005a9f274e29a45aadaccf9b",
+        "d8aa93e06368297af11c150de5a44403cb2c71058d22d27212a63d34fab97b35",
+        "209bc5e346642cdb37c881c1f0f7caf25a0b3bddf1f644cf3e8209c4b8ef1fb6"
+      ],
+      "headings": [
+        "headed-chrome-testing",
+        "big-scary---much-danger",
+        "entering-developer-mode-and-debugging-features",
+        "configuring-a-secure-ssh-connection",
+        "enabling-chrome-devtools-remote",
+        "running-a-tunnel-to-chrome",
+        "connecting-from-puppeteer-core",
+        "bonus-how-to-webusb-with-an-apple-mobile-device-on-chromeos"
+      ]
+    },
+    "/blog/qualcomm-baseband-research/": {
+      "code": [
+        "dd502c044ea7cad0b55ecf22d54baae25f782991feaf7786f5e922bad0225050",
+        "3de9b17f0afcaa4008d9a807c3c0bcd3854b7f3b0b473a6083d1c527136ae579",
+        "4641ba80b80b3582088dda1d57dfbc4bb7e08f2a72ac2678ec8886d6c7e8085a",
+        "f2e56cf21e3bf30e7fdcffa32919f221035ac64aa5a3b8f407a01791cfb0832d",
+        "c3b9c48144ab48f777f7043e133972515c447cabf8282bc0b882ddee449ba356",
+        "fae90a9c3c12c3072bda5acec836c84100aa99ea2a26ea40a40de2b91f147580",
+        "ecedac70b6565debb363fedf2eee90d16d69270b3613095bb125da83d0ca7a3d",
+        "513fb439112b658fc0dcf651f036ef6786bd96bd363738813afc39d918778f66",
+        "713a399b9dffb61630c2a34acbba38adc03d9582bd19e7291914bdbe106d2167",
+        "5981e898ffa8a01809c4013e88bfa8f4cfce4392bc456d2e404294ebcfffaf57",
+        "a6967fcd92584cd9a3b47a7f8415f00de6ed5354b2b347e6bc8b8b2eb11a15bf",
+        "f49cd55e3d737572de3036103dba80abde2dbd6428a523917e20cfa2c80eca1c",
+        "9c4faac71a1a4107ea0baef8929860a96744a0194e00fdbc45a5bb7bb80c7f8d",
+        "d4463ea907832a9bd0a97dcc6d8e999d352042510a66ecabef5b3b41330f10c6",
+        "f2cf93d370c500eef04190fee17162bf668372787c06036f656f106122e00a02"
+      ],
+      "headings": [
+        "bbfw",
+        "mbn-signature-format",
+        "header-region",
+        "examples-of-headers",
+        "asn1-encoded-signature",
+        "ecdsa-scep384r1",
+        "asn1-encoded-certificate-chain",
+        "sahara-protocol",
+        "baseband-config",
+        "blobs",
+        "asn-coded-files",
+        "stx2vg",
+        "mavz",
+        "xbl_cfg",
+        "cfgl",
+        "qhee",
+        "devices-in-hypmbn"
+      ]
+    },
+    "/blog/security-critical-kernel-object-confidentiality-and-integrity/": {
+      "code": [],
+      "headings": [
+        "license",
+        "from-the-author",
+        "primer-work-in-linux-kernel-protection",
+        "introduction",
+        "this-scheme-can-be-further-enhanced-in-the-following-ways",
+        "hardware-mitigations---the-secure-von-neumann-architecture",
+        "reference-implementation",
+        "arm-and-the-cryptographic-extensions",
+        "op-tee-and-linaro",
+        "interface"
+      ]
+    },
+    "/blog/the-execution-of-the-warrant/": {
+      "code": [],
+      "headings": []
+    },
+    "/blog/the-security-weakness-of-the-m1/": {
+      "code": [],
+      "headings": [
+        "tldr",
+        "static-and-dynamic-analysis-of-the-boot-loader",
+        "lack-of-ability-to-create-measurements-externally",
+        "relocation-of-securerom-to-volatile-memory",
+        "security-dependence-on-hydrausb-c-ace-etc",
+        "the-pmp-and-pmgr",
+        "lack-of-documentation-of-escapes-to-secure-boot-flow",
+        "bonus-section",
+        "xnu-kernels-failure-to-prevent-dlopen-of-mh_executable-objects",
+        "implement-trust-zone-like-secure-and-non-secure-user-task-modes"
+      ]
+    },
+    "/blog/the-sim-swap-revisited/": {
+      "code": [],
+      "headings": [
+        "terms",
+        "cellular-registration---an-overview",
+        "malware-in-the-baseband",
+        "ways-to-attack-the-baseband",
+        "ways-to-improve"
+      ]
+    },
+    "/blog/ubiquiti-unifi-security-and-boot-chain-analysis/": {
+      "code": [],
+      "headings": [
+        "this-paper-under-revision",
+        "the-udm-udm-pro-and-the-unvr",
+        "al_boot-and-i2c-devices-in-preboot",
+        "warning---wilding-here",
+        "fixing-bad-boot-chains",
+        "sign-everything-not-in-rom",
+        "provide-a-rom-based-recovery-system",
+        "debug-kernels-and-kvm",
+        "bsd-openssh-on-the-unvr-and-dropbear-on-the-udmudm-pro",
+        "abusing-the-mutable-data-partition-to-override-the-rootfs",
+        "udm-pro-and-ram-disk-union-mounting",
+        "slightly-suspicious",
+        "using-ubnt-as-an-alias-to-root",
+        "using-a-pam-module-to-allow-login-over-ssh-without-setting-the-password-or-ssh-keys-only",
+        "if-you-own-the-ecosystem-build-a-pki",
+        "get-rid-of-executable-scripts-on-embedded-devices-at-least-in-the-root-cgroup",
+        "if-the-device-updates-atomically-does-it-need-apt"
+      ]
+    },
+    "/blog/usb-security-in-the-linux-kernel/": {
+      "code": [],
+      "headings": [
+        "when-usb-was-new",
+        "lack-of-defensive-programming",
+        "examples-of-potentially-exploitable-code",
+        "unvalidated-length-from-device"
+      ]
+    },
+    "/blog/using-the-t2-for-detection-and-forensics/": {
+      "code": [],
+      "headings": [
+        "todays-need",
+        "new-solutions",
+        "solution-categories",
+        "demo---using-chrome-webusb-to-deliver-this-technology"
+      ]
+    },
+    "/blog/wip-how-did-pki-become-a-joke/": {
+      "code": [],
+      "headings": [
+        "tldr",
+        "terms",
+        "the-beef",
+        "the-culprits",
+        "the-heros",
+        "the-anti-heros",
+        "recommendations",
+        "internal-use-only-certificates",
+        "key-generation-indicators"
+      ]
+    },
+    "/blog/wip-icloud-keychain-poisoning/": {
+      "code": [
+        "c639dfbfb5368e73548dd7d9cab29d915e2fc9dba8377fe328b1caf886fbfea9",
+        "7002f6b9b6310c195dd3ebd0633ca1ad00ac5bd2e00f346bc34f9d09d97b5dfe",
+        "3cd4349eeafc891eda4004d7b5ad90e962eb72e91be34dcef1b18511e8defc7a",
+        "69585cafba3cd0d978681089d9a74933e7f8cb62e8759686544da107a9f465c8"
+      ],
+      "headings": [
+        "tldr",
+        "a-history-lesson",
+        "a-typical-secret-flow-upsert",
+        "variant-a---cloud-theft",
+        "variant-b---agressive-updates",
+        "variant-c---secure-storage",
+        "variant-d---access-control",
+        "oh-continuity",
+        "various-lateral-moves",
+        "secure-channel-and-se-backup-and-sync",
+        "loose-notes",
+        "dedication"
+      ]
+    },
+    "/blog/work-in-progress-using-apple-internal-builds-for-rootkits/": {
+      "code": [],
+      "headings": [
+        "backstory",
+        "overall-theory",
+        "the-auxkc-generation-process-and-elides",
+        "leveraged-kernel-extensions",
+        "comappledriverairportbrcm4360-mfg",
+        "comappledriverairportbrcmnic-mfg",
+        "comappledriverappleastrisgpioprobe",
+        "comappledriverapplebsdkextstartervpn",
+        "comappledriverapplehwaccess",
+        "comappledriverappleintelcpupowermanagementdriver",
+        "comappledriverapplenvmepassthrough",
+        "comappledriverappleinteltglgraphicsframebuffer",
+        "comappledriverusbappleusbrecoveryhost",
+        "comappledriverapplersm--comappledriverusbappleusbvhcirsm",
+        "comappledriverdrizzleplatformsupport",
+        "comappledriverdrizzlesmc",
+        "comappledriverkernelrelaytesterhost",
+        "exttestfunction",
+        "extsenddata",
+        "externalmethod",
+        "comappledriverluahardwareaccess",
+        "comappledrivermedetect",
+        "comappledriverkisapplekis",
+        "comappledriverusbappleusbkdp",
+        "comappleiokitrusbhostfamily",
+        "comappleiokitfipscavs-kext-tool",
+        "comapplekextmojokdp",
+        "comapplepaedriverapplequaibridgepcie"
+      ]
+    }
+  }
+}
