@@ -73,24 +73,27 @@ must first be configured to accept the subdomain and serve its certificate.
 
 ### Wrangler static site and legacy redirects
 
-`workers/site` serves the generated `_site` directory using Cloudflare Workers Static Assets.
+The root `wrangler.jsonc` configures `workers/site/src.js` to serve the generated `_site` directory using Cloudflare Workers Static Assets.
 Wrangler runs the production Jekyll build and SEO checks before dev or deployment.
 Requests on `blog.rickmark.me` receive
-301 responses to the canonical `/blog/` paths, preserves query strings, and avoids
-adding `/blog` twice. Jekyll's aliases then resolve renamed posts and external articles.
+301 responses to the canonical `/blog/` paths, preserving query strings and avoiding
+a duplicate `/blog` prefix. Jekyll's aliases then resolve renamed posts and external articles.
 The Worker source and dependencies are excluded from Jekyll output. The existing GitHub
 Pages workflow remains available; deploying this Worker with its custom domains moves
 serving of the main site to Cloudflare once DNS is activated.
 
 ```bash
-cd workers/site
 npm ci
 npm test
 npm run check
 npm run dev
 ```
 
-To connect the account and deploy, run from that directory:
+Run these commands from the repository root. Cloudflare Workers Builds should use
+the repository root directory and `npx wrangler deploy` as its deploy command; the
+checked-in config supplies the build command (no `npx` before Ruby’s `bundle`).
+
+To connect the account and deploy:
 
 ```bash
 npx wrangler login

@@ -1,10 +1,10 @@
 {
-  "name": "rickmark-site",
+  "name": "rickmark-me",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "test": "node --test",
+    "test": "node --test workers/site/src.test.js",
     "check": "wrangler deploy --dry-run",
     "deploy": "wrangler deploy"
   },
