@@ -10,3 +10,5 @@ vendor/
 node_modules/
 .wrangler/
 .dev.vars*
+# Gists fetched locally to publish as posts
+tmp/gists/

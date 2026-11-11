@@ -3,6 +3,9 @@ sites:
   - name: Blog
     url: /blog/
     note: Security research notes
+  - name: Research
+    url: /research/
+    note: Working papers on cryptography, AI security and driving
   - name: Products
     url: /products/
     note: Garage, AudienceKit, Hot Mess, Lumière Archive and Love Wins Media / LuminX

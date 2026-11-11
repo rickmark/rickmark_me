@@ -70,7 +70,7 @@ redirect_from:
 <section class="about-section" id="research">
   <div class="about-head">
     <h2 class="section-title">Research and open source</h2>
-    <p class="lead">Most of my work is on <a href="https://github.com/rickmark" rel="noopener">GitHub</a>. Beyond the T2, it falls into a few areas.</p>
+    <p class="lead">Most of my work is on <a href="https://github.com/rickmark" rel="noopener">GitHub</a>. Beyond the T2, it falls into a few areas. My current working papers are on the <a href="{{ '/research/' | relative_url }}">Research</a> page.</p>
   </div>
   <div class="card-grid card-grid-2">
     <div class="card card-accent">
