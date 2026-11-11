@@ -400,7 +400,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: block; overflow-x: auto; border-collapse: collapse;
   font-size: 14px; line-height: 20px;
 }
-.prose th, .prose td { border: 1px solid var(--hairline); padding: var(--space-1) 12px; text-align: left; vertical-align: top; }
+.prose th, .prose td { border: 1px solid var(--hairline); padding: var(--space-1) 12px; text-align: left; vertical-align: top; overflow-wrap: normal; }
 .prose th { background: var(--surface-raised); font-weight: 600; }
 
 .post-meta {
