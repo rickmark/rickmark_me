@@ -14,6 +14,19 @@ timezone: UTC
 author:
   name: Rick Mark-Penwell
   url: https://rickmark.me/about/
+  image: /assets/images/rick-mark.jpg
+  job_title: Security, privacy and AI engineer
+  alternate_names:
+    - Rick Mark
+  knows_about:
+    - Apple platform security
+    - Apple T2 security chip
+    - Firmware security
+    - Hardware security
+    - Secure boot
+    - Privacy engineering
+    - AI security
+    - Cryptography
 social:
   name: Rick Mark-Penwell
   links:

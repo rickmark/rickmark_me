@@ -1,7 +1,7 @@
 ---
 title: "WIP: iCloud Keychain Poisoning"
 date: "2024-10-05 01:01:31 +0000"
-description: "tl;dr If a malicious device is able to join your iCloud keychain (such as a jailbroken iDevice or insecure macOS device) it can pre-populate keychain items with overly permissive or insecure properties. This can be leveraged with reset tokens, auto and continuity unlock, and other apps to allow lateral…"
+description: "How a malicious device in your iCloud Keychain can pre-seed insecure items that enable lateral movement through reset tokens and unlock features."
 render_with_liquid: false
 tags:
   - working draft
@@ -21,7 +21,7 @@ The iCloud keychain is derived from various prior versions of key storage on the
 
 Apple’s own documentation is illustrative of managing keychain items by means of searching for the item, and updating it should it exist, and creating it if it does not.
 
-![](/assets/images/wip-icloud-keychain-poisoning/bbcd0469cd-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722877954856_8396f76a-e21a-41c8-8aa6-05d1649ccac3.png)
+![Apple keychain flowchart: search with SecItemCopyMatching, then update with SecItemUpdate if found or add with SecItemAdd if not](/assets/images/wip-icloud-keychain-poisoning/bbcd0469cd-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722877954856_8396f76a-e21a-41c8-8aa6-05d1649ccac3.png)
 
 ## Variant A - Cloud Theft
 
@@ -139,7 +139,7 @@ This variant is specific to Apple and the OS (as for most apps, sandbox rules ap
 
 It seems even Apple can make this mistake, and in a big way.  For those with a MacBook or iPhone and Apple Watch, you’ve probably seen or use ContinuityUnlock which is the ability to unlock or login to these devices using the presence of the Watch.  It even flows in reverse!  The Watch can be unlocked by the Phone as well.  After being plagued with some odd security issues myself, and having dug into a ton of the iCloud Keychain model (Octagon Trust, TrustedPeer, CKKS, and the SE restore / sync method), I discovered each time I setup the devices two entries for continuity were being added(Both within the same minute, and both with the same account UUID):
 
-![](/assets/images/wip-icloud-keychain-poisoning/c6bd7faf66-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722880925003_image.png)
+![Keychain Access list showing Auto Unlock items for iPad and iPhone](/assets/images/wip-icloud-keychain-poisoning/c6bd7faf66-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722880925003_image.png)
 *The result of adding an iPad to the circle*
 
 This is exactly the form of poisoning I referred to, but wait, these continuity values are *supposed* be synced… what gives?  Well the first major issue is that for the lay person, these aren’t even visible in Keychain Access (View → Show invisible items - which still doesn’t show everything).  Second, the keychain on macOS where this is inspectable lacks substantial relevant details for the item (protection class, SEP backed, etc).Here’s the iCloud item that was used to obtain the decryption key:
@@ -169,7 +169,7 @@ attributes:
 
 The unfortunate extractability of the key:
 
-![](/assets/images/wip-icloud-keychain-poisoning/a55db22bf2-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722882463393_image.png)
+![Terminal: security find-generic-password reading the com.apple.continuity.encryption keychain item as hex](/assets/images/wip-icloud-keychain-poisoning/a55db22bf2-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1722882463393_image.png)
 
 **Bonus Oh-No: iCloud + Setting Sync**
 
@@ -189,15 +189,15 @@ The unfortunate extractability of the key:
 - MobileBluetooth
 - Basic Attestation User Sub CA11
 
-![](/assets/images/wip-icloud-keychain-poisoning/9d2902381a-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071403676_image.png)
+![Keychain table with SE-PTC entries for classC, classA and tlk, two with GUIDs ending in fake-classC and fake-classA](/assets/images/wip-icloud-keychain-poisoning/9d2902381a-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071403676_image.png)
 
 Poisoned Octogon
 
-![](/assets/images/wip-icloud-keychain-poisoning/e4044b4628-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071637245_image.png)
+![Keychain table rows for com.apple.security.octagon items](/assets/images/wip-icloud-keychain-poisoning/e4044b4628-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071637245_image.png)
 
 Poisoned SOS
 
-![](/assets/images/wip-icloud-keychain-poisoning/ea2e1cf536-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071657338_image.png)
+![Keychain table rows for com.apple.security.sos items](/assets/images/wip-icloud-keychain-poisoning/ea2e1cf536-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071657338_image.png)
 
 # Secure Channel and SE Backup and Sync
 

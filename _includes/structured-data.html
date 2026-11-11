@@ -1,18 +1,3 @@
-{% if page.url == '/about/' or page.url == '/' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": {{ '/about/#person' | absolute_url | jsonify }},
-  "name": {{ site.author.name | jsonify }},
-  "alternateName": "Rick Mark",
-  "url": {{ site.author.url | jsonify }},
-  "image": {{ '/assets/images/rick-mark.jpg' | absolute_url | jsonify }},
-  "jobTitle": "Security, privacy and AI engineer",
-  "sameAs": {{ site.social.links | jsonify }}
-}
-</script>
-{% endif %}
 {% if page.layout == 'post' %}
 <script type="application/ld+json">
 {

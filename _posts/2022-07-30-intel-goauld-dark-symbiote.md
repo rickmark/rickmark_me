@@ -1,7 +1,7 @@
 ---
 title: "Intel Goa’uld"
 date: "2022-07-30 00:56:19 +0000"
-description: "About the name… Look… Lots of Stargate SG1 was playing while I slept, waking up to realize why the Intel ME layout was like it was (twocopies of the Boot partition sharing pages making it impossible for it to be for reasons of resiliency). Because it includes an Intel AMT/…"
+description: "An analysis of a suspicious Intel ME and AMT firmware capture: a duplicated boot partition, undocumented components and a possible in-the-wild CSME exploit."
 render_with_liquid: false
 redirect_from:
   - /intel-goauld-dark-symbiote/
@@ -30,7 +30,7 @@ Also when you’re looking at maestro, vermanus loader, arben, hotham, snowball,
 - The MFS data partition is shared amongst both personalities, easily done as the Main is lightweight
 - These two personalities are stored in two Boot tables that share pages:
 
-![](/assets/images/intel-goauld-dark-symbiote/6258a16601-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377672887_image.png)
+![UEFITool parser log: repeated CPD partition errors, intersecting or nested inside another CPD partition, skipped](/assets/images/intel-goauld-dark-symbiote/6258a16601-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377672887_image.png)
 
 - Intel ME makes use of SR-IOV to share the Intel Gigabit Ethernet hardware
 
@@ -51,7 +51,7 @@ Also when you’re looking at maestro, vermanus loader, arben, hotham, snowball,
 - By now it is too late to access the root UEFI
 - By the time the Gig Ethernet adapter is brought up in UEFI Shell it is ID 0x6 - making it a highly virtualized device, likely to facilitate loopback AMT / iSCSI / PXE (it also seems to like to use the MAC address 888888888788 for these purposes:
 
-![](/assets/images/intel-goauld-dark-symbiote/d8fa42f353-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377277923_image.png)
+![UEFITool NVRAM listing: EFI IPv4, IPv6 and DHCPv6 config variables holding the value 888888888788](/assets/images/intel-goauld-dark-symbiote/d8fa42f353-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377277923_image.png)
 
 - The Gig Ethernet adapter comes up under the “Managed Network Profile” and is immediately attempting to reach back over IPv4/IPv6 to a IPSec host via IKE (port 500)
 
@@ -63,7 +63,7 @@ Also when you’re looking at maestro, vermanus loader, arben, hotham, snowball,
 - Explains the usage of NVRAM to store the version of the UEFI payload and lack of variation on some components across updates
 - FirmwareIdGuid stored in NVRAM as example
 
-![](/assets/images/intel-goauld-dark-symbiote/939526316f-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377440962_image.png)
+![UEFITool NVRAM listing: entries under GUID 05A798EA for Management Engine, recovery, boot, main block, graphics and FV data firmware](/assets/images/intel-goauld-dark-symbiote/939526316f-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631377440962_image.png)
 
 - Avoid SVN increments by being 0xFF
 
@@ -101,11 +101,11 @@ The “OEM” configuration: <https://www.dropbox.com/home/Public/Dark%20Symbiot
 
 Note: Not at all mad at them (it’s not in their scope of control), but this is from a System76 version of the Intel NUC known as the meer4, these devices did not and never have had the AMT as an option.  It appears there is a file in the MFS that is called cse\_part which mediates which CSE boot profile is used.  (Note one is CSE Main while the other is another variant of the CSE with rbe defined as the CS/ME injected ROM Boot Extension - typically for implementation of BootGuard)
 
-![](/assets/images/intel-goauld-dark-symbiote/75e77adc7c-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631202638038_image.png)
+![UEFITool tree of the IFWI: two Boot partitions, one with CSE RBE, PMC, CSE BUP and OEM Key Manifest, the other with CSE Main, before the BIOS region](/assets/images/intel-goauld-dark-symbiote/75e77adc7c-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631202638038_image.png)
 
 Both boot partitions reuse the same pages for code modules and share one MFS, one is more advanced than the other and includes a non-fully intel chain of signing.  The latter “CSE Main” includes the AMT portion (mctp) including the Java VM (dal\_\*) and the OEM signed Intel Sensor Hub bring-up ish\_bup, while the other contains a full BootGuard stack(rbe) - coresponding to RB in UEFI, power manager, and custom signing elements.  In order to get a better view it might be required to patch UEFITool NE to be more forgiving of clever use of the partition tables in this way…
 
-![](/assets/images/intel-goauld-dark-symbiote/ccb32403b7-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631202897319_image.png)
+![UEFITool parser log: unknown SPI flash JEDEC ID 207018 and repeated overlapping CPD partition warnings](/assets/images/intel-goauld-dark-symbiote/ccb32403b7-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631202897319_image.png)
 
 ## Living through S5 without a battery…
 
@@ -137,7 +137,7 @@ Still looking but I suspect HVMP is part of the bringup of a hypervisor that is 
 
 ## Inter-process communication on the CSME…
 
-![](/assets/images/intel-goauld-dark-symbiote/03bdee2847-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631274322464_image.png)
+![Intel diagram, First Boot using new Intel CSME Firmware: ROM loads RBE, kernel and process manager, which create integrity check values for drivers, services and applications such as AMT](/assets/images/intel-goauld-dark-symbiote/03bdee2847-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631274322464_image.png)
 
 ## The policy module and the MFS
 
@@ -159,7 +159,7 @@ Other interesting portions included DXEs being loaded without an identifiable ba
 It’s not too hard to hand a faked HOB to a “guest” BDS, use and modify the result to leverage iSCSI and PXE to boot from a faked image on the other side of the ME personality (persisted thanks to snowball).  This lets a large adaptive kit run to inject itself intelligently into hypervisors, para,-virtualized kernels, boot-loaders, etc.
 It seems this partitions the UEFI into a SB (Secure Boot) and a NB (Native Boot?) area mediated by SBRun.  This is a clever use of the Secure Boot system locking our user into a specific UEFI workload, the UEFI bios of our expected system itself (in my case Visual BIOS).  The Secure Boot policy of the native UEFI (AMT Text BIOS in my image) is held in the dTPM, while a new fTPM is presented to the guest image for its use.  Because of the use of copy on write or other non-reset technique, this has the unfortunate effect of causing DXEs to be loaded from both portions.  I noticed NTFS and iSCSI and a large part of iPXE being loaded a second time.  UEFITool also found two FIT tables in the payload, where the host appears to be a 2018 copy of AMI text BIOS and the guest is a 2021 copy of the Intel Visual BIOS.  Two copies of the uCode also exist at the two points in time as well.
 
-![](/assets/images/intel-goauld-dark-symbiote/ab903f5eda-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631200068986_image.png)
+![Firmware Interface Table: FIT header, two microcode updates for CPU 000806EA, BIOS ACM, Boot Guard key manifest and boot policy](/assets/images/intel-goauld-dark-symbiote/ab903f5eda-s_3995126A312D89C3B54B9B9EE6A9EC443D492BAA5111D7A8A2B8B0DEC8C639AB_1631200068986_image.png)
 
 ## Handing UEFI Updates…
 

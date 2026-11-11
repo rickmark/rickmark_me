@@ -20,12 +20,13 @@ assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap URLs');
 assert(urls.length >= baseline.urls.length);
 for (const url of baseline.urls) assert(urls.includes(url), `Lost canonical URL: ${url}`);
 const guide = await read('/llms.txt');
+const llmsFull = await read('/llms-full.txt');
 assert(!guide.includes('{{') && !guide.includes('{%'), 'Unrendered AI guide');
 for (const url of urls) {
   const parsed = new URL(url);
   assert.equal(parsed.origin, site.url);
   const pathname = parsed.pathname;
-  assert(!['/404.html', '/robots.txt', '/llms.txt'].includes(pathname));
+  assert(!['/404.html', '/robots.txt', '/llms.txt', '/llms-full.txt'].includes(pathname));
   const content = await read(pathname);
   const $ = load(content);
   assert.deepEqual($('link[rel="canonical"]').map((_,el) => $(el).attr('href')).get(), [url]);
@@ -33,12 +34,29 @@ for (const url of urls) {
   assert(!$('meta[name="robots"]').attr('content')?.includes('noindex'), url);
   assert.equal($('meta[http-equiv="refresh"]').length, 0);
   assert($('h1').length > 0, `Missing heading: ${url}`);
-  const schemas = $('script[type="application/ld+json"]').map((_,el) => JSON.parse($(el).text())).get();
+  const schemas = $('script[type="application/ld+json"]').map((_,el) => JSON.parse($(el).text())).get().flatMap(s => s['@graph'] || [s]);
   assert(schemas.length > 0);
+  assert(schemas.some(s => s['@type'] === 'Person' && s['@id'] === `${site.url}/about/#person`), `Missing Person: ${url}`);
+  assert(schemas.some(s => s['@type'] === 'WebSite'), `Missing WebSite: ${url}`);
+  assert($('meta[name="description"]').attr('content').length <= 160, `Long meta description: ${url}`);
+  assert.equal($('h1').length, 1, `Expected one h1: ${url}`);
+  for (const heading of $('h1, h2, h3, h4, h5, h6').toArray()) assert($(heading).text().trim(), `Empty heading: ${url}`);
+  assert($('meta[property="og:image"]').attr('content')?.startsWith(site.url), `Missing og:image: ${url}`);
+  assert($('meta[property="og:image:alt"]').attr('content'), `Missing og:image:alt: ${url}`);
+  assert(llmsFull.includes(`URL: ${url}`) || !pathname.startsWith('/blog/') || pathname === '/blog/', `Missing from llms-full.txt: ${url}`);
+  for (const image of $('main img').toArray()) {
+    const alt = $(image).attr('alt');
+    const decorative = alt === '' && ($(image).hasClass('post-cover') || $(image).closest('.shot, .family-tile, .portrait').length);
+    assert(alt || decorative, `Image without alt text: ${url} ${$(image).attr('src')}`);
+    if ($(image).attr('src')?.startsWith('/')) assert($(image).attr('width') && $(image).attr('height'), `Image without dimensions: ${url} ${$(image).attr('src')}`);
+  }
   assert.equal($('script[src*="googletagmanager.com/gtag/js"]').length, 1, `Analytics: ${url}`);
   assert(content.includes(`gtag('config', '${site.google_analytics}')`));
   if (pathname.startsWith('/blog/') && pathname !== '/blog/') {
-    assert(schemas.some(s => s['@type'] === 'BlogPosting'), url);
+    const article = schemas.find(s => ['BlogPosting', 'ScholarlyArticle'].includes(s['@type']));
+    assert(article, url);
+    assert(article.datePublished && article.author?.['@id'], `Incomplete article schema: ${url}`);
+    if ($('.post-meta .tag').map((_,el) => $(el).text()).get().includes('working draft')) assert.equal(article['@type'], 'ScholarlyArticle', url);
     assert(guide.includes(`](${url})`), url);
     assert($('.post-meta time').text().trim(), `Missing article date: ${url}`);
   }

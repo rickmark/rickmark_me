@@ -1,7 +1,7 @@
 ---
 title: "checkra1n and the T2"
 date: "2020-10-06 04:56:43 +0000"
-description: "Given the interest in the industry I've decided to make some quick notes from earlier this year available, I plan to expland on this later: What can I do with SSH to the T2 anyway? Initially, look around and perform additional research. Once executing on the T2 core, the security…"
+description: "Early notes on what SSH access to Apple's T2 chip via checkra1n makes possible, and where further security research on the T2 core could lead."
 render_with_liquid: false
 redirect_from:
   - /checkra1n-and-the-t2/

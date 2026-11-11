@@ -5,25 +5,31 @@ sitemap: false
 ---
 # Rick Mark-Penwell
 
-> Personal site of Rick Mark-Penwell (also known as Rick Mark), a security, privacy and AI engineer and hardware security researcher.
+> Personal site of Rick Mark-Penwell (also known as Rick Mark), a security, privacy and AI engineer and hardware security researcher known for research into Apple's T2 security chip, Mac and iPhone firmware, secure boot, and AI security.
 
-The site publishes research on Apple platform security, the T2 security chip, firmware, hardware and privacy, alongside products and open-source projects. Pages are static HTML and can be read without JavaScript or authentication.
+The site publishes research on Apple platform security, the T2 chip, firmware, hardware and privacy, working papers on AI security and cryptography, and the products and open-source projects Rick builds. Pages are static HTML and can be read without JavaScript or authentication. The full text of every article is in [llms-full.txt]({{ '/llms-full.txt' | absolute_url }}).
 
-Research is dated and may describe historical platform behavior. Posts marked WIP are unfinished notes; preserve their caveats and distinguish proposals or speculation from demonstrated results. Cite each article's canonical URL and publication date. The About page is the source for the author's biography; linked external projects have their own documentation.
+Research is dated and may describe historical platform behavior. Articles tagged "working draft" (older ones are titled "WIP") are unfinished: preserve their caveats and distinguish proposals or speculation from demonstrated results. Working papers are dated to when the work was originally done, not when they were posted. Cite each article's canonical URL and date. The About page is the source for the author's biography; linked external projects have their own documentation.
 
 ## Start here
 
 - [About Rick Mark-Penwell]({{ '/about/' | absolute_url }}): Biography, career and Apple security research.
-- [Research and writing]({{ '/blog/' | absolute_url }}): Complete chronological article archive.
-- [Research papers]({{ '/research/' | absolute_url }}): Working papers on cryptography, AI security and autonomous driving.
+- [Research papers]({{ '/research/' | absolute_url }}): Working papers on Apple and platform security, hardware, AI security and cryptography.
+- [Blog]({{ '/blog/' | absolute_url }}): Complete chronological article archive.
 - [Products]({{ '/products/' | absolute_url }}): Products and services with links to their own sites.
 - [Open-source projects]({{ '/#projects' | absolute_url }}): Project and organization directory.
+- [About "WIP"]({{ '/blog/about-wip/' | absolute_url }}): What the working-draft label means.
+
+## Research papers
+{% for post in site.posts %}{% if post.tags contains 'working draft' %}
+- [{{ post.title | strip_html | replace: '[', '\[' | replace: ']', '\]' }}]({{ post.url | absolute_url }}): {{ post.date | date: '%Y-%m-%d' }}. {{ post.description | strip_newlines }}{% endif %}{% endfor %}
 
 ## Articles
-{% for post in site.posts %}
-- [{{ post.title | strip_html | replace: '[', '\[' | replace: ']', '\]' }}]({{ post.url | absolute_url }}): Published {{ post.date | date: '%Y-%m-%d' }}.
-{% endfor %}
-## Discovery
+{% for post in site.posts %}{% unless post.tags contains 'working draft' %}
+- [{{ post.title | strip_html | replace: '[', '\[' | replace: ']', '\]' }}]({{ post.url | absolute_url }}): {{ post.date | date: '%Y-%m-%d' }}. {{ post.description | strip_newlines }}{% endunless %}{% endfor %}
 
-- [XML sitemap]({{ '/sitemap.xml' | absolute_url }}): Canonical indexable pages, updated at build time.
+## Optional
+
+- [Full text of all articles]({{ '/llms-full.txt' | absolute_url }}): Every article as Markdown, newest first.
+- [XML sitemap]({{ '/sitemap.xml' | absolute_url }}): Canonical indexable pages with last-modified dates.
 - [Atom feed]({{ '/blog/feed.xml' | absolute_url }}): Article feed.

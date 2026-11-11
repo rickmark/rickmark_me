@@ -1,7 +1,7 @@
 ---
 title: "Design: Surface Area Reduction of the CS/ME by Using Bogus Public Keys"
 date: "2022-07-30 01:01:08 +0000"
-description: "The CS/ME is Scary… Because the CS/ME is run before the CPU comes up, and it has complete access to a system and is even designed for remote management (see Intel AMT) perhaps our classic approach isn’t working. Classic “High Assurance” of the Intel ME has centered…"
+description: "A proposal to shrink the Intel CS/ME attack surface by provisioning bogus public keys that lock out modules and features a device did not ship with."
 render_with_liquid: false
 redirect_from:
   - /design-surface-area-reduction-of-the-cs-me-by-using-bogus-public-keys/
