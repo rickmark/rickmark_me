@@ -3,6 +3,9 @@ title: "WIP: iCloud Keychain Poisoning"
 date: "2024-10-05 01:01:31 +0000"
 description: "tl;dr If a malicious device is able to join your iCloud keychain (such as a jailbroken iDevice or insecure macOS device) it can pre-populate keychain items with overly permissive or insecure properties. This can be leveraged with reset tokens, auto and continuity unlock, and other apps to allow lateral…"
 render_with_liquid: false
+tags:
+  - working draft
+  - Apple security
 redirect_from:
   - /wip-icloud-keychain-poisoning/
 ---
@@ -197,6 +200,19 @@ Poisoned SOS
 ![](/assets/images/wip-icloud-keychain-poisoning/ea2e1cf536-s_3A700D1ED4D34259A09AD0E555C598962DD417CA63A6E34B287B2CA7C0D33EF2_1723071657338_image.png)
 
 # Secure Channel and SE Backup and Sync
+
+# Detection and remediation: chainfix
+
+The companion to this writeup is [chainfix](https://github.com/rickmark/chainfix), a set of health checks and remediations for the keychain and iCloud Keychain (early scaffold, July 2024). Rather than hard-code checks, it reads a rule file so the assertions below can be stated declaratively over keychain attributes (`svce`, `agrp`, `sync`, `pdmn`, `labl`, and so on).
+
+Two rules capture the most dangerous case from Variant A, the password-reset token:
+
+- **Recovery token should be same-device-only.** For items whose service is `com.apple.account.idms.password-reset-token` (or its `-backup`) in access group `apple`, assert that the protection class (`pdmn`) is *not* `aku` (`AccessibleAlwaysThisDeviceOnly`'s synced cousin), so the token cannot sit at an over-permissive class.
+- **Recovery token should not be synced.** For the same items, assert `sync == 0`. A password-reset token that syncs is exactly the poisoning primitive: insert one from a device in the circle and it propagates.
+
+The remediation side lists items safe to remove so the OS regenerates them cleanly, each matched by access group or protected-cloud-storage label: sleep-proxy certificates (`com.apple.srp-mdsn-proxy`), HomeKit pairing records (`com.apple.hap.pairing`), AirPort passwords, Bluetooth and Rapport records, and the Protected Cloud Storage entries for Find My, Search Party, Health, Safari synced tabs and history, Siri, and Spotlight. Removing a synced PCS item forces re-derivation under current trust, which clears a poisoned copy without destroying the user's own data.
+
+This is a schema and a starting rule set, not a finished detector. The value is that "a poisoned keychain" becomes a list of checkable assertions over keychain attributes, which is the form the follow-up work needs.
 
 ## Loose notes
 
