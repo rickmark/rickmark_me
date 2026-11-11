@@ -1,12 +1,11 @@
 ---
 title: "USB Security in the Linux Kernel"
 date: "2022-07-30 01:19:03 +0000"
-description: "Dropbox not only works to ensure that our product is worthy of trust, but we look up and down the entire stack of components for risk and areas of improvement. Like many companies, we employ Linux servers to power the Dropbox product. We perform regular patching, secure configuration and performance…"
+description: "Written at Dropbox: why decades-old Linux USB code trusts devices too much, with examples of unvalidated input and a kernel patch."
 render_with_liquid: false
 redirect_from:
   - /usb-security-in-the-linux-kernel/
 ---
-#
 
 Dropbox not only works to ensure that our product is worthy of trust, but we look up and down the entire stack of components for risk and areas of improvement.  Like many companies, we employ Linux servers to power the Dropbox product.  We perform regular patching, secure configuration and performance and security logging, but at times we have to go deeper.
 
@@ -22,7 +21,7 @@ Code written during this era predates the modern security practice of defensive 
 
 ## Unvalidated Length from Device
 
-![](/assets/images/usb-security-in-the-linux-kernel/086df15c9d-s_848B01F014E8BFB84374AC8362E81C8D03D9E184AEAEDFF47C33B172DEE5F69F_1557968770373_image-1.png)
+![Diagram: a bad bLength on the 18-byte usb_device_descriptor overflows 237 bytes into struct usb_device, over the bos, config, actconfig and ep_in pointers](/assets/images/usb-security-in-the-linux-kernel/086df15c9d-s_848B01F014E8BFB84374AC8362E81C8D03D9E184AEAEDFF47C33B172DEE5F69F_1557968770373_image-1.png)
 
 Patch as submitted 5/14/2019<https://marc.info/?l=linux-usb&m=155780009303416&w=2>`--- drivers/usb/core/config.c | 67 +++++++++++++++++++++++++++++++++++++++++++++++ 1 file changed, 67 insertions(+)`
 `diff --git a/drivers/usb/core/config.c b/drivers/usb/core/config.cindex 7b5cb28ff..8cb9a136e 100644--- a/drivers/usb/core/config.c+++ b/drivers/usb/core/config.c@@ -33,6 +33,13 @@ static int find_next_descriptor(unsigned char*buffer, int size,`

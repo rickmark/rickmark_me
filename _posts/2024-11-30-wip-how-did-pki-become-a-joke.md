@@ -1,7 +1,7 @@
 ---
 title: "WIP: How did PKI become a joke?"
 date: "2024-11-30 09:48:06 +0000"
-description: "tl;dr If your system asks you to both upload a certificate and a private key, or it generates a CSR (certificate signing request) and also gives you the private key, you're doing PKI wrong... Also don't laugh - but this commentary is directly opposed to goals of US national…"
+description: "If a system asks for your private key or hands you one with your CSR, it is doing PKI wrong. Notes on how PKI practice went astray."
 render_with_liquid: false
 redirect_from:
   - /wip-how-did-pki-become-a-joke/

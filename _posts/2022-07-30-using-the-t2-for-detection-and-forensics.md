@@ -1,12 +1,11 @@
 ---
 title: "Using the T2 for Detection and Forensics"
 date: "2022-07-30 01:19:38 +0000"
-description: "Todays Need With the advent of modern security hardware, it has become near impossible to perform comprehensive security auditing of devices used in the field. This has allowed malware to run at layers of the stack not accessible to traditional endpoint security. Recent un-patchable hardware vulnerabilities that may have served…"
+description: "Using Apple's T2 chip as an independent vantage point for detecting malware and collecting forensics below the reach of endpoint security."
 render_with_liquid: false
 redirect_from:
   - /using-the-t2-for-detection-and-forensics/
 ---
-#
 
 ## Todays Need
 
@@ -62,4 +61,4 @@ With the recent discoveries of checkm8, blackbird and the subsequent work of che
 
 ## Demo - Using Chrome WebUSB to Deliver This Technology
 
-![](/assets/images/using-the-t2-for-detection-and-forensics/d1bff63320-s_E45BFBDCB9E23EE642EF6346F4FE25A02EC16FCEEE5E5471FDDEF207CE13C831_1602995662061_image.png)
+![Chrome WebUSB permission prompt listing a paired iPhone, over a local Apple Mobile Device on the Web test page](/assets/images/using-the-t2-for-detection-and-forensics/d1bff63320-s_E45BFBDCB9E23EE642EF6346F4FE25A02EC16FCEEE5E5471FDDEF207CE13C831_1602995662061_image.png)

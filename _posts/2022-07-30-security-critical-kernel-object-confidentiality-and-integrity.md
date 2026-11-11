@@ -1,7 +1,7 @@
 ---
 title: "Security Critical Kernel Object Confidentiality and Integrity"
 date: "2022-07-30 01:03:30 +0000"
-description: "License This work is licensed under a Creative Commons Attribution 4.0 International License. From the Author Furthermore I make no intellectual property claims, other then attribution of work. Therefore, from myself it can be used for both research as well as commercial works. This paper draws on the ARM…"
+description: "A CC BY 4.0 design, drawing on public ARM documentation, for protecting the confidentiality and integrity of security-critical kernel objects."
 render_with_liquid: false
 redirect_from:
   - /security-critical-kernel-object-confidentiality-and-integrity/

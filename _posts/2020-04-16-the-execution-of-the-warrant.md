@@ -1,7 +1,7 @@
 ---
 title: "The Execution of the Warrant"
 date: "2020-04-16 06:01:33 +0000"
-description: "In 2002 the country looked on as the offices of Arthur Anderson LLP had box after box of records carted out of the Houston office. It is through both photographs and court documents that the accounting firm's practices were displayed and all very publicly. That was almost 20 years ago…"
+description: "Twenty years after records were carted out of Arthur Andersen's Houston office, an essay on how search warrants are executed and what the public gets to see."
 render_with_liquid: false
 redirect_from:
   - /the-execution-of-the-warrant/

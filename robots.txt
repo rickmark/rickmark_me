@@ -7,4 +7,5 @@ Disallow:
 
 # Search engines and AI crawlers may read all public content.
 # AI reading guide: {{ '/llms.txt' | absolute_url }}
+# Full article text: {{ '/llms-full.txt' | absolute_url }}
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

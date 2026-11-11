@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+seo_title: "About Rick Mark-Penwell: Security Researcher and Engineer"
 permalink: /about/
 description: Rick Mark-Penwell is a security, privacy and AI engineer and hardware security researcher, formerly of Meta, Coinbase, Dropbox and Microsoft, known for research into Apple's T2 chip.
 about_hero: true

@@ -1,7 +1,7 @@
 ---
 title: "DataMigration iOS Mitigations"
 date: "2022-07-30 01:00:07 +0000"
-description: "Introduction While iOS continues to advance security controls on code with signing and entitlements, key aspects of the OS are lacking in security hardening. This paper proposes two features that could be included in iOS to increase the security of subsystems that handle untrusted data and uses the DataMigration framework…"
+description: "Two proposed iOS hardening features for subsystems that parse untrusted data, using the DataMigration framework as the worked example."
 render_with_liquid: false
 redirect_from:
   - /datamigration-ios-mitigations/

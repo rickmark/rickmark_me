@@ -1,7 +1,7 @@
 ---
 title: "The Security Weakness of the M1"
 date: "2022-07-30 01:15:54 +0000"
-description: "tl;dr The M1 and iBoot was overall a massive step forward in boot integrity for our devices, but the use of an encrypted boot-loader (as opposed to EFI which was not encrypted) makes it’s security guarantees impossible to verify. In addition, other regressions are outlined. Static and Dynamic…"
+description: "Why the encrypted iBoot on Apple's M1 makes its boot-integrity guarantees impossible to verify independently, plus other security regressions."
 render_with_liquid: false
 redirect_from:
   - /the-security-weakness-of-the-m1/

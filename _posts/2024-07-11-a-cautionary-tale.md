@@ -1,7 +1,7 @@
 ---
 title: "A Cautionary Tale..."
 date: "2024-07-11 10:10:04 +0000"
-description: "Now this will be the most disturbing and truthful of all my public postings. It's based on 14 years of knowledge and observation of which I rarely speak, given that the intent of majority of these events is to make me seem unreliable and to get me dismissed by law…"
+description: "A personal account, drawn from fourteen years of observation, of events Rick Mark-Penwell believes were meant to discredit him."
 render_with_liquid: false
 redirect_from:
   - /a-cautionary-tale/

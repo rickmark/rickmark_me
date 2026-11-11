@@ -36,9 +36,16 @@ source files, dependencies, scratch files and design documents are not published
 
 ## SEO, AI discovery and legacy URLs
 
-Every build generates canonical links, social metadata, BlogPosting structured data,
-a sitemap at `/sitemap.xml`, an Atom feed at `/blog/feed.xml`, and `/llms.txt` from the
-published article list. `robots.txt` permits search and AI crawlers and advertises
+Every build generates canonical links, social metadata (with an `og:image` for every
+page: the post's `image`, else its first inline image, else the portrait), a JSON-LD
+graph (WebSite, Person, the page, and BlogPosting, or ScholarlyArticle for posts tagged
+`working draft`), a sitemap at `/sitemap.xml`, an Atom feed at `/blog/feed.xml`,
+`/llms.txt` (a guide with every article's summary) and `/llms-full.txt` (the full
+Markdown of every article). Keep each post's `description` a real summary: search
+results show the first ~160 characters, and the build trims longer ones at a sentence
+boundary for the meta description while the full text feeds social cards and the
+Research page. Use `seo_title` to override a page's `<title>`. Markdown images get
+their width and height automatically; give each a descriptive alt text. `robots.txt` permits search and AI crawlers and advertises
 the sitemap. Allowing all crawlers also allows training crawlers. `llms.txt` is a
 supplemental reading guide, not a guarantee of indexing or AI citations.
 

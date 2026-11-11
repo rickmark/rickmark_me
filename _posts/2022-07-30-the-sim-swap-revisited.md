@@ -1,7 +1,7 @@
 ---
 title: "The SIM Swap Revisited"
 date: "2022-07-30 00:56:34 +0000"
-description: "Terms IMSI - The identifier for a particular line of service on the cellular network. Fixed for the lifetime of the line (pending some unknown rotation scheme) IMEI - A unique device on the GSM network. iPhones contain two IMEIs so that they can participate in Dual SIM (today DSS…"
+description: "How SIM swaps work, from IMSI, IMEI, EID and Ki to cellular registration and eSIM provisioning, and where the process can be abused."
 render_with_liquid: false
 redirect_from:
   - /the-sim-swap-revisited/

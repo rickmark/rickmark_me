@@ -1,7 +1,7 @@
 ---
 title: "How Minimalism Hurts Security"
 date: "2022-07-30 01:02:50 +0000"
-description: "Apple Device Boot Process Apple has for many years valued ease of use and consumer friendliness over actual security. This is totally clear when you consider that an Apple laptop can have its security features disabled without any clear visual indicator of this lowered security state. (Android and Chromebooks place…"
+description: "How Apple's minimal boot UX hides a Mac's lowered security state, compared with the visible warnings Android and Chromebooks show."
 render_with_liquid: false
 redirect_from:
   - /how-minimalism-hurts-security/
