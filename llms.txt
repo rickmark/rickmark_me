@@ -15,6 +15,7 @@ Research is dated and may describe historical platform behavior. Posts marked WI
 
 - [About Rick Mark-Penwell]({{ '/about/' | absolute_url }}): Biography, career and Apple security research.
 - [Research and writing]({{ '/blog/' | absolute_url }}): Complete chronological article archive.
+- [Research papers]({{ '/research/' | absolute_url }}): Working papers on cryptography, AI security and autonomous driving.
 - [Products]({{ '/products/' | absolute_url }}): Products and services with links to their own sites.
 - [Open-source projects]({{ '/#projects' | absolute_url }}): Project and organization directory.
 

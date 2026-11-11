@@ -120,7 +120,7 @@ await writeFile(`${output}/assets/syntax.css`, `${lightSyntax}\n@media (prefers-
 await cp('CNAME', `${output}/CNAME`);
 await writeFile(`${output}/.nojekyll`, '');
 const pages = [...site.posts];
-for (const [file, url] of Object.entries({'index.html':'/', 'about.md':'/about/', 'products.html':'/products/', 'blog/index.html':'/blog/', '404.md':'/404.html', 'robots.txt':'/robots.txt', 'llms.txt':'/llms.txt'})) {
+for (const [file, url] of Object.entries({'index.html':'/', 'about.md':'/about/', 'products.html':'/products/', 'blog/index.html':'/blog/', 'research/index.html':'/research/', '404.md':'/404.html', 'robots.txt':'/robots.txt', 'llms.txt':'/llms.txt'})) {
   const page = await source(file);
   pages.push({...page, url:page.permalink || url});
 }

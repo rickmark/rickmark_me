@@ -107,8 +107,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .mark { width: 24px; height: 24px; flex: none; }
 .site-title:hover { text-decoration: none; }
-.site-nav { display: flex; gap: 24px; font-size: 15px; }
-.site-nav a { color: var(--ink-muted); }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0 24px; font-size: 15px; }
+.site-nav a { color: var(--ink-muted); white-space: nowrap; }
 .site-nav a:hover { color: var(--ink); text-decoration: none; }
 .site-nav a { padding: 4px 0; border-bottom: 2px solid transparent; }
 .site-nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
@@ -333,6 +333,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .post-list a { flex: 1 1 18em; color: var(--ink); font-weight: 500; }
 .post-list a:hover { color: var(--accent); text-decoration: none; }
+.paper-list .paper-summary { flex: 1 1 100%; margin: 0; color: var(--ink-muted); font-size: 15px; line-height: 24px; max-width: 72ch; }
 
 .tag {
   display: inline-block;
@@ -645,7 +646,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .product-cards { grid-template-columns: 1fr; }
   .product-head, .product-body { padding-left: var(--space-2); padding-right: var(--space-2); }
   .product-head h2 { font-size: 32px; line-height: 36px; }
-  .site-nav { gap: 16px; }
+  .site-nav { gap: 0 14px; }
   .hero-text h1, .about-hero-text h1 { font-size: 40px; line-height: 44px; }
   .stat strong { font-size: 32px; line-height: 36px; }
   body { font-size: 16px; line-height: 26px; }

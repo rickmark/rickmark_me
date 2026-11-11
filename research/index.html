@@ -1,0 +1,20 @@
+---
+layout: default
+title: Research papers
+permalink: /research/
+description: Working papers by Rick Mark-Penwell on cryptography, AI security and autonomous driving, each dated and marked with its draft status.
+band: true
+band_label: Research
+band_lead: "Papers in progress: cryptography, AI security and autonomous driving. Each is a working draft, dated and timestamped, and changes as the work does."
+---
+<p>These are working drafts, not peer-reviewed results. Each states what it claims and what it doesn't; see <a href="{{ '/blog/about-wip/' | relative_url }}">About 'WIP'</a>. Shorter notes and older research are in the <a href="{{ '/blog/' | relative_url }}">blog</a>.</p>
+<ul class="post-list paper-list">
+  {% for post in site.posts %}{% if post.tags contains 'working draft' %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    <p class="paper-summary">{{ post.description }}</p>
+  </li>
+  {% endif %}{% endfor %}
+</ul>

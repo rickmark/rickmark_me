@@ -52,7 +52,9 @@
     - Pages for DJs, performers and hosts that members can follow
     - Photographers share their sets straight to the audiences they shoot for
     - An admin console for each audience, skinned in its own colours
-    - A GraphQL API with SDKs for Swift and Ruby
+    - A GraphQL API with SDKs for Swift and Ruby, listed on the Swift Package Index
+    - "Staff apps for the people who run the scene: Velvet for venues (the door, tonight's lineup and the venue chat), Backstage for performers and hosts, and Focus for an audience's admins"
+    - Soapbox, a newsroom inside the app, with articles from community publications and op-eds written by members
   shots:
     - src: /assets/images/products/audiencekit-site.webp
       alt: The audiencekit.com home page, headed "Give every scene its own home." beside a Hot Mess event list
@@ -67,6 +69,14 @@
       url: https://developer.audiencekit.com
     - name: Swift SDK
       url: https://github.com/audience-kit/audience-kit-sdk-swift
+    - name: Swift Package Index
+      url: https://swiftpackageindex.com/lwm-luminx/audience-kit-sdk
+    - name: Velvet
+      url: https://audiencekit.com/apps/velvet/
+    - name: Backstage
+      url: https://audiencekit.com/apps/backstage/
+    - name: Focus
+      url: https://audiencekit.com/apps/focus/
     - name: Ruby SDK
       url: https://github.com/audience-kit/audience-kit-sdk-ruby
     - name: Admin console
